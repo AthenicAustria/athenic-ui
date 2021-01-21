@@ -8,11 +8,10 @@
     "url": "https://github.com/b3h3m0th/athenic-ui"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js --progress",
-    "start": "webpack serve --mode development --open",
+    "start": "webpack --config webpack.config.js --progress",
+    "dev": "webpack serve --mode development --open",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "docz:dev": "docz dev"
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "athenic",
