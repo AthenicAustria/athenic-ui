@@ -38,4 +38,4 @@ export default MyComponent;
 
 ## License
 
-MIT © [b3h3m0th](https://github.com/b3h3m0th)y
+MIT © [b3h3m0th](https://github.com/b3h3m0th)
