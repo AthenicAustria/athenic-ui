@@ -1,7 +1,7 @@
 {
   "name": "athenic-ui",
-  "version": "1.0.22",
-  "description": "Athenic UI react component lib",
+  "version": "1.0.0",
+  "description": "Athenic UI React component library",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --progress",
