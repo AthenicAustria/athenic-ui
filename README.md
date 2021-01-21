@@ -24,7 +24,7 @@ export default MyComponent;
 ```
 
 ```tsx
-import React, { Component } from "react";
+import React from "react";
 
 import { H1 } from "athenic-ui";
 import "athenic-ui/dist/index.css";
