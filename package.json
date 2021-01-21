@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Athenic UI React component library",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b3h3m0th/athenic-ui"
+  },
   "scripts": {
     "build": "webpack --config webpack.config.js --progress",
     "start": "webpack serve --mode development --open",
