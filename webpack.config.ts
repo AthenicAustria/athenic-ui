@@ -1,8 +1,9 @@
-const path = require("path");
+import * as path from "path";
+import * as webpack from "webpack";
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = [
+const config: webpack.Configuration[] = [
   {
     mode: "development",
     entry: {
@@ -66,7 +67,11 @@ module.exports = [
     output: {
       filename: "index.js",
       path: path.resolve(__dirname, "dist"),
+      libraryTarget: "",
+      library: "athenic-ui",
     },
     plugins: [],
   },
 ];
+
+export default config;
