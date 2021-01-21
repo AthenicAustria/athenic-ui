@@ -10,6 +10,9 @@ const config: Config.InitialOptions = {
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
+  moduleNameMapper: {
+    "^.+\\.(css|less|scss)$": "identity-obj-proxy",
+  },
   name: "athenic-ui",
   verbose: true,
 };
