@@ -4,11 +4,12 @@ import "./H2.scss";
 interface H1Props {
   children?: ReactChild;
   style?: CSSProperties;
+  className?: string;
 }
 
-const H2 = ({ children, style }: H1Props) => {
+const H2 = ({ children, style, className }: H1Props) => {
   return (
-    <h2 className="h3" style={style && style}>
+    <h2 className={`h2 ${className && className}`} style={style && style}>
       {children && children}
     </h2>
   );
