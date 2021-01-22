@@ -9,7 +9,7 @@ export interface H1Props {
 
 const H3 = ({ children, style, className }: H1Props) => {
   return (
-    <h3 className={`h3 ${className && className}`} style={style && style}>
+    <h3 className={`h3 ${className ? className : ""}`} style={style && style}>
       {children && children}
     </h3>
   );

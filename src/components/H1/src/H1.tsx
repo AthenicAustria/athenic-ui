@@ -9,7 +9,7 @@ interface H1Props {
 
 const H1 = ({ children, style, className }: H1Props) => {
   return (
-    <h1 className={`h1 ${className && className}`} style={style && style}>
+    <h1 className={`h1 ${className ? className : ""}`} style={style && style}>
       {children && children}
     </h1>
   );
