@@ -13,7 +13,6 @@ const Button = ({ text, style, className }: ButtonProps) => {
   return (
     <button style={style && style} className={className && className}>
       {text && text}
-      <div></div>
     </button>
   );
 };
