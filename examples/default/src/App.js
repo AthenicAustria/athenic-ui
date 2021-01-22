@@ -10,7 +10,9 @@ class App extends Component {
         <H1 style={{ color: "var(--color-light-red)" }}>Athenic UI - H1</H1>
         <H2>Athenic UI - H2</H2>
         <H3>Athenic UI - H3</H3>
-        <Button>asdf</Button>
+        <Button size="small">asdf</Button>
+        <Button size="medium">asdf</Button>
+        <Button size="large">asdf</Button>
       </div>
     );
   }
