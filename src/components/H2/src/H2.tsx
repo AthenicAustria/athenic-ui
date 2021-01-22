@@ -1,7 +1,7 @@
 import React, { CSSProperties, ReactChild } from "react";
 import "./H2.scss";
 
-interface H1Props {
+export interface H1Props {
   children?: ReactChild;
   style?: CSSProperties;
   className?: string;

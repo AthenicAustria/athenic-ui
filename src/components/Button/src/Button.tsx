@@ -1,9 +1,11 @@
 import React, { CSSProperties } from "react";
+import "./Button.scss";
 
 export interface ButtonProps {
   text?: string;
   style?: CSSProperties;
-  className?: string;
+    className?: string;
+    size?: 
 }
 
 const Button = ({ text, style, className }: ButtonProps) => {
