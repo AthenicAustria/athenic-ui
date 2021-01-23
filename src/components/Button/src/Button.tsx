@@ -1,13 +1,17 @@
 import React, { CSSProperties, ReactChildren } from "react";
-import { ButtonSize } from "../types/ButtonTypes";
+import { ButtonSize, ButtonVariant } from "../types/ButtonTypes";
 import "./Button.scss";
+
+// const icon_placeholder = require("../../../assets/img/icon_placeholder.png");
 
 export interface ButtonProps {
   text: string | ReactChildren;
   style?: CSSProperties;
   className?: string;
   size?: ButtonSize;
+  variant?: ButtonVariant;
   children?: ReactChildren;
+  icon?: File;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   onHover?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -17,6 +21,7 @@ const Button = ({
   style,
   className,
   size,
+  variant,
   children,
   onClick,
   onHover,
@@ -24,11 +29,13 @@ const Button = ({
   return (
     <button
       style={style ? style : {}}
-      className={`button ${size ? size : ""} ${className ? className : ""}`}
-      onClick={onClick ? () => onClick : null}
-      onMouseOver={onHover ? () => onHover : null}
+      className={`button ${size ? size : ""} ${className ? className : ""} ${
+        variant ? variant : ""
+      }`}
+      onClick={onClick}
+      onMouseOver={onHover}
     >
-      {text ? text : children ? children : ""}
+      <span>{text ? text : children ? children : ""}</span>
     </button>
   );
 };

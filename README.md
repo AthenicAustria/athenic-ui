@@ -16,9 +16,9 @@ import React from "react";
 import * as Athenic from "athenic-ui";
 import "athenic-ui/dist/index.css";
 
-const MyComponent = () =>  {
-    return <Athenic.H1>Hello World</Athenic.Hi>;
-}
+const MyComponent = () => {
+  return <Athenic.H1>Hello World</Athenic.H1>;
+};
 
 export default MyComponent;
 ```
@@ -29,9 +29,9 @@ import React from "react";
 import { H1 } from "athenic-ui";
 import "athenic-ui/dist/index.css";
 
-const MyComponent = () =>  {
-    return <H1>Hello World</Hi>;
-}
+const MyComponent = () => {
+  return <H1>Hello World</H1>;
+};
 
 export default MyComponent;
 ```

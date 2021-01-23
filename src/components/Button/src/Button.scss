@@ -15,6 +15,30 @@
     transform: translateY(-2px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   }
+
+  &.primary {
+    //default
+  }
+
+  &.secondary {
+    background-color: var(--color-secondary);
+  }
+
+  &.tertiary {
+    background-color: var(--color-tertiary);
+  }
+
+  &.success {
+    background-color: var(--color-success);
+  }
+
+  &.warning {
+    background-color: var(--color-warning);
+  }
+
+  &.error {
+    background-color: var(--color-error);
+  }
 }
 
 .small {

@@ -1,10 +1,18 @@
 :root {
-  --color-primary: #a50f00;
-  --color-secondary: #121420;
+  //trio
+  --color-primary: #121420;
+  --color-secondary: #a50f00;
   --color-tertiary: #757780;
+
+  //names
   --color-dark-red: #a50f00;
   --color-light-red: #b51000;
   --color-blue: #121420;
   --color-grey: #757780;
   --color-white: #fffcf9;
+
+  //states
+  --color-error: #b51000;
+  --color-warning: #eca03d;
+  --color-success: #53a713;
 }
