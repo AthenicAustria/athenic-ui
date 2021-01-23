@@ -12,7 +12,8 @@
     "serve": "webpack serve --mode development --open",
     "test": "jest --config ./jest.config.ts",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "docz": "docz build && docz serve"
   },
   "keywords": [
     "athenic",
@@ -41,6 +42,7 @@
     "@types/webpack": "^4.41.26",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
+    "docz": "^2.3.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.0.0-beta.6",
     "identity-obj-proxy": "^3.0.0",

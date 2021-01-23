@@ -12,6 +12,7 @@ export interface ButtonProps {
   iconAfter?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   onHover?: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
 }
 
 const Button = ({
@@ -25,6 +26,7 @@ const Button = ({
   onHover,
   iconBefore,
   iconAfter,
+  disabled,
 }: ButtonProps) => {
   return (
     <button
@@ -34,6 +36,7 @@ const Button = ({
       }`}
       onClick={onClick}
       onMouseOver={onHover}
+      disabled={disabled}
     >
       {iconBefore ? (
         <img
