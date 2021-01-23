@@ -33,7 +33,7 @@ const Button = ({
       style={style ? style : null}
       className={`button ${size ? size : ""} ${className ? className : ""} ${
         variant ? variant : ""
-      }`}
+      } ${disabled ? "disabled" : ""}`}
       onClick={onClick}
       onMouseOver={onHover}
       disabled={disabled}

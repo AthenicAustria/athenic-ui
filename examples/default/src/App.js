@@ -9,16 +9,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* Headers */}
         <H1>Headers</H1>
         <H1 style={{ color: "var(--color-light-red)" }}>Athenic UI - H1</H1>
         <H2>Athenic UI - H2</H2>
         <H3>Athenic UI - H3</H3>
 
-        {/* Buttons */}
         <H1>Buttons</H1>
         <H2>Size</H2>
-
         <Button
           style={{ marginLeft: 0 }}
           size="small"
@@ -39,6 +36,7 @@ class App extends Component {
         <Button variant="success">Success</Button>
         <Button variant="error">Error</Button>
         <Button variant="warning">Warning</Button>
+
         <H2>With icon</H2>
         <Button
           style={{ marginLeft: 0 }}
@@ -55,6 +53,17 @@ class App extends Component {
           size="medium"
         >
           Icon after
+        </Button>
+
+        <H2>Disabled</H2>
+        <Button
+          style={{ marginLeft: 0 }}
+          iconBefore={icon_placeholder}
+          variant="tertiary"
+          size="medium"
+          disabled={true}
+        >
+          Icon before
         </Button>
       </div>
     );
