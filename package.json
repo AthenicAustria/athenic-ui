@@ -1,6 +1,6 @@
 {
   "name": "athenic-ui",
-  "version": "1.0.0",
+  "version": "1.0.22",
   "description": "Athenic UI React component library",
   "main": "dist/index.js",
   "repository": {
@@ -21,7 +21,7 @@
     "library",
     "components"
   ],
-  "author": "b3h3m0th",
+  "author": "simonostini",
   "license": "MIT",
   "dependencies": {
     "node-sass": "^5.0.0",
