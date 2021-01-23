@@ -8,7 +8,8 @@ export interface ButtonProps {
   size?: ButtonSize;
   variant?: ButtonVariant;
   children?: ReactChildren;
-  icon?: string;
+  iconBefore?: string;
+  iconAfter?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   onHover?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -22,7 +23,8 @@ const Button = ({
   children,
   onClick,
   onHover,
-  icon,
+  iconBefore,
+  iconAfter,
 }: ButtonProps) => {
   return (
     <button
@@ -33,9 +35,9 @@ const Button = ({
       onClick={onClick}
       onMouseOver={onHover}
     >
-      {icon ? (
+      {iconBefore ? (
         <img
-          src={icon}
+          src={iconBefore}
           alt="Athenic Button Icon"
           className="button__icon"
           style={{ marginRight: "8px" }}
@@ -43,10 +45,24 @@ const Button = ({
       ) : null}
       <span
         className="button__content"
-        style={icon ? { paddingLeft: 0 } : null}
+        style={
+          iconBefore
+            ? { paddingLeft: 0 }
+            : iconAfter
+            ? { paddingRight: 0 }
+            : null
+        }
       >
         {text ? text : children ? children : ""}
       </span>
+      {iconAfter ? (
+        <img
+          src={iconAfter}
+          alt="Athenic Button Icon"
+          className="button__icon"
+          style={{ marginLeft: "8px" }}
+        />
+      ) : null}
     </button>
   );
 };

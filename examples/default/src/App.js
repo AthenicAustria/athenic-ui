@@ -39,10 +39,23 @@ class App extends Component {
         <Button variant="success">Success</Button>
         <Button variant="error">Error</Button>
         <Button variant="warning">Warning</Button>
-        <Button icon={icon_placeholder} variant="success" size="medium">
-          With Icon
+        <H2>With icon</H2>
+        <Button
+          style={{ marginLeft: 0 }}
+          iconBefore={icon_placeholder}
+          variant="tertiary"
+          size="medium"
+        >
+          Icon before
         </Button>
-        <Button variant="warning">Warning</Button>
+        <Button
+          style={{ marginLeft: 0 }}
+          iconAfter={icon_placeholder}
+          variant="tertiary"
+          size="medium"
+        >
+          Icon after
+        </Button>
       </div>
     );
   }
