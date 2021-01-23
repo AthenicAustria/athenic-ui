@@ -3,7 +3,7 @@ import "./App.css";
 import { H1, H2, H3, Button } from "athenic-ui";
 import "athenic-ui/dist/index.css";
 
-const icon_placeholder = require("../../../src/assets/img/icon_placeholder.png");
+import icon_placeholder from "../../../src/assets/img/icon_placeholder.png";
 
 class App extends Component {
   render() {
@@ -39,7 +39,9 @@ class App extends Component {
         <Button variant="success">Success</Button>
         <Button variant="error">Error</Button>
         <Button variant="warning">Warning</Button>
-        <Button icon={icon_placeholder}>With Icon</Button>
+        <Button icon={icon_placeholder} variant="success" size="medium">
+          With Icon
+        </Button>
       </div>
     );
   }

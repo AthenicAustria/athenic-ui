@@ -33,8 +33,20 @@ const Button = ({
       onClick={onClick}
       onMouseOver={onHover}
     >
-      <img src={icon} alt="Athenic Button Icon" />
-      <span>{text ? text : children ? children : ""}</span>
+      {icon ? (
+        <img
+          src={icon}
+          alt="Athenic Button Icon"
+          className="button__icon"
+          style={{ marginRight: "8px" }}
+        />
+      ) : null}
+      <span
+        className="button__content"
+        style={icon ? { paddingLeft: 0 } : null}
+      >
+        {text ? text : children ? children : ""}
+      </span>
     </button>
   );
 };
