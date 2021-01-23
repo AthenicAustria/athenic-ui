@@ -39,6 +39,7 @@ class App extends Component {
         <Button variant="success">Success</Button>
         <Button variant="error">Error</Button>
         <Button variant="warning">Warning</Button>
+        <Button icon={icon_placeholder}>With Icon</Button>
       </div>
     );
   }

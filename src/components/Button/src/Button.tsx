@@ -1,9 +1,6 @@
 import React, { CSSProperties, ReactChildren } from "react";
 import { ButtonSize, ButtonVariant } from "../types/ButtonTypes";
 import "./Button.scss";
-
-// const icon_placeholder = require("../../../assets/img/icon_placeholder.png");
-
 export interface ButtonProps {
   text: string | ReactChildren;
   style?: CSSProperties;
@@ -11,7 +8,7 @@ export interface ButtonProps {
   size?: ButtonSize;
   variant?: ButtonVariant;
   children?: ReactChildren;
-  icon?: File;
+  icon?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   onHover?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -25,6 +22,7 @@ const Button = ({
   children,
   onClick,
   onHover,
+  icon,
 }: ButtonProps) => {
   return (
     <button
@@ -35,6 +33,7 @@ const Button = ({
       onClick={onClick}
       onMouseOver={onHover}
     >
+      <img src={icon} alt="Athenic Button Icon" />
       <span>{text ? text : children ? children : ""}</span>
     </button>
   );
