@@ -42,6 +42,7 @@ class App extends Component {
         <Button icon={icon_placeholder} variant="success" size="medium">
           With Icon
         </Button>
+        <Button variant="warning">Warning</Button>
       </div>
     );
   }

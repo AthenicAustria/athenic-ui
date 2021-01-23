@@ -26,7 +26,7 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      style={style ? style : {}}
+      style={style ? style : null}
       className={`button ${size ? size : ""} ${className ? className : ""} ${
         variant ? variant : ""
       }`}
