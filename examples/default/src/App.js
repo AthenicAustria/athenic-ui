@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
-import { H1, H2, H3, Button, IconButton, Badge, Spinner } from "athenic-ui";
+import {
+  H1,
+  H2,
+  H3,
+  Button,
+  IconButton,
+  Badge,
+  Spinner,
+  TextInput,
+} from "athenic-ui";
 import "athenic-ui/dist/index.css";
 
 import icon_placeholder from "../../../src/assets/img/icon_placeholder.png";
@@ -103,6 +112,18 @@ class App extends Component {
         <H2>Custom Speed</H2>
         <Spinner speed={500} />
         <Spinner speed={2000} />
+
+        <H1>Text Input</H1>
+        <TextInput />
+
+        <H2>With Placeholder</H2>
+        <TextInput placeholder="Athenic UI" />
+
+        <H2>Disabled</H2>
+        <TextInput disabled={true} />
+
+        <H2>Invalid</H2>
+        <TextInput invalid={true} />
       </div>
     );
   }
