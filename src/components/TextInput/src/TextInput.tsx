@@ -9,6 +9,7 @@ export interface TextInputProps {
   invalid?: boolean;
   name?: string;
   label?: string;
+  validationMessage?: string;
 }
 
 const TextInput = ({
@@ -19,6 +20,7 @@ const TextInput = ({
   invalid,
   name,
   label,
+  validationMessage,
 }: TextInputProps) => {
   return (
     <div className="text-input">
@@ -39,6 +41,12 @@ const TextInput = ({
           invalid ? "invalid" : ""
         }`}
       ></input>
+      {validationMessage ? (
+        <small className="text-input__validation-message">
+          {validationMessage}
+        </small>
+      ) : null}
+      <i className="fas fa-exclamation-triangle"></i>
     </div>
   );
 };

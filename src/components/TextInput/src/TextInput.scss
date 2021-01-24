@@ -31,5 +31,12 @@
     display: block;
     margin-bottom: 6px;
     font-family: var(--font-primary);
+    font-weight: 600;
+  }
+
+  &__validation-message {
+    display: block;
+    margin-top: 6px;
+    color: var(--color-error);
   }
 }

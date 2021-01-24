@@ -127,6 +127,9 @@ class App extends Component {
 
         <H2>With Label</H2>
         <TextInput label="E-Mail" />
+
+        <H2>With Validation-Message</H2>
+        <TextInput validationMessage="Please enter a valid E-Mail" />
       </div>
     );
   }
