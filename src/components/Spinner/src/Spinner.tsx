@@ -14,6 +14,7 @@ export interface SpinnerProps {
 }
 
 const Spinner = ({ variant, size, speed, style }: SpinnerProps) => {
+  speed ? (speed = speed / 1000) : null;
   return (
     <div
       className={`spinner ${variant ? variant : ""} ${size ? size : ""}`}

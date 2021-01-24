@@ -95,7 +95,8 @@ class App extends Component {
         <Spinner size="large" />
 
         <H2>Custom Speed</H2>
-        <Spinner speed={4} />
+        <Spinner speed={500} />
+        <Spinner speed={2000} />
       </div>
     );
   }
