@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "webpack --config webpack.config.js --progress -w",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js --progress",
     "serve": "webpack serve --mode development --open",
     "test": "jest --config ./jest.config.ts",
     "storybook": "start-storybook -p 6006",
