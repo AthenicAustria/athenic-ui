@@ -56,14 +56,14 @@ class App extends Component {
         </Button>
 
         <H2>Disabled</H2>
-        <Button
-          style={{ marginLeft: 0 }}
-          iconBefore={icon_placeholder}
-          variant="tertiary"
-          size="medium"
-          disabled={true}
-        >
-          Icon before
+        <Button style={{ marginLeft: 0 }} size="small" disabled={true}>
+          disabled - small
+        </Button>
+        <Button size="medium" disabled={true}>
+          disabled - medium
+        </Button>
+        <Button size="large" disabled={true}>
+          disabled - large
         </Button>
       </div>
     );
