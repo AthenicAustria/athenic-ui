@@ -8,8 +8,8 @@
     "url": "https://github.com/b3h3m0th/athenic-ui"
   },
   "scripts": {
-    "start": "webpack --config webpack.config.js --progress",
-    "build": "webpack --config webpack.config.js -w false",
+    "start": "webpack --config webpack.config.js --progress -w",
+    "build": "webpack --config webpack.config.js",
     "serve": "webpack serve --mode development --open",
     "test": "jest --config ./jest.config.ts",
     "storybook": "start-storybook -p 6006",

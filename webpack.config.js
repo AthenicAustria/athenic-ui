@@ -8,7 +8,7 @@ module.exports = [
     entry: {
       app: path.join(__dirname, "src", "index.tsx"),
     },
-    watch: true,
+    watch: false,
     target: "web",
     resolve: {
       extensions: [".ts", ".tsx", ".js"],
@@ -53,7 +53,7 @@ module.exports = [
     entry: {
       app: path.join(__dirname, "src", "index.ts"),
     },
-    watch: true,
+    watch: false,
     target: "web",
     resolve: {
       extensions: [".ts", ".tsx", ".js"],
