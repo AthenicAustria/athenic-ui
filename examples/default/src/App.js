@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { H1, H2, H3, Button } from "athenic-ui";
+import { H1, H2, H3, Button, Badge } from "athenic-ui";
 import "athenic-ui/dist/index.css";
 
 import icon_placeholder from "../../../src/assets/img/icon_placeholder.png";
@@ -65,6 +65,23 @@ class App extends Component {
         <Button size="large" disabled={true}>
           disabled - large
         </Button>
+
+        <H1>Badges</H1>
+        <H2>Tint</H2>
+        <Badge label="primary" style={{ marginRight: 0 }} />
+        <Badge label="secondary" variant="secondary" />
+        <Badge label="tertiary" variant="tertiary" />
+        <Badge label="success" variant="success" />
+        <Badge label="warning" variant="warning" />
+        <Badge label="error" variant="error" />
+
+        <H2>Solid</H2>
+        <Badge label="primary" solid={true} style={{ marginRight: 0 }} />
+        <Badge label="secondary" variant="secondary" solid={true} />
+        <Badge label="tertiary" variant="tertiary" solid={true} />
+        <Badge label="success" variant="success" solid={true} />
+        <Badge label="warning" variant="warning" solid={true} />
+        <Badge label="error" variant="error" solid={true} />
       </div>
     );
   }
