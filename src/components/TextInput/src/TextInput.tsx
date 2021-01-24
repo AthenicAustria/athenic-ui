@@ -1,5 +1,7 @@
 import React from "react";
 import "./TextInput.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 
 export interface TextInputProps {
   placeholder?: string;
@@ -43,10 +45,10 @@ const TextInput = ({
       ></input>
       {validationMessage ? (
         <small className="text-input__validation-message">
-          {validationMessage}
+          <FontAwesomeIcon icon={faExclamationTriangle} />
+          <span style={{ marginLeft: "4px" }}>{validationMessage}</span>
         </small>
       ) : null}
-      <i className="fas fa-exclamation-triangle"></i>
     </div>
   );
 };
