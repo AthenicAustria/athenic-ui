@@ -1,6 +1,10 @@
 // Button.stories.tsx
 
 import React from "react";
+import { Meta } from "@storybook/react/types-6-0";
 import { Button } from "./";
 
-export const Primary: React.VFC<{}> = () => <Button text="asdf"></Button>;
+export default {
+  title: "Component/Button",
+  component: Button,
+} as Meta;
