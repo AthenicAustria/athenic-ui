@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
-import { H1, H2, H3, Button, Badge, Spinner } from "athenic-ui";
+import { H1, H2, H3, Button, IconButton, Badge, Spinner } from "athenic-ui";
 import "athenic-ui/dist/index.css";
 
 import icon_placeholder from "../../../src/assets/img/icon_placeholder.png";
+import arrow_left from "../../../src/assets/img/arrow_right.png";
 
 class App extends Component {
   render() {
@@ -65,6 +66,11 @@ class App extends Component {
         <Button size="large" disabled={true}>
           disabled - large
         </Button>
+
+        <H2>Icon Button</H2>
+        <IconButton style={{ marginLeft: 0 }} icon={arrow_left} size="small" />
+        <IconButton style={{ marginLeft: 0 }} icon={arrow_left} size="medium" />
+        <IconButton style={{ marginLeft: 0 }} icon={arrow_left} size="large" />
 
         <H1>Badges</H1>
         <H2>Tint</H2>

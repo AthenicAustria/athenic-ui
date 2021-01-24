@@ -1,0 +1,43 @@
+.icon_button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 8px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-white);
+  font-family: var(--font-primary);
+  color: var(--color-white);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__content {
+    padding: 12px;
+    max-height: 20px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.small .icon_button__content {
+  padding: 8px;
+  border-radius: 8px;
+  max-height: 16px;
+}
+
+.medium .icon_button__content {
+  //default settings
+}
+
+.large .icon_button__content {
+  padding: 16px;
+  max-height: 24px;
+}

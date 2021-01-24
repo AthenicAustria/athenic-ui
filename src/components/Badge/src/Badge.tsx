@@ -7,11 +7,16 @@ export interface BadgeProps {
   variant?: BadgeVariant;
   solid?: BadgeSolid;
   style?: CSSProperties;
+  className?: string;
 }
 
-const Badge = ({ label, variant, solid }: BadgeProps) => {
+const Badge = ({ label, variant, solid, className }: BadgeProps) => {
   return (
-    <div className={`badge ${variant ? variant : ""} ${solid ? "solid" : ""}`}>
+    <div
+      className={`badge ${variant ? variant : ""} ${solid ? "solid" : ""} ${
+        className ? className : ""
+      }`}
+    >
       <small className={`badge__content`}>{label}</small>
     </div>
   );
