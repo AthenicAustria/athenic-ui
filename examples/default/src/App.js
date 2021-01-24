@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { H1, H2, H3, Button, Badge } from "athenic-ui";
+import { H1, H2, H3, Button, Badge, Spinner } from "athenic-ui";
 import "athenic-ui/dist/index.css";
 
 import icon_placeholder from "../../../src/assets/img/icon_placeholder.png";
@@ -82,6 +82,20 @@ class App extends Component {
         <Badge label="success" variant="success" solid={true} />
         <Badge label="warning" variant="warning" solid={true} />
         <Badge label="error" variant="error" solid={true} />
+
+        <H1>Spinner</H1>
+        <H2>Variants</H2>
+        <Spinner />
+        <Spinner variant="secondary" />
+        <Spinner variant="tertiary" />
+
+        <H2>Size</H2>
+        <Spinner size="small" />
+        <Spinner size="medium" />
+        <Spinner size="large" />
+
+        <H2>Custom Speed</H2>
+        <Spinner speed={4} />
       </div>
     );
   }
