@@ -7,6 +7,8 @@ export interface TextInputProps {
   form?: string;
   value?: string;
   invalid?: boolean;
+  name?: string;
+  label?: string;
 }
 
 const TextInput = ({
@@ -15,10 +17,19 @@ const TextInput = ({
   form,
   value,
   invalid,
+  name,
+  label,
 }: TextInputProps) => {
   return (
     <div className="text-input">
+      {label ? (
+        <label className="text-input__label" htmlFor={name}>
+          {label}
+        </label>
+      ) : null}
       <input
+        id={name ? name : null}
+        name={name ? name : null}
         form={form && form}
         type="text"
         placeholder={placeholder && placeholder}

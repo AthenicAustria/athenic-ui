@@ -124,6 +124,9 @@ class App extends Component {
 
         <H2>Invalid</H2>
         <TextInput invalid={true} />
+
+        <H2>With Label</H2>
+        <TextInput label="E-Mail" />
       </div>
     );
   }
