@@ -10,6 +10,7 @@
   "scripts": {
     "start": "webpack --config webpack.config.js --progress -w",
     "build": "webpack --config webpack.config.js --progress",
+    "deploy:netlify": "webpack --config webpack.config.js && cd examples/default && npm run build",
     "serve": "webpack serve --mode development --open",
     "test": "jest --config ./jest.config.ts",
     "storybook": "start-storybook -p 6006",
