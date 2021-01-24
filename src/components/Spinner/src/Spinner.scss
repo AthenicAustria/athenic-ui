@@ -5,7 +5,10 @@
   border-top: 4px solid var(--color-primary);
   width: 32px;
   height: 32px;
-  animation: spin attr(data-speed) linear infinite;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 0.885s;
   margin: 16px;
 
   &.default {
