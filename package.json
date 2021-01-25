@@ -1,6 +1,6 @@
 {
   "name": "athenic-ui",
-  "version": "1.0.23",
+  "version": "1.0.22",
   "description": "Athenic UI React component library",
   "main": "dist/index.js",
   "repository": {
