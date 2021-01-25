@@ -15,7 +15,7 @@
     "test": "jest --config ./jest.config.ts",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "docz": "docz build && docz serve",
+    "docz": "docz dev",
     "publish": "np"
   },
   "keywords": [
