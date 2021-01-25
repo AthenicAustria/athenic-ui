@@ -11,7 +11,7 @@ const SearchInput = ({ style, className }: SearchInput) => {
     <div className="search-input">
       <input
         type="text"
-        className={`search-input ${className ? className : ""}`}
+        className={`search-input__input ${className ? className : ""}`}
         style={style ? style : {}}
       />
     </div>
