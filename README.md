@@ -1,5 +1,8 @@
-<img width="760" height="500" src="https://raw.githubusercontent.com/b3h3m0th/athenic-ui/master/artwork/logo/logo.svg">
-
+<center>
+  <img width="760" height="500" src="https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/logo/logo.svg"> <br/>
+  <h3>👑 Building beautiful React Applications made simple</h3>
+</center>
+<hr/>
 # athenic-ui
 
 [![NPM](https://img.shields.io/npm/v/athenic-ui.svg)](https://www.npmjs.com/package/athenic-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
