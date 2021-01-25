@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="760" height="500" src="https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/logo/logo.svg"> <br/>
+  <img width="600" height="300" src="https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/logo/logo.svg"> <br/>
   <h3 align="center">👑 Building beautiful React Applications made simple</h3>
 </p>
 <hr/>
