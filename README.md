@@ -1,4 +1,4 @@
-<img width="760" height="500" src="https://raw.githubusercontent.com/b3h3m0th/athenic-ui/master/artwork/logo/logo.svg">g
+<img width="760" height="500" src="https://raw.githubusercontent.com/b3h3m0th/athenic-ui/master/artwork/logo/logo.svg">
 
 # athenic-ui
 
