@@ -90,4 +90,46 @@ module.exports = [
     },
     plugins: [],
   },
+  {
+    mode: "production",
+    entry: {
+      app: path.join(__dirname, "src", "index.ts"),
+    },
+    watch: false,
+    target: "web",
+    resolve: {
+      extensions: [".ts", ".tsx", ".js"],
+    },
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: "ts-loader",
+          exclude: "/node_modules/",
+        },
+        {
+          test: /\.s?css$/,
+          use: ["style-loader", "css-loader", "sass-loader"],
+        },
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                outputPath: "assets/img",
+              },
+            },
+          ],
+        },
+      ],
+    },
+    output: {
+      filename: "index.d.ts",
+      path: path.resolve(__dirname, "dist"),
+      libraryTarget: "umd",
+      library: "athenic-ui",
+    },
+    plugins: [],
+  },
 ];

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import "./TextInput.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
@@ -12,6 +12,8 @@ export interface TextInputProps {
   name?: string;
   label?: string;
   validationMessage?: string;
+  style?: CSSProperties;
+  className?: string;
 }
 
 const TextInput = ({
@@ -23,6 +25,8 @@ const TextInput = ({
   name,
   label,
   validationMessage,
+  style,
+  className,
 }: TextInputProps) => {
   return (
     <div className="text-input">
