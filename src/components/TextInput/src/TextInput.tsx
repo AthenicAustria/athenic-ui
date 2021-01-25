@@ -45,7 +45,8 @@ const TextInput = ({
         value={value && value}
         className={`text-input__input ${disabled ? "disabled" : ""} ${
           invalid ? "invalid" : ""
-        }`}
+        } ${className ? className : ""}`}
+        style={style ? style : {}}
       ></input>
       {validationMessage ? (
         <small className="text-input__validation-message">
