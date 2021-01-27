@@ -9,6 +9,7 @@ import {
   Badge,
   Spinner,
   TextInput,
+  Card,
 } from "athenic-ui";
 import "athenic-ui/dist/index.css";
 
@@ -130,6 +131,13 @@ class App extends Component {
 
         <H2>With Validation-Message</H2>
         <TextInput validationMessage="Please enter a valid E-Mail" />
+
+        <H1>Card</H1>
+        <Card title="Athenic UI - Card title">
+          <TextInput placeholder="E-Mail" />
+          <TextInput placeholder="E-Mail" />
+          <Button>Athenic - Card content</Button>
+        </Card>
       </div>
     );
   }

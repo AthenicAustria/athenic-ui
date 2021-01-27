@@ -1,0 +1,11 @@
+.card {
+  border-radius: 16px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-white);
+  padding: 8px 16px 16px 16px;
+  width: 30vw;
+
+  &__title {
+    margin-left: 16px;
+  }
+}
