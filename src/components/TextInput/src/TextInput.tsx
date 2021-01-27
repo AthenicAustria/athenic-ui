@@ -2,6 +2,7 @@ import React, { CSSProperties } from "react";
 import "./TextInput.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
+import { TextInputType } from "../types/TextInput";
 
 export interface TextInputProps {
   placeholder?: string;
@@ -14,6 +15,7 @@ export interface TextInputProps {
   validationMessage?: string;
   style?: CSSProperties;
   className?: string;
+  type?: TextInputType;
 }
 
 const TextInput = ({
@@ -27,6 +29,7 @@ const TextInput = ({
   validationMessage,
   style,
   className,
+  type,
 }: TextInputProps) => {
   return (
     <div className="text-input">
@@ -39,7 +42,7 @@ const TextInput = ({
         id={name ? name : null}
         name={name ? name : null}
         form={form && form}
-        type="text"
+        type={type ? type : "text"}
         placeholder={placeholder && placeholder}
         disabled={disabled}
         value={value && value}

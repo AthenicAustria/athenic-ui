@@ -115,22 +115,28 @@ class App extends Component {
         <Spinner speed={2000} />
 
         <H1>Text Input</H1>
-        <TextInput />
+        <TextInput style={{ marginLeft: "0px" }} />
 
         <H2>With Placeholder</H2>
-        <TextInput placeholder="Athenic UI" />
+        <TextInput placeholder="Athenic UI" style={{ marginLeft: 0 }} />
 
         <H2>Disabled</H2>
-        <TextInput disabled={true} />
+        <TextInput disabled={true} style={{ marginLeft: 0 }} />
 
         <H2>Invalid</H2>
-        <TextInput invalid={true} />
+        <TextInput invalid={true} style={{ marginLeft: 0 }} />
 
         <H2>With Label</H2>
-        <TextInput label="E-Mail" />
+        <TextInput label="E-Mail" style={{ marginLeft: 0 }} />
 
         <H2>With Validation-Message</H2>
-        <TextInput validationMessage="Please enter a valid E-Mail" />
+        <TextInput
+          validationMessage="Please enter a valid E-Mail"
+          style={{ marginLeft: 0 }}
+        />
+
+        <H2>Password</H2>
+        <TextInput type="password" style={{ marginLeft: 0 }} />
 
         <H1>Card</H1>
         <Card title="Athenic UI - Card title">
