@@ -1,3 +1,5 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
 export type ButtonSize = "small" | "medium" | "large";
 export type ButtonVariant =
   | "primary"
@@ -6,3 +8,5 @@ export type ButtonVariant =
   | "success"
   | "warning"
   | "error";
+
+export type ButtonIconType = IconDefinition;

@@ -1,6 +1,12 @@
 import React, { CSSProperties, ReactChild, ReactChildren } from "react";
-import { ButtonSize, ButtonVariant } from "../types/ButtonTypes";
+import {
+  ButtonIconType,
+  ButtonSize,
+  ButtonVariant,
+} from "../types/ButtonTypes";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Button.scss";
+
 export interface ButtonProps {
   text?: string | ReactChildren;
   style?: CSSProperties;
@@ -8,8 +14,8 @@ export interface ButtonProps {
   size?: ButtonSize;
   variant?: ButtonVariant;
   children?: ReactChildren | ReactChild | string;
-  iconBefore?: string | any;
-  iconAfter?: string | any;
+  iconBefore?: ButtonIconType;
+  iconAfter?: ButtonIconType;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   onHover?: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
@@ -39,32 +45,22 @@ const Button = ({
       disabled={disabled}
     >
       {iconBefore ? (
-        <img
-          src={iconBefore}
-          alt="Athenic Button Icon"
-          className="button__icon"
-          style={{ marginRight: "8px" }}
-        />
+        <FontAwesomeIcon className="button__icon-before" icon={iconBefore} />
       ) : null}
       <span
         className="button__content"
         style={
           iconBefore
-            ? { paddingLeft: 0 }
+            ? { paddingLeft: 4 }
             : iconAfter
-            ? { paddingRight: 0 }
+            ? { paddingRight: 4 }
             : null
         }
       >
         {text ? text : children ? children : ""}
       </span>
       {iconAfter ? (
-        <img
-          src={iconAfter}
-          alt="Athenic Button Icon"
-          className="button__icon"
-          style={{ marginLeft: "8px" }}
-        />
+        <FontAwesomeIcon className="button__icon-after" icon={iconAfter} />
       ) : null}
     </button>
   );

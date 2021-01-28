@@ -54,7 +54,7 @@ const App = () => {
       <H2>With icon</H2>
       <Button
         style={{ marginLeft: 0 }}
-        iconBefore={icon_placeholder}
+        iconBefore={faShoppingBag}
         variant="tertiary"
         size="medium"
       >
@@ -62,23 +62,15 @@ const App = () => {
       </Button>
       <Button
         style={{ marginLeft: 0 }}
-        iconAfter={icon_placeholder}
+        iconAfter={faShoppingBag}
         variant="tertiary"
         size="medium"
       >
         Icon after
       </Button>
-      <Button
-        style={{ marginLeft: 0 }}
-        iconBefore={icon_placeholder}
-        variant="tertiary"
-        size="medium"
-      >
-        Icon before
+      <Button style={{ marginLeft: 0 }} variant="tertiary" size="medium">
+        Icon beforeasdf
       </Button>
-      <FontAwesomeIcon icon={faShoppingCart} />
-      <FontAwesomeIcon icon={faShoppingBag} />
-      <FontAwesomeIcon icon={faShoppingBasket} />
 
       <H2>Disabled</H2>
       <Button style={{ marginLeft: 0 }} size="small" disabled={true}>

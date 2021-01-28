@@ -13,13 +13,18 @@
   align-items: center;
   justify-content: space-evenly;
 
-  &__icon {
+  &__icon-before {
     margin: 4px;
-    max-height: 10px;
+    margin-left: 12px;
   }
 
   &__content {
     padding: 12px 18px;
+  }
+
+  &__icon-after {
+    margin: 4px;
+    margin-right: 12px;
   }
 
   &:hover {
