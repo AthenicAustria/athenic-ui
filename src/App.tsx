@@ -1,4 +1,5 @@
 import React from "react";
+import packageJson from "../package.json";
 import { H1 } from "./components/H1";
 import { H2 } from "./components/H2";
 import { H3 } from "./components/H3";
@@ -8,18 +9,23 @@ import { Badge } from "./components/Badge";
 import { Spinner } from "./components/Spinner";
 import { TextInput } from "./components/TextInput";
 import { Card } from "./components/Card";
+import { Link } from "./components/Link";
 import "./index.scss";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
   faShoppingBag,
   faShoppingBasket,
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
+import * as faIcons from "@fortawesome/free-solid-svg-icons";
+var fontawesomeIcons: any = [];
+Object.values(faIcons).forEach((f) => fontawesomeIcons.push(f));
+console.log(fontawesomeIcons);
 
 import icon_placeholder from "./assets/img/icon_placeholder.png";
 import arrow_right from "./assets/img/arrow_right.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const App = () => {
   return (
@@ -65,6 +71,15 @@ const App = () => {
         Icon after
       </Button>
 
+      <H2>With link</H2>
+      <Button
+        variant="primary"
+        link={packageJson.repository.url}
+        style={{ marginLeft: 0 }}
+      >
+        Link to the Github-Repo
+      </Button>
+
       <H2>Disabled</H2>
       <Button style={{ marginLeft: 0 }} size="small" disabled={true}>
         disabled - small
@@ -82,6 +97,12 @@ const App = () => {
       <IconButton style={{ marginLeft: 0 }} icon={arrow_right} size="large" />
 
       <H1>All Icons</H1>
+      <Link to={`https://fontawesome.com/`} text="Icons by Font Awesome" />
+      <Card size="auto" style={{ marginLeft: 0 }}>
+        {Object.values(faIcons).map((f: any) => (
+          <FontAwesomeIcon icon={f} style={{ margin: 5 }} />
+        ))}
+      </Card>
 
       <H1>Badges</H1>
       <H2>Tint</H2>

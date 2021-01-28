@@ -7,3 +7,4 @@ export { Badge } from "./components/Badge";
 export { Spinner } from "./components/Spinner";
 export { TextInput } from "./components/TextInput";
 export { Card } from "./components/Card";
+export { Link } from "./components/Link";

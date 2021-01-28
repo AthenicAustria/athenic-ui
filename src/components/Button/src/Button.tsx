@@ -19,6 +19,7 @@ export interface ButtonProps {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   onHover?: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
+  link?: string;
 }
 
 const Button = ({
@@ -33,6 +34,7 @@ const Button = ({
   iconBefore,
   iconAfter,
   disabled,
+  link,
 }: ButtonProps) => {
   return (
     <button
@@ -40,9 +42,12 @@ const Button = ({
       className={`button ${size ? size : ""} ${className ? className : ""} ${
         variant ? variant : ""
       } ${disabled ? "disabled" : ""}`}
-      onClick={onClick}
+      onClick={() => {
+        onClick && onClick;
+        link && (window.location.href = link);
+      }}
       onMouseOver={onHover}
-      disabled={disabled && disabled}
+      disabled={disabled}
     >
       {iconBefore ? (
         <FontAwesomeIcon className="button__icon-before" icon={iconBefore} />
