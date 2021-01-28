@@ -4,6 +4,7 @@ import React, {
   HtmlHTMLAttributes,
 } from "react";
 import "./Link.scss";
+//test
 
 export interface LinkProps {
   text: string;
