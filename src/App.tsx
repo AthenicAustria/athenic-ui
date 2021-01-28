@@ -11,8 +11,8 @@ import { Card } from "./components/Card";
 import "./index.scss";
 import "../dist/index.css";
 
-const icon_placeholder = require("../img/icon_placeholder.png");
-const arrow_right = require("./assets/img/arrow_right.png");
+import icon_placeholder from "./assets/img/icon_placeholder.png";
+import arrow_right from "./assets/img/arrow_right.png";
 
 const App = () => {
   return (
