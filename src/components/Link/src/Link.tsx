@@ -15,16 +15,14 @@ export interface LinkProps {
 
 const Link = ({ to, text, target, className, style }: LinkProps) => {
   return (
-    <div className="link">
-      <a
-        href={to}
-        className={`link__link ${className}`}
-        style={style ? style : null}
-        target={target ? target : ""}
-      >
-        {text}
-      </a>
-    </div>
+    <a
+      href={to}
+      className={`link ${className}`}
+      style={style ? style : null}
+      target={target ? target : ""}
+    >
+      {text}
+    </a>
   );
 };
 

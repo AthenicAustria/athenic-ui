@@ -163,11 +163,21 @@ const App = () => {
       <Card />
       <Card size="large" />
       <H2>Example</H2>
-      <Card title="Athenic UI - Card title" size="auto">
+      <Card
+        title="Athenic UI - Card title"
+        size="auto"
+        style={{ marginLeft: 0 }}
+      >
         <TextInput placeholder="Password" />
         <TextInput placeholder="E-Mail" type="password" />
         <Button>Athenic Card content</Button>
       </Card>
+
+      <H1>Link</H1>
+      <p>
+        This is a simple <Link to={packageJson.repository.url} text="Link" /> to
+        the Athenic UI Github-Repo
+      </p>
     </div>
   );
 };
