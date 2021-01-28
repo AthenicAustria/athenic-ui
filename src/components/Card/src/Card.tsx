@@ -6,7 +6,12 @@ import "./Card.scss";
 export interface CardProps {
   style?: CSSProperties;
   className?: string;
-  children?: ReactChildren | ReactChild;
+  children?:
+    | ReactChild
+    | ReactChild[]
+    | ReactChildren
+    | ReactChildren[]
+    | string;
   title?: string;
   size?: CardSize;
 }

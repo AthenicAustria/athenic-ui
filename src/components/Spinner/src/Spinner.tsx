@@ -7,10 +7,10 @@ import {
 import "./Spinner.scss";
 
 export interface SpinnerProps {
-  variant: SpinnerVariant;
-  size: SpinnerSize;
-  speed: SpinnerSpeed;
-  style: CSSProperties;
+  variant?: SpinnerVariant;
+  size?: SpinnerSize;
+  speed?: SpinnerSpeed;
+  style?: CSSProperties;
 }
 
 const Spinner = ({ variant, size, speed, style }: SpinnerProps) => {

@@ -1,13 +1,13 @@
-import React, { CSSProperties, ReactChildren } from "react";
+import React, { CSSProperties, ReactChild, ReactChildren } from "react";
 import { ButtonSize, ButtonVariant } from "../types/ButtonTypes";
 import "./Button.scss";
 export interface ButtonProps {
-  text: string | ReactChildren;
+  text?: string | ReactChildren;
   style?: CSSProperties;
   className?: string;
   size?: ButtonSize;
   variant?: ButtonVariant;
-  children?: ReactChildren;
+  children?: ReactChildren | ReactChild | string;
   iconBefore?: string;
   iconAfter?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
