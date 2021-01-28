@@ -10,6 +10,13 @@ import { TextInput } from "./components/TextInput";
 import { Card } from "./components/Card";
 import "./index.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faShoppingBag,
+  faShoppingBasket,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
+
 import icon_placeholder from "./assets/img/icon_placeholder.png";
 import arrow_right from "./assets/img/arrow_right.png";
 
@@ -61,6 +68,17 @@ const App = () => {
       >
         Icon after
       </Button>
+      <Button
+        style={{ marginLeft: 0 }}
+        iconBefore={icon_placeholder}
+        variant="tertiary"
+        size="medium"
+      >
+        Icon before
+      </Button>
+      <FontAwesomeIcon icon={faShoppingCart} />
+      <FontAwesomeIcon icon={faShoppingBag} />
+      <FontAwesomeIcon icon={faShoppingBasket} />
 
       <H2>Disabled</H2>
       <Button style={{ marginLeft: 0 }} size="small" disabled={true}>

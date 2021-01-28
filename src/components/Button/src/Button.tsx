@@ -8,8 +8,8 @@ export interface ButtonProps {
   size?: ButtonSize;
   variant?: ButtonVariant;
   children?: ReactChildren | ReactChild | string;
-  iconBefore?: string;
-  iconAfter?: string;
+  iconBefore?: string | any;
+  iconAfter?: string | any;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   onHover?: React.MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
