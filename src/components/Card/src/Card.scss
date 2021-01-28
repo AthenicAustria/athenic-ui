@@ -1,11 +1,35 @@
 .card {
+  display: inline-block;
   border-radius: 16px;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
   background-color: var(--color-white);
   padding: 8px 16px 16px 16px;
-  width: 30vw;
+  width: fit-content;
+  min-width: 240px;
+  min-height: 240px;
+  margin: 16px;
 
   &__title {
     margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  &.auto {
+    min-width: 0px;
+    min-height: 0px;
+  }
+
+  &.small {
+    min-width: 120px;
+    min-height: 120px;
+  }
+
+  &.medium {
+    //default
+  }
+
+  &.large {
+    min-width: 320px;
+    min-height: 320px;
   }
 }

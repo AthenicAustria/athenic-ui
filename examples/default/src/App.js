@@ -139,9 +139,12 @@ class App extends Component {
         <TextInput type="password" style={{ marginLeft: 0 }} />
 
         <H1>Card</H1>
-        <Card title="Athenic UI - Card title">
-          <TextInput placeholder="E-Mail" />
-          <TextInput placeholder="E-Mail" />
+        <Card size="small" />
+        <Card />
+        <Card size="large" />
+        <Card title="Athenic UI - Card title" size="auto">
+          <TextInput placeholder="Password" />
+          <TextInput placeholder="E-Mail" type="password" />
           <Button>Athenic - Card content</Button>
         </Card>
       </div>
