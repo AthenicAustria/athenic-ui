@@ -1,2 +1,7 @@
 @use "./styles/fonts";
 @use "./styles/colors";
+
+body {
+  margin: 0;
+  padding: 1em;
+}

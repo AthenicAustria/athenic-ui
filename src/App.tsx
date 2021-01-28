@@ -9,7 +9,6 @@ import { Spinner } from "./components/Spinner";
 import { TextInput } from "./components/TextInput";
 import { Card } from "./components/Card";
 import "./index.scss";
-import "../dist/index.css";
 
 import icon_placeholder from "./assets/img/icon_placeholder.png";
 import arrow_right from "./assets/img/arrow_right.png";
