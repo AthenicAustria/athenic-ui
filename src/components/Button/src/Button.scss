@@ -16,6 +16,7 @@
   &__icon-before {
     margin: 4px;
     margin-left: 12px;
+    max-height: 16px;
   }
 
   &__content {
@@ -25,6 +26,7 @@
   &__icon-after {
     margin: 4px;
     margin-right: 12px;
+    max-height: 16px;
   }
 
   &:hover {

@@ -42,7 +42,7 @@ const Button = ({
       } ${disabled ? "disabled" : ""}`}
       onClick={onClick}
       onMouseOver={onHover}
-      disabled={disabled}
+      disabled={disabled && disabled}
     >
       {iconBefore ? (
         <FontAwesomeIcon className="button__icon-before" icon={iconBefore} />
@@ -51,9 +51,9 @@ const Button = ({
         className="button__content"
         style={
           iconBefore
-            ? { paddingLeft: 4 }
+            ? { paddingLeft: 6 }
             : iconAfter
-            ? { paddingRight: 4 }
+            ? { paddingRight: 6 }
             : null
         }
       >

@@ -12,6 +12,7 @@ import "./index.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowRight,
   faShoppingBag,
   faShoppingBasket,
   faShoppingCart,
@@ -60,16 +61,8 @@ const App = () => {
       >
         Icon before
       </Button>
-      <Button
-        style={{ marginLeft: 0 }}
-        iconAfter={faShoppingBag}
-        variant="tertiary"
-        size="medium"
-      >
+      <Button iconAfter={faShoppingBag} variant="tertiary" size="medium">
         Icon after
-      </Button>
-      <Button style={{ marginLeft: 0 }} variant="tertiary" size="medium">
-        Icon beforeasdf
       </Button>
 
       <H2>Disabled</H2>
@@ -87,6 +80,8 @@ const App = () => {
       <IconButton style={{ marginLeft: 0 }} icon={arrow_right} size="small" />
       <IconButton style={{ marginLeft: 0 }} icon={arrow_right} size="medium" />
       <IconButton style={{ marginLeft: 0 }} icon={arrow_right} size="large" />
+
+      <H1>All Icons</H1>
 
       <H1>Badges</H1>
       <H2>Tint</H2>
