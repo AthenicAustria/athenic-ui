@@ -19,9 +19,6 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import * as faIcons from "@fortawesome/free-solid-svg-icons";
-var fontawesomeIcons: any = [];
-Object.values(faIcons).forEach((f) => fontawesomeIcons.push(f));
-console.log(fontawesomeIcons);
 
 import icon_placeholder from "./assets/img/icon_placeholder.png";
 import arrow_right from "./assets/img/arrow_right.png";
@@ -99,8 +96,8 @@ const App = () => {
       <H1>All Icons</H1>
       <Link to={`https://fontawesome.com/`} text="Icons by Font Awesome" />
       <Card size="auto" style={{ marginLeft: 0 }}>
-        {Object.values(faIcons).map((f: any) => (
-          <FontAwesomeIcon icon={f} style={{ margin: 5 }} />
+        {Object.values(faIcons).map((f: any, i: number) => (
+          <FontAwesomeIcon icon={f} style={{ margin: 5 }} key={i} />
         ))}
       </Card>
 
