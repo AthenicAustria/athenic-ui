@@ -8,6 +8,6 @@ sidebar: auto
 
 Welcome to Athenic UI, a React based component library that helps you creating beautiful and modern websites in no time!
 
-## Introduction
+## Installation
 
 You can install Athenic UI using `npm install athenic-ui`.

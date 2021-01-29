@@ -37,7 +37,7 @@ module.exports = {
     lastUpdated: false,
     logo:
       "https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/logo/logo.png",
-    searchPlaceholder: "Search for sth very important...",
+    searchPlaceholder: "Search...",
     nav: [
       {
         text: "Home",
@@ -64,7 +64,7 @@ module.exports = {
         {
           title: "Documentation",
           collapsable: false,
-          children: ["", "introduction", "installation"]
+          children: [""]
         }
       ]
     },
