@@ -176,7 +176,11 @@ const App = () => {
       <H1>Link</H1>
       <p>
         This is a simple <Link to={packageJson.repository.url} text="Link" /> to
-        the Athenic UI Github-Repo
+        the Athenic UI Github-Repo.
+      </p>
+      <p>
+        Here is another sample{" "}
+        <Link to={packageJson.repository.url} text="Link" />.
       </p>
     </div>
   );
