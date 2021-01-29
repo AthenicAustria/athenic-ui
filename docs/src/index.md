@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/logo/logo.png
 actionText: View Documentation →
 actionLink: /documentation/
 features:
