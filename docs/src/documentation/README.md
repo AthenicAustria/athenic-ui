@@ -4,12 +4,10 @@ sidebar: auto
 
 # Documentation
 
-## foo
+## Introduction
 
-- Type: `string`
-- Default: `/`
+Welcome to Athenic UI, a React based component library that helps you creating beautiful and modern websites in no time!
 
-## bar
+## Introduction
 
-- Type: `string`
-- Default: `/`
+You can install Athenic UI using `npm install athenic-ui`.

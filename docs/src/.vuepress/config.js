@@ -36,7 +36,8 @@ module.exports = {
     editLinkText: "",
     lastUpdated: false,
     logo:
-      "https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/logo/logo.svg",
+      "https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/logo/logo.png",
+    searchPlaceholder: "Search for sth very important...",
     nav: [
       {
         text: "Home",
@@ -63,11 +64,11 @@ module.exports = {
         {
           title: "Documentation",
           collapsable: false,
-          children: ["", "introduction"]
+          children: ["", "introduction", "installation"]
         }
       ]
     },
-    displayAllHeaders: true
+    displayAllHeaders: false
   },
 
   /**
