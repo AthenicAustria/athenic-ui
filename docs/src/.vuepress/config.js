@@ -35,7 +35,13 @@ module.exports = {
     docsDir: "/docs",
     editLinkText: "",
     lastUpdated: false,
+    logo:
+      "https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/logo/logo.svg",
     nav: [
+      {
+        text: "Home",
+        link: "/"
+      },
       {
         text: "Documentation",
         link: "/documentation/"
@@ -57,10 +63,11 @@ module.exports = {
         {
           title: "Documentation",
           collapsable: false,
-          children: ["", "using-vue"]
+          children: ["", "introduction"]
         }
       ]
-    }
+    },
+    displayAllHeaders: true
   },
 
   /**

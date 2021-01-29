@@ -4,11 +4,11 @@ heroImage: https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/lo
 actionText: View Documentation →
 actionLink: /documentation/
 features:
-  - title: Feature 1 Title
-    details: Feature 1 Description
-  - title: Feature 2 Title
-    details: Feature 2 Description
-  - title: Feature 3 Title
-    details: Feature 3 Description
+  - title: ⚛️ React based
+    details: Athenic UI is a React based library. Components can we easily implemented and used
+  - title: ✨ Moden UI elements
+    details: Athenic UI means beautiful and modern UI that convinces and amazes
+  - title: 🤡 Very simple usage
+    details: Usage is basically a piece of cake. Import the Athenic components simply with Import * as Athenic from "athenic-ui" or import single components with import { Button } from "athenic-ui"
 footer: Made by b3h3m0th with ❤️
 ---
