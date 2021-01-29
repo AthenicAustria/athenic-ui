@@ -174,13 +174,16 @@ const App = () => {
       </Card>
 
       <H1>Link</H1>
+      <H2>Standard</H2>
       <p>
         This is a simple <Link to={packageJson.repository.url} text="Link" /> to
         the Athenic UI Github-Repo.
       </p>
+
+      <H2>Target new Tab</H2>
       <p>
         Here is another sample{" "}
-        <Link to={packageJson.repository.url} text="Link" />.
+        <Link to={packageJson.repository.url} text="Link" target="_blank" />.
       </p>
     </div>
   );
