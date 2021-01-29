@@ -8,7 +8,7 @@
 
 [![NPM](https://img.shields.io/npm/v/athenic-ui.svg)](https://www.npmjs.com/package/athenic-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-##### 📝 View the [Documentation](https://docs.athenic.at/)
+##### 📝 View the Documentation (coming soon)
 
 ##### 🔥 Explore the [Demo](https://ui.athenic.at/)
 
