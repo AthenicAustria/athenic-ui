@@ -13,7 +13,7 @@ Inquirer.prompt([
 ]).then(async (answers) => {
   try {
     await exec(
-      `git commit -m "🔖 published ${packageJson.version}"`,
+      `git commit -m \"🔖 published ${packageJson.version}\"`,
       (error, stdout, stderr) => {
         if (error) console.log(error);
         if (stderr) console.log(stderr);
@@ -31,9 +31,6 @@ Inquirer.prompt([
     await exec(`npm run build`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
-
-      // chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
-      console.log(stdout);
     });
 
     await exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
@@ -53,7 +50,9 @@ Inquirer.prompt([
       );
       console.log(stdout);
     });
+    process.exit(0);
   } catch (err) {
     console.log(err);
+    process.exit(1);
   }
 });
