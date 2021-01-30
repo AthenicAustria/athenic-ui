@@ -12,22 +12,6 @@ Inquirer.prompt([
   },
 ]).then(async (answers) => {
   try {
-    await exec(`npm run build`, (error, stdout, stderr) => {
-      if (error) console.log(error);
-      if (stderr) console.log(stderr);
-
-      // chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
-      console.log(stdout);
-    });
-
-    await exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
-      if (error) console.log(error);
-      if (stderr) console.log(stderr);
-
-      // chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
-      console.log(stdout);
-    });
-
     await exec(
       `git commit -m "🔖 published ${packageJson.version}"`,
       (error, stdout, stderr) => {
@@ -41,7 +25,22 @@ Inquirer.prompt([
     await exec(`git push`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
+      console.log(stdout);
+    });
 
+    await exec(`npm run build`, (error, stdout, stderr) => {
+      if (error) console.log(error);
+      if (stderr) console.log(stderr);
+
+      // chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
+      console.log(stdout);
+    });
+
+    await exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
+      if (error) console.log(error);
+      if (stderr) console.log(stderr);
+
+      // chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
       console.log(stdout);
     });
 
