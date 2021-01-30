@@ -12,7 +12,7 @@ Inquirer.prompt([
   },
 ]).then(async (answers) => {
   try {
-    await exec(
+    exec(
       `git commit -m \"🔖 published ${packageJson.version}\"`,
       (error, stdout, stderr) => {
         if (error) console.log(error);
@@ -22,18 +22,18 @@ Inquirer.prompt([
       }
     );
 
-    await exec(`git push`, (error, stdout, stderr) => {
+    exec(`git push`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
       console.log(stdout);
     });
 
-    await exec(`npm run build`, (error, stdout, stderr) => {
+    exec(`npm run build`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
     });
 
-    await exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
+    exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
 
@@ -41,7 +41,7 @@ Inquirer.prompt([
       console.log(stdout);
     });
 
-    await exec(`npm publish`, (error, stdout, stderr) => {
+    exec(`npm publish`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
 
