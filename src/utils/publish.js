@@ -15,14 +15,14 @@ Inquirer.prompt([
     exec(`npm run build`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
+      console.log(chalk.white.bold(`✔️  Built new bundle`));
     });
 
     exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
 
-      // chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
-      console.log(stdout);
+      console.log(chalk.white.bold(`✔️  Bumped version to ${stdout}`));
     });
 
     exec(`git add .`, (error, stdout, stderr) => {
@@ -35,6 +35,8 @@ Inquirer.prompt([
       (error, stdout, stderr) => {
         if (error) console.log(error);
         if (stderr) console.log(stderr);
+
+        console.log(chalk.white.bold(`✔️  Committed changes to Github`));
       }
     );
 
@@ -48,9 +50,10 @@ Inquirer.prompt([
       if (error) console.log(error);
       if (stderr) console.log(stderr);
 
-      console.log(stdout);
-      chalk.white.bold(
-        `✔️  Successfully published ${packageJson.name}@${packageJson.version} to NPM`
+      console.log(
+        chalk.white.bold(
+          `✔️  Successfully published ${packageJson.name}@${packageJson.version} to NPM`
+        )
       );
     });
   } catch (err) {
