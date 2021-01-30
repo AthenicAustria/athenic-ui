@@ -3,6 +3,9 @@
   "version": "1.0.25",
   "description": "👑 Athenic UI React component library. Building beautiful React applications made simple!",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/AthenicAustria/athenic-ui"
