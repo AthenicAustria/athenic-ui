@@ -36,6 +36,7 @@ Inquirer.prompt([
         if (error) console.log(error);
         if (stderr) console.log(stderr);
 
+        console.log(stdout);
         console.log(chalk.white.bold(`✔️  Committed changes to Github`));
       }
     );
