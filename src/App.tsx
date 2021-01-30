@@ -23,6 +23,7 @@ import * as faIcons from "@fortawesome/free-solid-svg-icons";
 import icon_placeholder from "./assets/img/icon_placeholder.png";
 import arrow_right from "./assets/img/arrow_right.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Counter } from "./components/Counter";
 
 const App = () => {
   return (
@@ -158,7 +159,7 @@ const App = () => {
       <TextInput type="password" style={{ marginLeft: 0 }} />
 
       <H1>Card</H1>
-      <H2>Sizes</H2>
+      <H2>Size</H2>
       <Card size="small" />
       <Card />
       <Card size="large" />
@@ -185,6 +186,24 @@ const App = () => {
         Here is another sample{" "}
         <Link to={packageJson.repository.url} text="Link" target="_blank" />.
       </p>
+
+      <H1>Counter</H1>
+      <H2>Size</H2>
+      <Counter size="small" end={5000} />
+      <Counter end={5000} />
+      <Counter size="large" end={5000} />
+
+      <H2>Duration</H2>
+      <Counter size="medium" end={5000} duration={2} />
+      <Counter size="medium" end={5000} duration={5} />
+
+      <H2>With prefix</H2>
+      <Counter size="medium" prefix="$" end={5000} />
+      <Counter size="medium" prefix="€" end={5000} />
+
+      <H2>With suffix</H2>
+      <Counter size="medium" suffix="Users" end={5000} />
+      <Counter size="medium" suffix="times sold" end={5000} />
     </div>
   );
 };
