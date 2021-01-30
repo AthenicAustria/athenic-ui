@@ -16,6 +16,7 @@ export interface TextInputProps {
   style?: CSSProperties;
   className?: string;
   type?: TextInputType;
+  onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
 const TextInput = ({
@@ -30,6 +31,7 @@ const TextInput = ({
   style,
   className,
   type,
+  onChange,
 }: TextInputProps) => {
   return (
     <div className="text-input">
@@ -50,6 +52,7 @@ const TextInput = ({
           invalid ? "invalid" : ""
         } ${className ? className : ""}`}
         style={style ? style : {}}
+        onChange={onChange && onChange}
       ></input>
       {validationMessage ? (
         <small className="text-input__validation-message">
