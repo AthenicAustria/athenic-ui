@@ -44,12 +44,6 @@ Inquirer.prompt([
       console.log(stdout);
     });
 
-    exec(`git push`, (error, stdout, stderr) => {
-      if (error) console.log(error);
-      if (stderr) console.log(stderr);
-      console.log(stdout);
-    });
-
     exec(`npm publish`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
