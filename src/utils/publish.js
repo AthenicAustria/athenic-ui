@@ -31,7 +31,7 @@ Inquirer.prompt([
     });
 
     exec(
-      `git commit -m \"🔖 published ${packageJson.version}\"`,
+      `git commit -m \"Published ${packageJson.version}\"`,
       (error, stdout, stderr) => {
         if (error) console.log(error);
         if (stderr) console.log(stderr);
