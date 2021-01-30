@@ -18,7 +18,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "docz": "docz dev",
-    "publish": "np"
+    "deploy": "np"
   },
   "keywords": [
     "athenic",
