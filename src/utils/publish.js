@@ -12,11 +12,14 @@ Inquirer.prompt([
   },
 ]).then(async (answers) => {
   try {
-    exec(`npm run build`, (error, stdout, stderr) => {
-      if (error) console.log(error);
-      if (stderr) console.log(stderr);
-      console.log(chalk.white.bold(`✔️  Built new bundle`));
-    });
+    exec(
+      `${packageJson.scripts.build} --display none`,
+      (error, stdout, stderr) => {
+        if (error) console.log(error);
+        if (stderr) console.log(stderr);
+        console.log(chalk.white.bold(`✔️  Built new bundle`));
+      }
+    );
 
     exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
       if (error) console.log(error);
@@ -43,7 +46,6 @@ Inquirer.prompt([
     exec(`git push`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
-      console.log(stdout);
     });
 
     exec(`npm publish`, (error, stdout, stderr) => {
