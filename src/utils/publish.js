@@ -12,11 +12,19 @@ Inquirer.prompt([
   },
 ]).then((answers) => {
   try {
+    exec(`npm run build`, (error, stdout, stderr) => {
+      if (error) console.log(error);
+      if (stderr) console.log(stderr);
+
+      // chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
+      console.log(stdout);
+    });
+
     exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
 
-      chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
+      // chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
       console.log(stdout);
     });
 
