@@ -204,6 +204,9 @@ const App = () => {
       <H2>With suffix</H2>
       <Counter size="small" suffix=" Users" end={5000} />
       <Counter size="small" suffix=" satisfied customers" end={5000} />
+
+      <H2>With delay</H2>
+      <Counter size="small" delay={2} end={5000} />
     </div>
   );
 };
