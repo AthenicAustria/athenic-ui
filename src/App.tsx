@@ -194,16 +194,16 @@ const App = () => {
       <Counter size="large" end={5000} />
 
       <H2>Duration</H2>
-      <Counter size="medium" end={5000} duration={2} />
-      <Counter size="medium" end={5000} duration={5} />
+      <Counter size="small" end={5000} duration={2} />
+      <Counter size="small" end={5000} duration={5} />
 
       <H2>With prefix</H2>
-      <Counter size="medium" prefix="$" end={5000} />
-      <Counter size="medium" prefix="€" end={5000} />
+      <Counter size="small" prefix="$ " end={5000} />
+      <Counter size="small" prefix="€ " end={5000} />
 
       <H2>With suffix</H2>
-      <Counter size="medium" suffix="Users" end={5000} />
-      <Counter size="medium" suffix="times sold" end={5000} />
+      <Counter size="small" suffix=" Users" end={5000} />
+      <Counter size="small" suffix=" satisfied customers" end={5000} />
     </div>
   );
 };
