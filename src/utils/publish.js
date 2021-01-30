@@ -13,7 +13,7 @@ Inquirer.prompt([
 ]).then(async (answers) => {
   try {
     exec(
-      `git commit -m \"🔖 published ${packageJson.version}\"`,
+      `git commit -a -m \"🔖 published ${packageJson.version}\"`,
       (error, stdout, stderr) => {
         if (error) console.log(error);
         if (stderr) console.log(stderr);
@@ -54,3 +54,4 @@ Inquirer.prompt([
     console.log(err);
   }
 });
+//test
