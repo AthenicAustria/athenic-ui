@@ -57,4 +57,4 @@ Inquirer.prompt([
     console.log(err);
   }
 });
-//testasdf
+process.exit();
