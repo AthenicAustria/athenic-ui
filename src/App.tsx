@@ -12,15 +12,9 @@ import { Card } from "./components/Card";
 import { Link } from "./components/Link";
 import "./index.scss";
 
-import {
-  faArrowRight,
-  faShoppingBag,
-  faShoppingBasket,
-  faShoppingCart,
-} from "@fortawesome/free-solid-svg-icons";
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import * as faIcons from "@fortawesome/free-solid-svg-icons";
 
-import icon_placeholder from "./assets/img/icon_placeholder.png";
 import arrow_right from "./assets/img/arrow_right.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Counter } from "./components/Counter";
@@ -90,9 +84,13 @@ const App = () => {
       </Button>
 
       <H2>Icon Button</H2>
-      <IconButton style={{ marginLeft: 0 }} icon={arrow_right} size="small" />
-      <IconButton style={{ marginLeft: 0 }} icon={arrow_right} size="medium" />
-      <IconButton style={{ marginLeft: 0 }} icon={arrow_right} size="large" />
+      <IconButton style={{ marginLeft: 0 }} icon={faShoppingBag} size="small" />
+      <IconButton
+        style={{ marginLeft: 0 }}
+        icon={faShoppingBag}
+        size="medium"
+      />
+      <IconButton style={{ marginLeft: 0 }} icon={faShoppingBag} size="large" />
 
       <H1>All Icons</H1>
       <Link to={`https://fontawesome.com/`} text="Icons by Font Awesome" />

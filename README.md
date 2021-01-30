@@ -6,7 +6,9 @@
 
 # athenic-ui
 
-[![NPM](https://img.shields.io/npm/v/athenic-ui.svg)](https://www.npmjs.com/package/athenic-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://nodei.co/npm/athenc-ui.png?compact=true)](https://npmjs.org/package/athenic-ui)
+
+[![NPM](https://img.shields.io/npm/v/athenic-ui.svg)](https://www.npmjs.com/package/athenic-ui) [![NPM](https://img.shields.io/npm/dt/athenic-ui)](https://www.npmjs.com/package/athenic-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Netlify Status](https://api.netlify.com/api/v1/badges/eef6da85-a579-4bb6-8ffd-8e84f4b19abe/deploy-status)](https://app.netlify.com/sites/athenic-ui-demo/deploys)
 
 ##### 📝 View the Documentation (coming soon)
 
@@ -41,6 +43,26 @@ import "athenic-ui/dist/index.css";
 
 const MyComponent = () => {
   return <H1>Hello World</H1>;
+};
+
+export default MyComponent;
+```
+
+## Examples
+
+```tsx
+import React from "react";
+
+import { Button } from "athenic-ui";
+import "athenic-ui/dist/index.css";
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+
+const MyComponent = () => {
+  return (
+    <Button variant="primary" iconBefore={faShoppingBag}>
+      Click me!
+    </Button>
+  );
 };
 
 export default MyComponent;

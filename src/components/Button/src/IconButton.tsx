@@ -1,9 +1,10 @@
 import React, { CSSProperties } from "react";
-import { ButtonSize } from "../types/ButtonTypes";
+import { ButtonSize, ButtonIconType } from "../types/ButtonTypes";
 import "./IconButton.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface IconButtonProps {
-  icon: string;
+  icon: ButtonIconType;
   style?: CSSProperties;
   className?: string;
   size?: ButtonSize;
@@ -17,11 +18,7 @@ const IconButton = ({ icon, style, className, size }: IconButtonProps) => {
       }`}
       style={style ? style : {}}
     >
-      <img
-        className="icon_button__content"
-        src={icon}
-        alt="Athenic Icon Button Icon"
-      />
+      <FontAwesomeIcon className="icon_button__content" icon={icon} />
     </button>
   );
 };
