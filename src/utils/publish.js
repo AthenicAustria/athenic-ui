@@ -57,4 +57,3 @@ Inquirer.prompt([
     console.log(err);
   }
 });
-process.exit();
