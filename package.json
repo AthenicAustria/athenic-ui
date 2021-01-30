@@ -18,7 +18,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "docz": "docz dev",
-    "publish": ""
+    "publish": " node ./src/utils/publish"
   },
   "keywords": [
     "athenic",
@@ -53,6 +53,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/webpack": "^4.41.26",
     "babel-loader": "^8.2.2",
+    "chalk": "^4.1.0",
     "css-loader": "^5.0.1",
     "docz": "^2.3.1",
     "file-loader": "^6.2.0",
