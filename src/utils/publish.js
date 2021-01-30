@@ -34,10 +34,16 @@ Inquirer.prompt([
         if (error) console.log(error);
         if (stderr) console.log(stderr);
 
-        // chalk.white.bold(`✔️  Updated package version to ${packageJson.version}`);
         console.log(stdout);
       }
     );
+
+    await exec(`git push`, (error, stdout, stderr) => {
+      if (error) console.log(error);
+      if (stderr) console.log(stderr);
+
+      console.log(stdout);
+    });
 
     await exec(`npm publish`, (error, stdout, stderr) => {
       if (error) console.log(error);
