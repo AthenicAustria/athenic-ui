@@ -12,22 +12,6 @@ Inquirer.prompt([
   },
 ]).then(async (answers) => {
   try {
-    exec(
-      `git commit -a -m \"🔖 published ${packageJson.version}\"`,
-      (error, stdout, stderr) => {
-        if (error) console.log(error);
-        if (stderr) console.log(stderr);
-
-        console.log(stdout);
-      }
-    );
-
-    exec(`git push`, (error, stdout, stderr) => {
-      if (error) console.log(error);
-      if (stderr) console.log(stderr);
-      console.log(stdout);
-    });
-
     exec(`npm run build`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
@@ -41,14 +25,33 @@ Inquirer.prompt([
       console.log(stdout);
     });
 
+    exec(`git add .`, (error, stdout, stderr) => {
+      if (error) console.log(error);
+      if (stderr) console.log(stderr);
+    });
+
+    exec(
+      `git commit -m \"🔖 published ${packageJson.version}\"`,
+      (error, stdout, stderr) => {
+        if (error) console.log(error);
+        if (stderr) console.log(stderr);
+      }
+    );
+
+    exec(`git push`, (error, stdout, stderr) => {
+      if (error) console.log(error);
+      if (stderr) console.log(stderr);
+      console.log(stdout);
+    });
+
     exec(`npm publish`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
 
+      console.log(stdout);
       chalk.white.bold(
         `✔️  Successfully published ${packageJson.name}@${packageJson.version} to NPM`
       );
-      console.log(stdout);
     });
   } catch (err) {
     console.log(err);
