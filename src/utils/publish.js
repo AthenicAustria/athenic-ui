@@ -10,9 +10,9 @@ Inquirer.prompt([
     message: "Version",
     choices: ["patch", "major", "minor"],
   },
-]).then((answers) => {
+]).then(async (answers) => {
   try {
-    exec(`npm run build`, (error, stdout, stderr) => {
+    await exec(`npm run build`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
 
@@ -20,7 +20,7 @@ Inquirer.prompt([
       console.log(stdout);
     });
 
-    exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
+    await exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
 
@@ -28,7 +28,7 @@ Inquirer.prompt([
       console.log(stdout);
     });
 
-    exec(`npm publish`, (error, stdout, stderr) => {
+    await exec(`npm publish`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
 
