@@ -12,14 +12,11 @@ Inquirer.prompt([
   },
 ]).then(async (answers) => {
   try {
-    exec(
-      `${packageJson.scripts.build} --display none`,
-      (error, stdout, stderr) => {
-        if (error) console.log(error);
-        if (stderr) console.log(stderr);
-        console.log(chalk.white.bold(`✔️  Built new bundle`));
-      }
-    );
+    exec(`${packageJson.scripts.build} --no-stats`, (error, stdout, stderr) => {
+      if (error) console.log(error);
+      if (stderr) console.log(stderr);
+      console.log(chalk.white.bold(`✔️  Built new bundle`));
+    });
 
     exec(`npm version ${answers.version}`, (error, stdout, stderr) => {
       if (error) console.log(error);
