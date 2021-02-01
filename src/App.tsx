@@ -247,6 +247,8 @@ const App = () => {
         ]}
         initialActiveTabs={[0]}
       ></Collapse>
+
+      <H1>Stepper</H1>
     </div>
   );
 };
