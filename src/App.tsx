@@ -10,15 +10,14 @@ import { Spinner } from "./components/Spinner";
 import { TextInput } from "./components/TextInput";
 import { Card } from "./components/Card";
 import { Link } from "./components/Link";
+import { Counter } from "./components/Counter";
+import { Collapse } from "./components/Collapse";
+import { Stepper, Step } from "./components/Stepper";
 import "./index.scss";
 
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import * as faIcons from "@fortawesome/free-solid-svg-icons";
-
-import arrow_right from "./assets/img/arrow_right.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Counter } from "./components/Counter";
-import { Collapse } from "./components/Collapse";
 
 const App = () => {
   return (
@@ -249,6 +248,9 @@ const App = () => {
       ></Collapse>
 
       <H1>Stepper</H1>
+      <Stepper>
+        <Step />
+      </Stepper>
     </div>
   );
 };

@@ -9,3 +9,4 @@ export { TextInput } from "./components/TextInput";
 export { Card } from "./components/Card";
 export { Link } from "./components/Link";
 export { Counter } from "./components/Counter";
+export { Stepper, Step } from "./components/Stepper";
