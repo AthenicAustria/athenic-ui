@@ -4,10 +4,12 @@
   display: block;
   border-radius: 8px;
   min-width: 40px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+  padding: 8px 16px;
 
   &__tab {
     overflow: hidden;
-    background-color: red;
+    padding-bottom: 4px;
 
     &__header {
     }

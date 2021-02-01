@@ -4,39 +4,50 @@ import "./Collapse.scss";
 
 export interface CollapseProps {
   content: CollapsContentType;
-  activeCollapseTab?: number;
+  initialActiveTabs?: number[];
   className?: string;
   style?: CSSProperties;
 }
 
 const Collapse = ({
   content,
-  activeCollapseTab,
+  initialActiveTabs,
   className,
   style,
 }: CollapseProps) => {
   const [collapseTabs, setCollapseTabs] = useState([]);
-  const [activeTab, setActiveTab] = useState(
-    activeCollapseTab ? activeCollapseTab : null
-  );
+  // const [collapsed, setCollapsed] = useState(new Array(content.length - 1));
 
-  const toggleCollapseTab = (e: React.MouseEvent<HTMLElement>) => {
-    console.log(e);
+  const toggleCollapseTab = (e: any) => {
+    console.log(e.target.nextElementSibling.className);
+    if (e.target.nextElementSibling.className.includes("collapsed")) {
+      e.target.nextElementSibling.className = e.target.nextElementSibling.className.replace(
+        "collapsed",
+        "opened"
+      );
+    } else if (e.target.nextElementSibling.className.includes("opened")) {
+      console.log(e.target.nextElementSibling.className);
+      e.target.nextElementSibling.className = e.target.nextElementSibling.className.replace(
+        "opened",
+        "collapsed"
+      );
+    }
   };
 
   useEffect(() => {
     let collapseTabsTemp: any = [];
     content.forEach((tab: CollapseTab, index: number) => {
       collapseTabsTemp.push(
-        <div
-          className={`collapse__tab `}
-          key={index}
-          onClick={(e) => toggleCollapseTab(e)}
-        >
-          <div className={`collapse__tab__header`}>{tab.header}</div>
+        <div className={`collapse__tab`} key={index}>
+          <div
+            className={`collapse__tab__header`}
+            onClick={(e) => toggleCollapseTab(e)}
+          >
+            {tab.header}
+          </div>
           <div
             className={`collapse__tab__content ${
-              activeCollapseTab === index ? "open" : "collapsed"
+              initialActiveTabs?.includes(index) ? "opened" : "collapsed"
             }`}
           >
             {tab.content}
