@@ -8,7 +8,7 @@
 
 [![NPM](https://img.shields.io/npm/v/athenic-ui.svg)](https://www.npmjs.com/package/athenic-ui) [![NPM](https://img.shields.io/npm/dt/athenic-ui)](https://www.npmjs.com/package/athenic-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Netlify Status](https://api.netlify.com/api/v1/badges/eef6da85-a579-4bb6-8ffd-8e84f4b19abe/deploy-status)](https://app.netlify.com/sites/athenic-ui-demo/deploys)
 
-[![NPM](https://nodei.co/npm/athenc-ui.png?compact=true)](https://npmjs.org/package/athenic-ui) <a href="https://www.buymeacoffee.com/b3h3m0th" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 180px !important; margin: 0px 8px" ></a>
+[![NPM](https://nodei.co/npm/athenc-ui.png?compact=true)](https://npmjs.org/package/athenic-ui) <a href="https://www.buymeacoffee.com/b3h3m0th" target="_tab"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 180px !important; margin: 0px 8px" ></a>
 
 ##### 📝 View the Documentation (coming soon)
 
