@@ -27,6 +27,13 @@ Inquirer.prompt([
       console.log(chalk.white.bold(`✔️  Bumped version to ${stdout}`));
     });
 
+    exec(`git diff`, (error, stdout, stderr) => {
+      if (error) console.log(error);
+      if (stderr) console.log(stderr);
+
+      console.log("OUT", stdout);
+    });
+
     exec(`git add .`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
