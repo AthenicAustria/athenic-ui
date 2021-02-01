@@ -12,6 +12,8 @@ Inquirer.prompt([
   },
 ]).then(async (answers) => {
   try {
+    console.clear();
+
     exec(`npm run build`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
