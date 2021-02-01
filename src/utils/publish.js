@@ -29,8 +29,6 @@ Inquirer.prompt([
           if (error) console.log(error);
           if (stderr) console.log(stderr);
 
-          console.log("OUT", stdout);
-
           if (stdout) {
             exec(`git add .`, (error, stdout, stderr) => {
               if (error) console.log(error);
