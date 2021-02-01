@@ -1,6 +1,11 @@
 import React, { CSSProperties, useState, useEffect } from "react";
 import { CollapsContentType, CollapseTab } from "../types/CollapseTypes";
 import "./Collapse.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronDown,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 export interface CollapseProps {
   content: CollapsContentType;
@@ -43,7 +48,13 @@ const Collapse = ({
             className={`collapse__tab__header`}
             onClick={(e) => toggleCollapseTab(e)}
           >
-            {tab.header}
+            <h4 className={`collapse__tab__header__text`}>
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                className={`collapse__tab__header__icon`}
+              />
+              {tab.header}
+            </h4>
           </div>
           <div
             className={`collapse__tab__content ${

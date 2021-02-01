@@ -1,26 +1,39 @@
 .collapse {
+  display: inline-block;
   font-family: var(--font-primary);
   background-color: var(--color-white);
-  display: block;
-  border-radius: 8px;
-  min-width: 40px;
+  border-radius: 16px;
+  min-width: 200px;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
-  padding: 8px 16px;
+  padding: 8px 20px;
 
   &__tab {
     overflow: hidden;
-    padding-bottom: 4px;
 
     &__header {
+      &__icon {
+        margin-right: 8px;
+        font-size: 0.7em;
+        font-weight: 400;
+      }
+
+      &__text {
+        pointer-events: none;
+        margin: 6px 0px;
+      }
     }
 
     &__content {
+      transition: 0.3s;
+      margin-left: 16px;
+
       &.collapsed {
         height: 0;
       }
 
       &.opened {
         height: auto;
+        padding-bottom: 6px;
       }
     }
   }
