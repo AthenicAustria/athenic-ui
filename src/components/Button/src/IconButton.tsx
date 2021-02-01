@@ -24,3 +24,4 @@ const IconButton = ({ icon, style, className, size }: IconButtonProps) => {
 };
 
 export default IconButton;
+//test
