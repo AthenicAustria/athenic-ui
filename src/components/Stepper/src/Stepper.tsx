@@ -15,7 +15,6 @@ const Stepper = ({ className, style, children }: StepperProps) => {
       style={style ? style : null}
     >
       {children}
-      <div></div>
     </div>
   );
 };
