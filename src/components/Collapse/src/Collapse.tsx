@@ -24,15 +24,23 @@ const Collapse = ({
   // const [collapsed, setCollapsed] = useState(new Array(content.length - 1));
 
   const toggleCollapseTab = (e: any) => {
-    console.log(e.target.nextElementSibling.className);
+    console.log(e);
     if (e.target.nextElementSibling.className.includes("collapsed")) {
       e.target.nextElementSibling.className = e.target.nextElementSibling.className.replace(
+        "collapsed",
+        "opened"
+      );
+      e.target.children[0].children[0].classname = e.target.children[0].children[0].classname.replace(
         "collapsed",
         "opened"
       );
     } else if (e.target.nextElementSibling.className.includes("opened")) {
       console.log(e.target.nextElementSibling.className);
       e.target.nextElementSibling.className = e.target.nextElementSibling.className.replace(
+        "opened",
+        "collapsed"
+      );
+      e.target.children[0].children[0].classname = e.target.children[0].children[0].classname.replace(
         "opened",
         "collapsed"
       );
@@ -48,13 +56,13 @@ const Collapse = ({
             className={`collapse__tab__header`}
             onClick={(e) => toggleCollapseTab(e)}
           >
-            <h4 className={`collapse__tab__header__text`}>
+            <p className={`collapse__tab__header__text`}>
               <FontAwesomeIcon
                 icon={faChevronRight}
                 className={`collapse__tab__header__icon`}
               />
               {tab.header}
-            </h4>
+            </p>
           </div>
           <div
             className={`collapse__tab__content ${

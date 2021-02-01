@@ -215,6 +215,16 @@ const App = () => {
           { header: "Tab 3", content: "Content of Tab 3" },
         ]}
       ></Collapse>
+
+      <H2>With initial opened</H2>
+      <Collapse
+        content={[
+          { header: "Tab 1", content: "Content of Tab 1" },
+          { header: "Tab 2", content: "Content of Tab 2" },
+          { header: "Tab 3", content: "Content of Tab 3" },
+        ]}
+        initialActiveTabs={[0]}
+      ></Collapse>
     </div>
   );
 };
