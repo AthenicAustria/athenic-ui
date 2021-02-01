@@ -1,0 +1,25 @@
+.collapse {
+  font-family: var(--font-primary);
+  background-color: var(--color-white);
+  display: block;
+  border-radius: 8px;
+  min-width: 40px;
+
+  &__tab {
+    overflow: hidden;
+    background-color: red;
+
+    &__header {
+    }
+
+    &__content {
+      &.collapsed {
+        height: 0;
+      }
+
+      &.opened {
+        height: auto;
+      }
+    }
+  }
+}

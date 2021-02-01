@@ -16,7 +16,7 @@ const IconButton = ({ icon, style, className, size }: IconButtonProps) => {
       className={`icon_button ${className ? className : ""} ${
         size ? size : null
       }`}
-      style={style ? style : {}}
+      style={style ? style : null}
     >
       <FontAwesomeIcon className="icon_button__content" icon={icon} />
     </button>

@@ -18,6 +18,7 @@ import * as faIcons from "@fortawesome/free-solid-svg-icons";
 import arrow_right from "./assets/img/arrow_right.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Counter } from "./components/Counter";
+import { Collapse } from "./components/Collapse";
 
 const App = () => {
   return (
@@ -205,6 +206,15 @@ const App = () => {
 
       <H2>With delay</H2>
       <Counter size="small" delay={2} end={5000} />
+
+      <H1>Collapse</H1>
+      <Collapse
+        content={[
+          { header: "Tab 1", content: "Content of Tab 1" },
+          { header: "Tab 2", content: "Content of Tab 2" },
+          { header: "Tab 3", content: "Content of Tab 3" },
+        ]}
+      ></Collapse>
     </div>
   );
 };
