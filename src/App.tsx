@@ -22,7 +22,7 @@ import { Collapse } from "./components/Collapse";
 
 const App = () => {
   return (
-    <div>
+    <div id="App">
       <H1>Headers</H1>
       <H1 style={{ color: "var(--color-light-red)" }}>Athenic UI - H1</H1>
       <H2>Athenic UI - H2</H2>
@@ -70,7 +70,7 @@ const App = () => {
         link={packageJson.repository.url}
         style={{ marginLeft: 0 }}
       >
-        Link to the Github-Repo
+        🐱 Link to the Github-Repo
       </Button>
 
       <H2>Disabled</H2>
@@ -170,7 +170,7 @@ const App = () => {
       >
         <TextInput placeholder="Password" />
         <TextInput placeholder="E-Mail" type="password" />
-        <Button>Athenic Card content</Button>
+        <Button>✌️ Athenic - Sign In</Button>
       </Card>
 
       <H1>Link</H1>
@@ -209,10 +209,14 @@ const App = () => {
 
       <H1>Collapse</H1>
       <Collapse
+        content={[{ header: "Tab 1", content: "Content of Tab 1" }]}
+      ></Collapse>
+      <Collapse
         content={[
           { header: "Tab 1", content: "Content of Tab 1" },
           { header: "Tab 2", content: "Content of Tab 2" },
           { header: "Tab 3", content: "Content of Tab 3" },
+          { header: "Tab 4", content: "Content of Tab 4" },
         ]}
       ></Collapse>
 
@@ -220,6 +224,24 @@ const App = () => {
       <Collapse
         content={[
           { header: "Tab 1", content: "Content of Tab 1" },
+          { header: "Tab 2", content: "Content of Tab 2" },
+          { header: "Tab 3", content: "Content of Tab 3" },
+        ]}
+        initialActiveTabs={[0]}
+      ></Collapse>
+
+      <H2>Nesting Elements in Collapse</H2>
+      <Collapse
+        content={[
+          {
+            header: "Tab 1",
+            content: (
+              <Button
+                text="👋 I'm hiding in here... :D"
+                style={{ marginLeft: 0 }}
+              />
+            ),
+          },
           { header: "Tab 2", content: "Content of Tab 2" },
           { header: "Tab 3", content: "Content of Tab 3" },
         ]}
