@@ -10,7 +10,7 @@
 
 [![NPM](https://img.shields.io/npm/v/athenic-ui.svg)](https://www.npmjs.com/package/athenic-ui) [![NPM](https://img.shields.io/npm/dt/athenic-ui)](https://www.npmjs.com/package/athenic-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Netlify Status](https://api.netlify.com/api/v1/badges/eef6da85-a579-4bb6-8ffd-8e84f4b19abe/deploy-status)](https://app.netlify.com/sites/athenic-ui-demo/deploys)
 
-<a href="https://www.buymeacoffee.com/b3h3m0th" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 20px !important;width: 54.25px !important;" ></a>
+<a href="https://www.buymeacoffee.com/b3h3m0th" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 140px !important;" ></a>
 
 ##### 📝 View the Documentation (coming soon)
 
