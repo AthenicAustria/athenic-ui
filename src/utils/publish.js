@@ -52,22 +52,33 @@ Inquirer.prompt([
                     console.log(
                       chalk.white.bold(`✔️  Pushed changes to Github`)
                     );
+
+                    exec(`npm publish`, (error, stdout, stderr) => {
+                      if (error) console.log(error);
+                      if (stderr) console.log(stderr);
+
+                      console.log(
+                        chalk.white.bold(
+                          `✔️  Successfully published ${packageJson.name}@${packageJson.version} to NPM`
+                        )
+                      );
+                    });
                   });
                 }
               );
             });
+          } else {
+            exec(`npm publish`, (error, stdout, stderr) => {
+              if (error) console.log(error);
+              if (stderr) console.log(stderr);
+
+              console.log(
+                chalk.white.bold(
+                  `✔️  Successfully published ${packageJson.name}@${packageJson.version} to NPM`
+                )
+              );
+            });
           }
-
-          exec(`npm publish`, (error, stdout, stderr) => {
-            if (error) console.log(error);
-            if (stderr) console.log(stderr);
-
-            console.log(
-              chalk.white.bold(
-                `✔️  Successfully published ${packageJson.name}@${packageJson.version} to NPM`
-              )
-            );
-          });
         });
       });
     });
