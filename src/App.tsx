@@ -20,6 +20,7 @@ import { Counter } from "./components/Counter";
 import { Collapse } from "./components/Collapse";
 import { Stepper } from "./components/Stepper";
 import { Rating } from "./components/Rating";
+import { Modal } from "./components/Modal";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -31,6 +32,8 @@ const App = () => {
 
   const [ratingDisplay, setRatingDisplay] = useState(0);
   const [ratingDisplayEmoji, setRatingDisplayEmoji] = useState(0);
+
+  const [defaultModalShown, setDefaultModalShown] = useState(false);
 
   return (
     <div id="App">
@@ -377,6 +380,10 @@ const App = () => {
         onRate={(value: number) => setRatingDisplayEmoji(value)}
       />
       <span>{ratingDisplayEmoji} / 5</span>
+
+      <H1>Modal</H1>
+      <Button style={{ marginLeft: 0 }}>😮‍💨 Show Modal</Button>
+      <Modal shown={false}></Modal>
     </div>
   );
 };

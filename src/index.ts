@@ -11,3 +11,4 @@ export { Link } from "./components/Link";
 export { Counter } from "./components/Counter";
 export { Stepper } from "./components/Stepper";
 export { Rating } from "./components/Rating";
+export { Modal } from "./components/Modal";
