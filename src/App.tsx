@@ -382,8 +382,13 @@ const App = () => {
       <span>{ratingDisplayEmoji} / 5</span>
 
       <H1>Modal</H1>
-      <Button style={{ marginLeft: 0 }}>😮‍💨 Show Modal</Button>
-      <Modal shown={false}></Modal>
+      <Button
+        style={{ marginLeft: 0 }}
+        onClick={() => setDefaultModalShown(!defaultModalShown)}
+      >
+        😮‍💨 Toggle Modal
+      </Button>
+      <Modal shown={defaultModalShown} title="🔓 Modal title"></Modal>
     </div>
   );
 };
