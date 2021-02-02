@@ -29,6 +29,8 @@ const App = () => {
   ];
   const [stepperCardExample, setStepperCardExample] = useState(1);
 
+  const [ratingDisplay, setRatingDisplay] = useState(0);
+
   return (
     <div id="App">
       <H1>Headers</H1>
@@ -360,6 +362,13 @@ const App = () => {
 
       <H2>Initial Rating</H2>
       <Rating variant="star" initialRating={3} />
+
+      <H2>onRate Event</H2>
+      <Rating
+        variant="star"
+        onRate={(value: number) => setRatingDisplay(value)}
+      />
+      <span>{ratingDisplay} / 5</span>
     </div>
   );
 };

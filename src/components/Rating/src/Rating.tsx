@@ -27,7 +27,7 @@ const Rating = ({
 
   useEffect(() => {
     onRate ? onRate(rating) : null;
-  }, [setRating]);
+  }, [rating]);
 
   return (
     <div
