@@ -9,6 +9,7 @@ export interface RatingProps {
   size?: RatingSize;
   className?: string;
   style?: CSSProperties;
+  initialRating?: number;
 }
 
 const Rating = ({ variant, className, style, size }: RatingProps) => {

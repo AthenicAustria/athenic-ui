@@ -15,6 +15,7 @@
   }
 
   &__star {
-    color: var(--color-gold);
+    cursor: pointer;
+    color: var(--color-disabled);
   }
 }
