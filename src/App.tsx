@@ -349,6 +349,8 @@ const App = () => {
           Next 👉
         </Button>
       </Card>
+
+      <H1>Rating</H1>
     </div>
   );
 };
