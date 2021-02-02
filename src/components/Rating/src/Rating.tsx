@@ -1,5 +1,10 @@
 import React, { CSSProperties, useState, useEffect } from "react";
-import { RatingVariant, RatingSize, EmojiScale } from "../types/RatingTypes";
+import {
+  RatingVariant,
+  RatingSize,
+  EmojiScale,
+  EmojiType,
+} from "../types/RatingTypes";
 import "./Rating.scss";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,7 +62,7 @@ const Rating = ({
       className={`rating ${className ? className : ""} ${size ? size : ""}`}
       style={style ? style : null}
     >
-      {variant == "star" ? (
+      {variant === "star" ? (
         <>
           {[...Array(5)].map((_: any, index: number) => {
             return (
@@ -74,9 +79,21 @@ const Rating = ({
           })}
         </>
       ) : (
-        () => {
-          return <div>asdf</div>;
-        }
+        <>
+          {emojis.map((_: EmojiType, index: number) => {
+            return (
+              <span
+                className={`rating__emoji ${index < rating ? "selected" : ""}`}
+                key={index}
+                onClick={(): void => {
+                  setRating(index + 1);
+                }}
+              >
+                {_.emoji}
+              </span>
+            );
+          })}
+        </>
       )}
     </div>
   );

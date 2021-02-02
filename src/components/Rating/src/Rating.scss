@@ -23,4 +23,13 @@
       color: var(--color-gold);
     }
   }
+
+  &__emoji {
+    cursor: pointer;
+    opacity: 0.365;
+
+    &.selected {
+      opacity: 1;
+    }
+  }
 }

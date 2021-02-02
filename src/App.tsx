@@ -30,6 +30,7 @@ const App = () => {
   const [stepperCardExample, setStepperCardExample] = useState(1);
 
   const [ratingDisplay, setRatingDisplay] = useState(0);
+  const [ratingDisplayEmoji, setRatingDisplayEmoji] = useState(0);
 
   return (
     <div id="App">
@@ -369,6 +370,13 @@ const App = () => {
         onRate={(value: number) => setRatingDisplay(value)}
       />
       <span>{ratingDisplay} / 5</span>
+
+      <H2>Emoji</H2>
+      <Rating
+        variant="emoji"
+        onRate={(value: number) => setRatingDisplayEmoji(value)}
+      />
+      <span>{ratingDisplayEmoji} / 5</span>
     </div>
   );
 };
