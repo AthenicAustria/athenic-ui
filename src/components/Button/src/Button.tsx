@@ -42,8 +42,8 @@ const Button = ({
       className={`button ${size ? size : ""} ${className ? className : ""} ${
         variant ? variant : ""
       } ${disabled ? "disabled" : ""}`}
-      onClick={() => {
-        onClick && onClick;
+      onClick={(e) => {
+        onClick ? onClick(e) : null;
         link && (window.location.href = link);
       }}
       onMouseOver={onHover}

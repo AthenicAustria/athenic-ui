@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import packageJson from "../package.json";
 import { H1 } from "./components/H1";
 import { H2 } from "./components/H2";
@@ -20,6 +20,13 @@ import * as faIcons from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const App = () => {
+  const stepperCardExampleSteps = [
+    "Add personal info",
+    "Verify your E-Mail",
+    "Complete Registration",
+  ];
+  const [stepperCardExample, setStepperCardExample] = useState(1);
+
   return (
     <div id="App">
       <H1>Headers</H1>
@@ -307,6 +314,40 @@ const App = () => {
             "Complete payment",
           ]}
         />
+      </Card>
+
+      <H2>Example with React states</H2>
+
+      <Card title="Register">
+        <Stepper
+          currentStep={stepperCardExample}
+          steps={stepperCardExampleSteps}
+        />
+        <br />
+        <Button
+          size="small"
+          variant="primary"
+          onClick={() => {
+            stepperCardExample > 1
+              ? setStepperCardExample(stepperCardExample - 1)
+              : null;
+            console.log(stepperCardExample);
+          }}
+        >
+          👈 Previous
+        </Button>
+        <Button
+          size="small"
+          variant="primary"
+          onClick={() => {
+            stepperCardExample <= stepperCardExampleSteps.length
+              ? setStepperCardExample(stepperCardExample + 1)
+              : null;
+            console.log(stepperCardExample);
+          }}
+        >
+          Next 👉
+        </Button>
       </Card>
     </div>
   );
