@@ -23,9 +23,9 @@ const Rating = ({ variant, className, style, size }: RatingProps) => {
         <>
           {[...Array(5)].map((_: any, index: number) => {
             return (
-              <div className={`rating__star`} key={index}>
+              <span className={`rating__star`} key={index}>
                 <FontAwesomeIcon icon={faStar} />
-              </div>
+              </span>
             );
           })}
         </>

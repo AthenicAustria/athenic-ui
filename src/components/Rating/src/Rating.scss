@@ -1,20 +1,20 @@
 .rating {
-  font-size: initial;
+  font-size: 1.3em;
+  margin: 6px 8px;
 
-  .small {
-    font-size: 0.8em;
-  }
-
-  .medium {
-    //default
-  }
-
-  .large {
+  &.small {
     font-size: 1em;
   }
 
+  &.medium {
+    //default
+  }
+
+  &.large {
+    font-size: 1.5em;
+  }
+
   &__star {
-    display: inline-block;
     color: var(--color-gold);
   }
 }
