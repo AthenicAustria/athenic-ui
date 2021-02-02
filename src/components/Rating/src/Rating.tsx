@@ -22,7 +22,6 @@ const Rating = ({ variant, className, style, size }: RatingProps) => {
       {variant == "star" ? (
         <>
           {[...Array(5)].map((_: any, index: number) => {
-            console.log("hi");
             return (
               <div className={`rating__star`} key={index}>
                 <FontAwesomeIcon icon={faStar} />
