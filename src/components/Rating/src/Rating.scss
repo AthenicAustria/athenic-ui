@@ -1,4 +1,20 @@
 .rating {
+  font-size: initial;
+
+  .small {
+    font-size: 0.8em;
+  }
+
+  .medium {
+    //default
+  }
+
+  .large {
+    font-size: 1em;
+  }
+
   &__star {
+    display: inline-block;
+    color: var(--color-gold);
   }
 }

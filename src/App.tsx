@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import packageJson from "../package.json";
+import "./index.scss";
+
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import * as faIcons from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { H1 } from "./components/H1";
 import { H2 } from "./components/H2";
 import { H3 } from "./components/H3";
@@ -13,11 +19,7 @@ import { Link } from "./components/Link";
 import { Counter } from "./components/Counter";
 import { Collapse } from "./components/Collapse";
 import { Stepper } from "./components/Stepper";
-import "./index.scss";
-
-import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
-import * as faIcons from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Rating } from "./components/Rating";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -351,6 +353,10 @@ const App = () => {
       </Card>
 
       <H1>Rating</H1>
+      <H2>Size</H2>
+      <Rating variant="star" size="small" />
+      <Rating variant="star" />
+      <Rating variant="star" size="large" />
     </div>
   );
 };

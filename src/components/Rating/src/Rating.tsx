@@ -1,25 +1,40 @@
 import React, { CSSProperties } from "react";
-import { RatingVariant } from "../types/RatingTypes";
+import { RatingVariant, RatingSize } from "../types/RatingTypes";
 import "./Rating.scss";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface RatingProps {
-  variant: RatingVariant;
+  variant?: RatingVariant;
+  size?: RatingSize;
   className?: string;
   style?: CSSProperties;
 }
 
-const Rating = ({ variant, className, style }: RatingProps) => {
+const Rating = ({ variant, className, style, size }: RatingProps) => {
+  variant = variant ? variant : "star";
+
   return (
     <div
-      className={`rating ${className ? className : ""}`}
+      className={`rating ${className ? className : ""} ${size ? size : ""}`}
       style={style ? style : null}
     >
-      {variant === "star"
-        ? new Array(5).map((e: any, index: number) => {
-            return <div className={`rating__star`}></div>;
-          })
-        : null}
+      {variant == "star" ? (
+        <>
+          {[...Array(5)].map((_: any, index: number) => {
+            console.log("hi");
+            return (
+              <div className={`rating__star`} key={index}>
+                <FontAwesomeIcon icon={faStar} />
+              </div>
+            );
+          })}
+        </>
+      ) : (
+        () => {
+          return <div>asdf</div>;
+        }
+      )}
     </div>
   );
 };
