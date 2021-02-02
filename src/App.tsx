@@ -298,10 +298,9 @@ const App = () => {
       />
 
       <H2>Combined with Card</H2>
-      <Card size="auto" style={{ paddingBottom: 0 }}>
-        <H3>My Stepper in a Card :D</H3>
+      <Card title="💳 Payment Process" size="auto" style={{ paddingBottom: 0 }}>
         <Stepper
-          currentStep={1}
+          currentStep={3}
           steps={[
             "Add personal info",
             "Add payment details",
