@@ -142,14 +142,10 @@ const App = () => {
       <Card />
       <Card size="large" />
       <H2>Example</H2>
-      <Card
-        title="Athenic UI - Card title"
-        size="auto"
-        style={{ marginLeft: 0 }}
-      >
+      <Card title="Athenic UI - Login" size="auto" style={{ marginLeft: 0 }}>
         <TextInput placeholder="Password" />
         <TextInput placeholder="E-Mail" type="password" />
-        <Button>✌️ Athenic - Sign In</Button>
+        <Button>✌️ Athenic UI Sign In</Button>
       </Card>
       <H1>Link</H1>
       <H2>Standard</H2>
@@ -216,7 +212,7 @@ const App = () => {
         ]}
         initialActiveTabs={[0]}
       ></Collapse>
-      <H2>Combining with Card</H2>
+      <H2>Combined with Card</H2>
       <Card size="auto">
         <Collapse
           content={[
@@ -237,7 +233,7 @@ const App = () => {
       </Card>
 
       <H1>Stepper</H1>
-      <H2>Vertical</H2>
+      <H2>Horizontal</H2>
       <Stepper
         currentStep={1}
         direction="horizontal"
@@ -279,18 +275,40 @@ const App = () => {
         ]}
       />
 
-      <H2>Horizontal</H2>
+      <H2>Vertical</H2>
+      <Stepper
+        currentStep={1}
+        direction="vertical"
+        steps={["Add personal info", "Add payment details", "Complete payment"]}
+      />
       <Stepper
         currentStep={2}
         direction="vertical"
-        steps={[
-          // "Create your account",
-          "Add personal info",
-          "Add payment details",
-          "Complete registration",
-          "Registration complete",
-        ]}
+        steps={["Add personal info", "Add payment details", "Complete payment"]}
       />
+      <Stepper
+        currentStep={3}
+        direction="vertical"
+        steps={["Add personal info", "Add payment details", "Complete payment"]}
+      />
+      <Stepper
+        currentStep={4}
+        direction="vertical"
+        steps={["Add personal info", "Add payment details", "Complete payment"]}
+      />
+
+      <H2>Combined with Card</H2>
+      <Card size="auto" style={{ paddingBottom: 0 }}>
+        <H3>My Stepper in a Card :D</H3>
+        <Stepper
+          currentStep={1}
+          steps={[
+            "Add personal info",
+            "Add payment details",
+            "Complete payment",
+          ]}
+        />
+      </Card>
     </div>
   );
 };

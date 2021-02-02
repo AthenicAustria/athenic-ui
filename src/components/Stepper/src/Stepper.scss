@@ -56,6 +56,10 @@
 }
 
 .stepper-vertical {
+  width: auto;
+  display: inline-block;
+  margin: 6px 32px 6px 8px;
+
   .step {
     display: flex;
     align-items: center;
@@ -64,11 +68,14 @@
 
     &__number {
       border-radius: 50%;
+      //   border: 1px solid var(--color-primary-tint);
       width: 18px;
       height: 18px;
       padding: 4.5px 4px 4px;
       text-align: center;
       font-size: 95%;
+      font-weight: 600;
+
       .step-icon {
         font-size: 0.9em;
       }
@@ -84,15 +91,6 @@
       display: none;
     }
   }
-}
-
-.step-number-selected {
-  border: 1px solid var(--color-primary-tint);
-  color: #fff;
-}
-
-.step-number-disabled {
-  border: 1px solid var(--color-primary-tint);
 }
 
 .step-description-active {

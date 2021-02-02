@@ -6,12 +6,13 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 export interface StepperProps {
   steps: StepType;
-  direction: StepperDirection;
+  direction?: StepperDirection;
   currentStep: number;
 }
 
 const Stepper = ({ steps, direction, currentStep = 1 }: StepperProps) => {
   const [stepState, setStepState] = useState([]);
+  direction = direction ? direction : "vertical";
 
   useEffect(() => {
     let createSteps = steps.map((step: any, idx: number) => ({
