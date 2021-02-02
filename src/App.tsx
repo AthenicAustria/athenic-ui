@@ -12,7 +12,7 @@ import { Card } from "./components/Card";
 import { Link } from "./components/Link";
 import { Counter } from "./components/Counter";
 import { Collapse } from "./components/Collapse";
-import { Stepper, Step } from "./components/Stepper";
+import { Stepper } from "./components/Stepper";
 import "./index.scss";
 
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
@@ -217,7 +217,7 @@ const App = () => {
         initialActiveTabs={[0]}
       ></Collapse>
       <H2>Combining with Card</H2>
-      <Card>
+      <Card size="auto">
         <Collapse
           content={[
             {
@@ -237,9 +237,60 @@ const App = () => {
       </Card>
 
       <H1>Stepper</H1>
-      <Stepper>
-        <Step />
-      </Stepper>
+      <H2>Vertical</H2>
+      <Stepper
+        currentStep={1}
+        direction="horizontal"
+        steps={[
+          // "Create your account",
+          "Sign Up",
+          "Verify your Account",
+          "Complete registration",
+        ]}
+      />
+      <Stepper
+        currentStep={2}
+        direction="horizontal"
+        steps={[
+          // "Create your account",
+          "Sign Up",
+          "Verify your Account",
+          "Complete registration",
+        ]}
+      />
+      <Stepper
+        currentStep={3}
+        direction="horizontal"
+        steps={[
+          // "Create your account",
+          "Sign Up",
+          "Verify your Account",
+          "Complete registration",
+        ]}
+      />
+      <Stepper
+        currentStep={4}
+        direction="horizontal"
+        steps={[
+          // "Create your account",
+          "Sign Up",
+          "Verify your Account",
+          "Complete registration",
+        ]}
+      />
+
+      <H2>Horizontal</H2>
+      <Stepper
+        currentStep={2}
+        direction="vertical"
+        steps={[
+          // "Create your account",
+          "Add personal info",
+          "Add payment details",
+          "Complete registration",
+          "Registration complete",
+        ]}
+      />
     </div>
   );
 };
