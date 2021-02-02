@@ -1,12 +1,10 @@
 .collapse {
   display: inline-block;
   font-family: var(--font-primary);
-  background-color: var(--color-white);
-  border-radius: 16px;
+  // background-color: var(--color-white);
+  border-radius: 8px;
   min-width: 200px;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
   padding: 16px 20px;
-  margin: 16px 20px;
 
   &__tab {
     overflow: hidden;
