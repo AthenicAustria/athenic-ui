@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, useState } from "react";
 import { RatingVariant, RatingSize } from "../types/RatingTypes";
 import "./Rating.scss";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -15,6 +15,8 @@ export interface RatingProps {
 const Rating = ({ variant, className, style, size }: RatingProps) => {
   variant = variant ? variant : "star";
 
+  const [rating, setRating] = useState(0);
+
   return (
     <div
       className={`rating ${className ? className : ""} ${size ? size : ""}`}
@@ -24,7 +26,13 @@ const Rating = ({ variant, className, style, size }: RatingProps) => {
         <>
           {[...Array(5)].map((_: any, index: number) => {
             return (
-              <span className={`rating__star`} key={index}>
+              <span
+                className={`rating__star ${index < rating ? "selected" : ""}`}
+                key={index}
+                onClick={(): void => {
+                  setRating(index + 1);
+                }}
+              >
                 <FontAwesomeIcon icon={faStar} />
               </span>
             );

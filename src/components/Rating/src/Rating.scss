@@ -17,5 +17,9 @@
   &__star {
     cursor: pointer;
     color: var(--color-disabled);
+
+    &.selected {
+      color: var(--color-gold);
+    }
   }
 }
