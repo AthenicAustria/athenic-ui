@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState } from "react";
+import React, { CSSProperties, useState, useEffect } from "react";
 import { RatingVariant, RatingSize } from "../types/RatingTypes";
 import "./Rating.scss";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -10,12 +10,24 @@ export interface RatingProps {
   className?: string;
   style?: CSSProperties;
   initialRating?: number;
+  onRate?: (value: number) => void;
 }
 
-const Rating = ({ variant, className, style, size }: RatingProps) => {
+const Rating = ({
+  variant,
+  className,
+  style,
+  size,
+  initialRating,
+  onRate,
+}: RatingProps) => {
   variant = variant ? variant : "star";
 
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(initialRating || 0);
+
+  useEffect(() => {
+    onRate ? onRate(rating) : null;
+  }, [setRating]);
 
   return (
     <div

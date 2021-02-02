@@ -357,6 +357,9 @@ const App = () => {
       <Rating variant="star" size="small" />
       <Rating variant="star" />
       <Rating variant="star" size="large" />
+
+      <H2>Initial Rating</H2>
+      <Rating variant="star" initialRating={3} />
     </div>
   );
 };

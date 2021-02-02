@@ -24,7 +24,6 @@ const Collapse = ({
   // const [collapsed, setCollapsed] = useState(new Array(content.length - 1));
 
   const toggleCollapseTab = (e: any) => {
-    console.log(e.target.children[0].children[0].className);
     if (e.target.nextElementSibling.className.includes("collapsed")) {
       e.target.nextElementSibling.className = e.target.nextElementSibling.className.replace(
         "collapsed",
@@ -35,7 +34,6 @@ const Collapse = ({
         "opened"
       );
     } else if (e.target.nextElementSibling.className.includes("opened")) {
-      console.log(e.target.nextElementSibling.className);
       e.target.nextElementSibling.className = e.target.nextElementSibling.className.replace(
         "opened",
         "collapsed"
@@ -79,8 +77,6 @@ const Collapse = ({
     });
     setCollapseTabs(collapseTabsTemp);
   }, []);
-
-  console.log(collapseTabs);
 
   return (
     <div
