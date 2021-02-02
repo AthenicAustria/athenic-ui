@@ -1,5 +1,5 @@
 import React, { CSSProperties, useState, useEffect } from "react";
-import { RatingVariant, RatingSize } from "../types/RatingTypes";
+import { RatingVariant, RatingSize, EmojiScale } from "../types/RatingTypes";
 import "./Rating.scss";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,6 +24,29 @@ const Rating = ({
   variant = variant ? variant : "star";
 
   const [rating, setRating] = useState(initialRating || 0);
+  const emojis: EmojiScale = [
+    {
+      emoji: "😞",
+      value: 1,
+    },
+
+    {
+      emoji: "😟",
+      value: 2,
+    },
+    {
+      emoji: "😐",
+      value: 3,
+    },
+    {
+      emoji: "🙂",
+      value: 4,
+    },
+    {
+      emoji: "😀",
+      value: 5,
+    },
+  ];
 
   useEffect(() => {
     onRate ? onRate(rating) : null;
