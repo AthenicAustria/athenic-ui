@@ -1,6 +1,6 @@
 {
   "name": "athenic-ui",
-  "version": "1.0.56",
+  "version": "1.0.57",
   "description": "👑 Athenic UI React component library. Building beautiful React applications made simple!",
   "main": "dist/index.js",
   "files": [
