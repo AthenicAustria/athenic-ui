@@ -386,9 +386,21 @@ const App = () => {
         style={{ marginLeft: 0 }}
         onClick={() => setDefaultModalShown(!defaultModalShown)}
       >
-        😮‍💨 Toggle Modal
+        😮‍💨 Open Modal
       </Button>
-      <Modal shown={defaultModalShown} title="🔓 Modal title"></Modal>
+      <Modal
+        shown={defaultModalShown}
+        title="🔓 Modal title"
+        onClose={() => setDefaultModalShown(false)}
+      >
+        <Button
+          size="small"
+          style={{ marginLeft: 0 }}
+          onClick={() => setDefaultModalShown(false)}
+        >
+          Close Modal
+        </Button>
+      </Modal>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, ReactChild, ReactChildren } from "react";
 import { H3 } from "../../H3";
 import "./Modal.scss";
 
@@ -10,6 +10,8 @@ export interface ModalProps {
   closeButton?: boolean;
   className?: string;
   style?: CSSProperties;
+  onClose: () => void;
+  children?: ReactChild | ReactChildren;
 }
 
 const Modal = ({
@@ -18,10 +20,15 @@ const Modal = ({
   style,
   closeButton = true,
   title,
+  onClose,
+  children,
 }: ModalProps) => {
   return (
     <>
-      <div className={`modal-blur ${shown ? "shown" : "hidden"}`}></div>{" "}
+      <div
+        className={`modal-blur ${shown ? "shown" : "hidden"}`}
+        onClick={() => onClose()}
+      ></div>
       <div
         className={`modal ${className ? className : ""} ${
           shown ? "shown" : "hidden"
@@ -30,13 +37,15 @@ const Modal = ({
       >
         <div className={`modal__header`}>
           {title ? <H3 className={`modal__header__title`}>{title}</H3> : null}
-          <FontAwesomeIcon
-            icon={faTimes}
-            className={`modal__header__close-icon`}
-            onClick={() => {}}
-          />
+          {closeButton ? (
+            <FontAwesomeIcon
+              icon={faTimes}
+              className={`modal__header__close-icon`}
+              onClick={() => onClose()}
+            />
+          ) : null}
         </div>
-        <div className={`modal__body`}>adsfadsf</div>
+        <div className={`modal__body`}>{children && children}</div>
         <div className={`modal__footer`}></div>
       </div>
     </>
