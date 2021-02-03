@@ -9,9 +9,16 @@ export interface AvatarProps {
   className?: string;
   style?: CSSProperties;
   size?: AvatarSize;
+  notifications?: number;
 }
 
-const Avatar = ({ className, style, image, size = "medium" }: AvatarProps) => {
+const Avatar = ({
+  className,
+  style,
+  image,
+  size = "medium",
+  notifications,
+}: AvatarProps) => {
   return (
     <div
       className={`avatar ${className ? className : ""} ${size}`}
@@ -28,6 +35,9 @@ const Avatar = ({ className, style, image, size = "medium" }: AvatarProps) => {
           <FontAwesomeIcon icon={faUser} />
         </span>
       )}
+      {notifications ? (
+        <div className="icon__notifications">{notifications}</div>
+      ) : null}
     </div>
   );
 };

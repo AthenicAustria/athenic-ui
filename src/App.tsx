@@ -478,6 +478,9 @@ const App = () => {
       <Avatar size="small" />
       <Avatar />
       <Avatar size="large" />
+
+      <H2>Notifications</H2>
+      <Avatar size="medium" />
     </div>
   );
 };

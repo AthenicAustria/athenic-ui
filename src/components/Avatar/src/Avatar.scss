@@ -40,4 +40,13 @@
     justify-content: center;
     align-items: center;
   }
+
+  &__notifications {
+    position: relative;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+  }
 }
