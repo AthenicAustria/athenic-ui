@@ -392,7 +392,7 @@ const App = () => {
       </Button>
       <Modal
         shown={defaultModalShown}
-        title="🍍 Yo! I'm a fresh Modal"
+        title="🍍 Yo! I'm a fresh Modal and this is a very long title. It should break just right about here :)"
         onClose={() => setDefaultModalShown(false)}
       >
         <Button
@@ -421,7 +421,7 @@ const App = () => {
       </Button>
       <Modal
         shown={bottomLeftModalShown}
-        title="🍍 Yo! I'm a fresh Modal"
+        title="🥝 Yo! I'm another fresh Modal"
         onClose={() => setBottomLeftModalShown(false)}
         position="bottomLeft"
       >
@@ -451,7 +451,7 @@ const App = () => {
       </Button>
       <Modal
         shown={bottomRightModalShown}
-        title="🍍 Yo! I'm a fresh Modal"
+        title="🍓 Yo! I'm fresh too"
         onClose={() => setBottomRightModalShown(false)}
         position="bottomRight"
       >
