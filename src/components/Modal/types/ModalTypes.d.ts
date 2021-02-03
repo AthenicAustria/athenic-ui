@@ -1,5 +1,1 @@
-export type ModalPosition =
-  | "default"
-  | "center"
-  | "bottomLeft"
-  | "bottomRright";
+export type ModalPosition = "default" | "center" | "bottomLeft" | "bottomRight";

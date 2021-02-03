@@ -1,6 +1,7 @@
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties, ReactChild, ReactChildren } from "react";
+import { ModalPosition } from "../types/ModalTypes";
 import { H3 } from "../../H3";
 import "./Modal.scss";
 
@@ -12,6 +13,7 @@ export interface ModalProps {
   style?: CSSProperties;
   onClose: () => void;
   children?: ReactChild | ReactChildren | ReactChild[] | ReactChildren[];
+  position?: ModalPosition;
 }
 
 const Modal = ({
@@ -22,6 +24,7 @@ const Modal = ({
   title,
   onClose,
   children,
+  position = "default",
 }: ModalProps) => {
   return (
     <>
@@ -32,6 +35,12 @@ const Modal = ({
       <div
         className={`modal ${className ? className : ""} ${
           shown ? "shown" : "hidden"
+        } ${
+          position === "bottomLeft"
+            ? "bottomLeft"
+            : position === "bottomRight"
+            ? "bottomRight"
+            : ""
         }`}
         style={style ? style : null}
       >

@@ -34,6 +34,8 @@ const App = () => {
   const [ratingDisplayEmoji, setRatingDisplayEmoji] = useState(0);
 
   const [defaultModalShown, setDefaultModalShown] = useState(false);
+  const [bottomLeftModalShown, setBottomLeftModalShown] = useState(false);
+  const [bottomRightModalShown, setBottomRightModalShown] = useState(false);
 
   return (
     <div id="App">
@@ -405,6 +407,66 @@ const App = () => {
           size="small"
           style={{ marginLeft: 0 }}
           onClick={() => setDefaultModalShown(false)}
+        >
+          Delete?
+        </Button>
+      </Modal>
+
+      <H2>Position bottomLeft</H2>
+      <Button
+        style={{ marginLeft: 0 }}
+        onClick={() => setBottomLeftModalShown(!defaultModalShown)}
+      >
+        ↙️ Open Modal bottomLeft
+      </Button>
+      <Modal
+        shown={bottomLeftModalShown}
+        title="🍍 Yo! I'm a fresh Modal"
+        onClose={() => setBottomLeftModalShown(false)}
+        position="bottomLeft"
+      >
+        <Button
+          size="small"
+          style={{ marginLeft: 0 }}
+          onClick={() => setBottomLeftModalShown(false)}
+        >
+          Nah, I'm fine
+        </Button>
+        <Button
+          variant="error"
+          size="small"
+          style={{ marginLeft: 0 }}
+          onClick={() => setBottomLeftModalShown(false)}
+        >
+          Delete?
+        </Button>
+      </Modal>
+
+      <H2>Position bottomRight</H2>
+      <Button
+        style={{ marginLeft: 0 }}
+        onClick={() => setBottomRightModalShown(!defaultModalShown)}
+      >
+        Open Modal bottomRight ↘️
+      </Button>
+      <Modal
+        shown={bottomRightModalShown}
+        title="🍍 Yo! I'm a fresh Modal"
+        onClose={() => setBottomRightModalShown(false)}
+        position="bottomRight"
+      >
+        <Button
+          size="small"
+          style={{ marginLeft: 0 }}
+          onClick={() => setBottomRightModalShown(false)}
+        >
+          Nah, I'm fine
+        </Button>
+        <Button
+          variant="error"
+          size="small"
+          style={{ marginLeft: 0 }}
+          onClick={() => setBottomRightModalShown(false)}
         >
           Delete?
         </Button>
