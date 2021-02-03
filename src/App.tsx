@@ -21,6 +21,7 @@ import { Collapse } from "./components/Collapse";
 import { Stepper } from "./components/Stepper";
 import { Rating } from "./components/Rating";
 import { Modal } from "./components/Modal";
+import { Avatar } from "./components/Avatar";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -471,6 +472,12 @@ const App = () => {
           Delete?
         </Button>
       </Modal>
+
+      <H1>Avatar</H1>
+      <H2>Size</H2>
+      <Avatar size="small" />
+      <Avatar />
+      <Avatar size="large" />
     </div>
   );
 };
