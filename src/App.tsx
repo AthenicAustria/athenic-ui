@@ -483,6 +483,9 @@ const App = () => {
       <Avatar size="small" notifications={4} />
       <Avatar size="medium" notifications={4} />
       <Avatar size="large" notifications={4} />
+
+      <H2>Link</H2>
+      <Avatar link={packageJson.repository.url} notifications={4} />
     </div>
   );
 };

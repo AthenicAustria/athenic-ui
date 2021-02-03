@@ -10,6 +10,8 @@ export interface AvatarProps {
   style?: CSSProperties;
   size?: AvatarSize;
   notifications?: number;
+  link?: string;
+  onClick?: () => void;
 }
 
 const Avatar = ({
@@ -18,11 +20,25 @@ const Avatar = ({
   image,
   size = "medium",
   notifications,
+  link,
+  onClick,
 }: AvatarProps) => {
   return (
-    <div
+    <a
       className={`avatar ${className ? className : ""} ${size}`}
-      style={style ? style : null}
+      style={
+        link
+          ? style
+            ? { cursor: "pointer", ...style }
+            : { cursor: "pointer" }
+          : style
+          ? style
+          : null
+      }
+      onClick={() => {
+        onClick && onClick();
+      }}
+      href={link}
     >
       {image ? (
         <img
@@ -34,11 +50,13 @@ const Avatar = ({
         <span className="avatar__icon">
           <FontAwesomeIcon icon={faUser} />
           {notifications ? (
-            <small className="avatar__icon__notifications">{notifications}</small>
+            <small className="avatar__icon__notifications">
+              {notifications}
+            </small>
           ) : null}
         </span>
       )}
-    </div>
+    </a>
   );
 };
 
