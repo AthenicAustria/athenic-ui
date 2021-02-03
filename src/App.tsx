@@ -486,6 +486,8 @@ const App = () => {
 
       <H2>Link</H2>
       <Avatar link={packageJson.repository.url} notifications={4} />
+
+      <H1>Comment</H1>
     </div>
   );
 };
