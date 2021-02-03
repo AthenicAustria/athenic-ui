@@ -11,7 +11,7 @@ export interface ModalProps {
   className?: string;
   style?: CSSProperties;
   onClose: () => void;
-  children?: ReactChild | ReactChildren;
+  children?: ReactChild | ReactChildren | ReactChild[] | ReactChildren[];
 }
 
 const Modal = ({

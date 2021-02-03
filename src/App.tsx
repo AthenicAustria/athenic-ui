@@ -398,7 +398,15 @@ const App = () => {
           style={{ marginLeft: 0 }}
           onClick={() => setDefaultModalShown(false)}
         >
-          Close Modal
+          Nah, I'm fine
+        </Button>
+        <Button
+          variant="error"
+          size="small"
+          style={{ marginLeft: 0 }}
+          onClick={() => setDefaultModalShown(false)}
+        >
+          Delete?
         </Button>
       </Modal>
     </div>
