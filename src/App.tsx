@@ -390,7 +390,7 @@ const App = () => {
       </Button>
       <Modal
         shown={defaultModalShown}
-        title="🔓 Modal title"
+        title="🍍 Yo! I'm a fresh Modal"
         onClose={() => setDefaultModalShown(false)}
       >
         <Button
