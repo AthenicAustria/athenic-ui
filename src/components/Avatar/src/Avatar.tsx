@@ -33,11 +33,11 @@ const Avatar = ({
       ) : (
         <span className="avatar__icon">
           <FontAwesomeIcon icon={faUser} />
+          {notifications ? (
+            <small className="avatar__icon__notifications">{notifications}</small>
+          ) : null}
         </span>
       )}
-      {notifications ? (
-        <div className="icon__notifications">{notifications}</div>
-      ) : null}
     </div>
   );
 };

@@ -480,7 +480,9 @@ const App = () => {
       <Avatar size="large" />
 
       <H2>Notifications</H2>
-      <Avatar size="medium" />
+      <Avatar size="small" notifications={4} />
+      <Avatar size="medium" notifications={4} />
+      <Avatar size="large" notifications={4} />
     </div>
   );
 };

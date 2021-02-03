@@ -29,6 +29,7 @@
   }
 
   &__icon {
+    position: relative;
     display: block;
     text-align: center;
     height: 100%;
@@ -39,14 +40,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  &__notifications {
-    position: relative;
-    padding: 4px;
-    border-radius: 50%;
-    background-color: var(--color-secondary);
-    display: flex;
-    justify-content: center;
+    &__notifications {
+      position: absolute;
+      color: var(--color-white);
+      font-size: small;
+      top: 0;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      padding: 4px;
+      border-radius: 50%;
+      background-color: var(--color-secondary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(25%, -25%);
+    }
   }
 }
