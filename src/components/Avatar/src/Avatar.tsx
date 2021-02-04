@@ -53,7 +53,7 @@ const Avatar = ({
         </span>
       )}
       {notifications ? (
-        <small className="avatar__notifications">{notifications}</small>
+        <small className="avatar__notifications">{notificationCount}</small>
       ) : null}
     </a>
   );

@@ -483,7 +483,7 @@ const App = () => {
       <H2>Notifications</H2>
       <Avatar size="small" notifications={4} />
       <Avatar size="medium" notifications={10} />
-      <Avatar size="large" notifications={99} />
+      <Avatar size="large" notifications={100} />
 
       <H2>Link</H2>
       <Avatar link={packageJson.repository.url} notifications={4} />
@@ -491,35 +491,45 @@ const App = () => {
       <H1>Comment</H1>
       <Comment
         style={{ marginLeft: 0 }}
-        author={{ name: "Behemoth" }}
-        text="I ❤️ using Athenic UI!"
+        author={{
+          name: "Behemoth",
+        }}
+        text="Made with ❤️ by... well me ;)"
         likes={666}
       />
       <Comment
         style={{ marginLeft: 0 }}
         author={{
-          name: "Penis Monster",
-          avatar:
-            "https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg",
-          link: "https://generated.photos/",
+          name: "ReactLover42",
+          avatar: "https://source.unsplash.com/1600x900/?game",
+          link: "https://source.unsplash.com/",
         }}
         text="Athenic UI is the best option!"
       />
       <Comment
         style={{ marginLeft: 0 }}
-        author={{ name: "Behemoth" }}
+        author={{
+          name: "Guest20",
+        }}
         text="Love it!"
         likes={18}
       />
       <Comment
         style={{ marginLeft: 0 }}
-        author={{ name: "Hand Pedre" }}
+        author={{
+          name: "Hand Pedre",
+        }}
         text="Great Library!"
         likes={18}
       />
       <Comment
         style={{ marginLeft: 0 }}
-        author={{ name: "Jonny Sins" }}
+        author={{
+          name: "PatPlayz",
+          avatar:
+            "https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg",
+          link: "https://generated.photos/",
+        }}
         text="I can recommend Athenic UI to everybody."
         likes={18}
       />
