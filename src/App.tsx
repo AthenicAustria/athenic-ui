@@ -560,6 +560,50 @@ const App = () => {
           likes={3}
         />
       </Comment>
+
+      <H2>Multiply nested</H2>
+      <Comment
+        style={{ marginLeft: 0 }}
+        author={{
+          name: "Behemoth",
+        }}
+        text="Made with ❤️ by... well me ;)"
+        likes={666}
+      >
+        <Comment
+          style={{ marginLeft: 0 }}
+          author={{
+            name: "Hand Pedre",
+          }}
+          text="Yo, nice comment!"
+          likes={5}
+        >
+          <Comment
+            style={{ marginLeft: 0 }}
+            author={{
+              name: "Hand Pedre",
+            }}
+            text="Yo, nice comment!"
+            likes={5}
+          ></Comment>
+          <Comment
+            style={{ marginLeft: 0 }}
+            author={{
+              name: "Hand Pedre",
+            }}
+            text="Hey, it's me in the replies!"
+            likes={3}
+          ></Comment>
+        </Comment>
+        <Comment
+          style={{ marginLeft: 0 }}
+          author={{
+            name: "Hand Pedre",
+          }}
+          text="Hey, it's me in the replies!"
+          likes={3}
+        ></Comment>
+      </Comment>
     </div>
   );
 };

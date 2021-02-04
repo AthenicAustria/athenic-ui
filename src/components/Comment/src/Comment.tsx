@@ -12,6 +12,7 @@ export interface CommentProps {
   dislikes?: number;
   onLike?: () => void;
   onDislike?: () => void;
+  onReply?: () => void;
   style?: CSSProperties;
   className?: string;
   children?: ReactElement<CommentProps> | Array<ReactElement<CommentProps>>;
