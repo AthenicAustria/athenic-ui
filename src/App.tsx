@@ -23,6 +23,7 @@ import { Rating } from "./components/Rating";
 import { Modal } from "./components/Modal";
 import { Avatar } from "./components/Avatar";
 import Comment from "./components/Comment/src/Comment";
+import { Alert } from "./components/Alert";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -604,6 +605,13 @@ const App = () => {
           likes={3}
         ></Comment>
       </Comment>
+
+      <H1>Alert</H1>
+      <H2>Variants</H2>
+      <Alert variant="success" title="Success"></Alert>
+      <Alert variant="info" title="Info"></Alert>
+      <Alert variant="warning" title="Warning"></Alert>
+      <Alert variant="error" title="Error"></Alert>
     </div>
   );
 };
