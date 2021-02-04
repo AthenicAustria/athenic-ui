@@ -489,7 +489,26 @@ const App = () => {
       <Avatar link={packageJson.repository.url} notifications={4} />
 
       <H1>Comment</H1>
-      <Comment style={{ marginLeft: 0 }} />
+      <Comment
+        style={{ marginLeft: 0 }}
+        author="Behemoth"
+        text="I ❤️ using Athenic UI!"
+      />
+      <Comment
+        style={{ marginLeft: 0 }}
+        author="Behemoth"
+        text="I ❤️ using Athenic UI!"
+      />
+      <Comment
+        style={{ marginLeft: 0 }}
+        author="Behemoth"
+        text="I ❤️ using Athenic UI!"
+      />
+      <Comment
+        style={{ marginLeft: 0 }}
+        author="Behemoth"
+        text="I ❤️ using Athenic UI!"
+      />
     </div>
   );
 };
