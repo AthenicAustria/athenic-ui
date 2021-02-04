@@ -533,6 +533,33 @@ const App = () => {
         text="I can recommend Athenic UI to everybody."
         likes={18}
       />
+
+      <H2>With replies</H2>
+      <Comment
+        style={{ marginLeft: 0 }}
+        author={{
+          name: "Behemoth",
+        }}
+        text="Made with ❤️ by... well me ;)"
+        likes={666}
+      >
+        <Comment
+          style={{ marginLeft: 0 }}
+          author={{
+            name: "Hand Pedre",
+          }}
+          text="Yo, nice comment!"
+          likes={5}
+        />
+        <Comment
+          style={{ marginLeft: 0 }}
+          author={{
+            name: "Hand Pedre",
+          }}
+          text="Hey, it's me in the replies!"
+          likes={3}
+        />
+      </Comment>
     </div>
   );
 };

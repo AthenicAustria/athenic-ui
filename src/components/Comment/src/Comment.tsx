@@ -1,8 +1,7 @@
 import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, ReactElement } from "react";
 import { Avatar } from "../../Avatar";
-import { Link } from "../../Link";
 import { CommentAuthor } from "../types/CommentTypes";
 import "./Comment.scss";
 
@@ -15,6 +14,7 @@ export interface CommentProps {
   onDislike?: () => void;
   style?: CSSProperties;
   className?: string;
+  children?: ReactElement<CommentProps> | Array<ReactElement<CommentProps>>;
 }
 
 const Comment = ({
@@ -26,6 +26,7 @@ const Comment = ({
   dislikes,
   onLike,
   onDislike,
+  children,
 }: CommentProps) => {
   return (
     <div
@@ -66,6 +67,7 @@ const Comment = ({
             </span>
           ) : null}
         </div>
+        <div className="comment__wrapper__replies">{children && children}</div>
       </div>
     </div>
   );
