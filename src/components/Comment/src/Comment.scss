@@ -13,6 +13,7 @@
       color: var(--color-disabled);
       font-size: 0.9em;
       padding: 4px 0px;
+      text-decoration: none;
     }
 
     &__text {
@@ -27,6 +28,11 @@
       &__like {
         cursor: pointer;
         padding: 0 6px;
+        transition: color 0.1s;
+
+        &:hover {
+          color: var(--color-primary-tint);
+        }
       }
 
       &__like-count {
