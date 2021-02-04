@@ -27,6 +27,7 @@ const Comment = ({
   dislikes,
   onLike,
   onDislike,
+  onReply,
   children,
 }: CommentProps) => {
   return (
@@ -67,6 +68,12 @@ const Comment = ({
               {dislikes}
             </span>
           ) : null}
+          <span
+            className="comment__wrapper__actions__reply"
+            onClick={() => onReply && noReply()}
+          >
+            Reply
+          </span>
         </div>
         <div className="comment__wrapper__replies">{children && children}</div>
       </div>

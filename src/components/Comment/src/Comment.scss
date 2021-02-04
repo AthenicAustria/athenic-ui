@@ -38,6 +38,12 @@
       &__like-count {
         padding: 0 4px 0 0;
       }
+
+      &__reply {
+        cursor: pointer;
+        padding-left: 8px;
+        color: var(--color-disabled);
+      }
     }
 
     &__replies {
