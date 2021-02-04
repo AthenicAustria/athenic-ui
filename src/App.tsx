@@ -476,9 +476,15 @@ const App = () => {
 
       <H1>Avatar</H1>
       <H2>Size</H2>
-      <Avatar size="small" />
-      <Avatar />
-      <Avatar size="large" />
+      <Avatar
+        size="small"
+        image="https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg"
+      />
+      <Avatar image="https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg" />
+      <Avatar
+        size="large"
+        image="https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg"
+      />
 
       <H2>Notifications</H2>
       <Avatar size="small" notifications={4} />
@@ -491,24 +497,36 @@ const App = () => {
       <H1>Comment</H1>
       <Comment
         style={{ marginLeft: 0 }}
-        author="Behemoth"
+        author={{ name: "Behemoth" }}
         text="I ❤️ using Athenic UI!"
         likes={18}
       />
       <Comment
         style={{ marginLeft: 0 }}
-        author="Behemoth"
+        author={{
+          name: "Penis Monster",
+          avatar:
+            "https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg",
+        }}
         text="I ❤️ using Athenic UI!"
       />
       <Comment
         style={{ marginLeft: 0 }}
-        author="Behemoth"
+        author={{ name: "Behemoth" }}
         text="I ❤️ using Athenic UI!"
+        likes={18}
       />
       <Comment
         style={{ marginLeft: 0 }}
-        author="Behemoth"
+        author={{ name: "Behemoth" }}
         text="I ❤️ using Athenic UI!"
+        likes={18}
+      />
+      <Comment
+        style={{ marginLeft: 0 }}
+        author={{ name: "Behemoth" }}
+        text="I ❤️ using Athenic UI!"
+        likes={18}
       />
     </div>
   );

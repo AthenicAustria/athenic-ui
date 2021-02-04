@@ -41,21 +41,17 @@ const Avatar = ({
       href={link}
     >
       {image ? (
-        <img
-          src={image ? image : "https://via.placeholder.com/150x150?text=%20"}
-          alt="Athenic UI - Avatar Image"
-          className={`avatar__image`}
-        />
+        <span>
+          <img src={image} className={`avatar__image`} />
+        </span>
       ) : (
         <span className="avatar__icon">
-          <FontAwesomeIcon icon={faUser} />
-          {notifications ? (
-            <small className="avatar__icon__notifications">
-              {notifications}
-            </small>
-          ) : null}
+          <FontAwesomeIcon icon={faUser} className="avatar__icon__fa" />
         </span>
       )}
+      {notifications ? (
+        <small className="avatar__notifications">{notifications}</small>
+      ) : null}
     </a>
   );
 };
