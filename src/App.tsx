@@ -476,20 +476,14 @@ const App = () => {
 
       <H1>Avatar</H1>
       <H2>Size</H2>
-      <Avatar
-        size="small"
-        image="https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg"
-      />
-      <Avatar image="https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg" />
-      <Avatar
-        size="large"
-        image="https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg"
-      />
+      <Avatar size="small" />
+      <Avatar />
+      <Avatar size="large" />
 
       <H2>Notifications</H2>
       <Avatar size="small" notifications={4} />
-      <Avatar size="medium" notifications={4} />
-      <Avatar size="large" notifications={4} />
+      <Avatar size="medium" notifications={10} />
+      <Avatar size="large" notifications={99} />
 
       <H2>Link</H2>
       <Avatar link={packageJson.repository.url} notifications={4} />
