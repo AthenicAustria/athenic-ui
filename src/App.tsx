@@ -22,6 +22,7 @@ import { Stepper } from "./components/Stepper";
 import { Rating } from "./components/Rating";
 import { Modal } from "./components/Modal";
 import { Avatar } from "./components/Avatar";
+import Comment from "./components/Comment/src/Comment";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -488,6 +489,7 @@ const App = () => {
       <Avatar link={packageJson.repository.url} notifications={4} />
 
       <H1>Comment</H1>
+      <Comment style={{ marginLeft: 0 }} />
     </div>
   );
 };
