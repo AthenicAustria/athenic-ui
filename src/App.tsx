@@ -501,25 +501,26 @@ const App = () => {
           name: "Penis Monster",
           avatar:
             "https://images.generated.photos/VnCN8wB4smlRzzcnM6GT4J163C5iNBxK2o5lc34ZFQg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjI0MjQuanBn.jpg",
+          link: "https://generated.photos/",
         }}
-        text="I ❤️ using Athenic UI!"
+        text="Athenic UI is the best option!"
       />
       <Comment
         style={{ marginLeft: 0 }}
         author={{ name: "Behemoth" }}
-        text="I ❤️ using Athenic UI!"
+        text="Love it!"
         likes={18}
       />
       <Comment
         style={{ marginLeft: 0 }}
-        author={{ name: "Behemoth" }}
-        text="I ❤️ using Athenic UI!"
+        author={{ name: "Hand Pedre" }}
+        text="Great Library!"
         likes={18}
       />
       <Comment
         style={{ marginLeft: 0 }}
-        author={{ name: "Behemoth" }}
-        text="I ❤️ using Athenic UI!"
+        author={{ name: "Jonny Sins" }}
+        text="I can recommend Athenic UI to everybody."
         likes={18}
       />
     </div>

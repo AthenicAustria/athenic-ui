@@ -40,8 +40,6 @@ const Comment = ({
         <div className="comment__wrapper__author">{author.name}</div>
         <div className="comment__wrapper__text">{text}</div>
         <div className="comment__wrapper__actions">
-          {/* <small className="comment__wrapper__actions__like">👍</small>
-          <small className="comment__wrapper__actions__like">👎</small> */}
           <FontAwesomeIcon
             icon={faThumbsUp}
             className="comment__wrapper__actions__like"
