@@ -20,7 +20,7 @@ const Comment = ({ style, className }: CommentProps) => {
       style={style ? style : null}
     >
       <Avatar />
-      <div></div>
+      <div className="comment__wrapper"></div>
     </div>
   );
 };
