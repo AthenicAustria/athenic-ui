@@ -493,6 +493,7 @@ const App = () => {
         style={{ marginLeft: 0 }}
         author="Behemoth"
         text="I ❤️ using Athenic UI!"
+        likes={18}
       />
       <Comment
         style={{ marginLeft: 0 }}

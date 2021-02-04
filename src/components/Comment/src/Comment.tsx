@@ -1,3 +1,5 @@
+import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties } from "react";
 import { Avatar } from "../../Avatar";
 import "./Comment.scss";
@@ -32,6 +34,28 @@ const Comment = ({
       <div className="comment__wrapper">
         <div className="comment__wrapper__author">{author}</div>
         <div className="comment__wrapper__text">{text}</div>
+        <div className="comment__wrapper__actions">
+          {/* <small className="comment__wrapper__actions__like">👍</small>
+          <small className="comment__wrapper__actions__like">👎</small> */}
+          <FontAwesomeIcon
+            icon={faThumbsUp}
+            className="comment__wrapper__actions__like"
+          />
+          {likes ? (
+            <span className="comment__wrapper__actions__like-count">
+              {likes}
+            </span>
+          ) : null}
+          <FontAwesomeIcon
+            icon={faThumbsDown}
+            className="comment__wrapper__actions__like"
+          />
+          {dislikes ? (
+            <span className="comment__wrapper__actions__like-count">
+              {dislikes}
+            </span>
+          ) : null}
+        </div>
       </div>
     </div>
   );

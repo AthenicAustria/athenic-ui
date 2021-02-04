@@ -18,5 +18,20 @@
     &__text {
       padding-bottom: 4px;
     }
+
+    &__actions {
+      color: var(--color-disabled);
+      font-size: 0.8em;
+      padding-top: 4px;
+
+      &__like {
+        cursor: pointer;
+        padding: 0 6px;
+      }
+
+      &__like-count {
+        padding: 0 4px 0 0;
+      }
+    }
   }
 }
