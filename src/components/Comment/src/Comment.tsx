@@ -70,7 +70,7 @@ const Comment = ({
           ) : null}
           <span
             className="comment__wrapper__actions__reply"
-            onClick={() => onReply && noReply()}
+            onClick={() => onReply && onReply()}
           >
             Reply
           </span>
