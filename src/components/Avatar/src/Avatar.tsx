@@ -23,6 +23,9 @@ const Avatar = ({
   link,
   onClick,
 }: AvatarProps) => {
+  const notificationCount: number | "99+" =
+    notifications > 99 ? "99+" : notifications;
+
   return (
     <a
       className={`avatar ${className ? className : ""} ${size}`}
