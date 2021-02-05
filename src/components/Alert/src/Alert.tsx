@@ -16,6 +16,7 @@ export interface AlertProps {
   icon?: boolean;
   variant: AlertVariant;
   closeIcon?: boolean;
+  shown?: boolean;
   onClose?: () => void;
   className?: string;
   style?: CSSProperties;
@@ -29,7 +30,8 @@ const Alert = ({
   icon = true,
   variant,
   closeIcon = false,
-  onClose,
+  onClose = () => {},
+  shown = true,
 }: AlertProps) => {
   return (
     <div
