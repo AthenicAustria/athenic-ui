@@ -11,6 +11,7 @@ import "./Alert.scss";
 
 export interface AlertProps {
   title?: string;
+  description?: string;
   icon?: boolean;
   variant: AlertVariant;
   className?: string;
@@ -21,6 +22,7 @@ const Alert = ({
   className,
   style,
   title,
+  description,
   icon = true,
   variant,
 }: AlertProps) => {
@@ -46,6 +48,7 @@ const Alert = ({
             />
           ) : null}
           {title}
+          {description ? <p>{description}</p> : null}
         </h3>
       ) : null}
     </div>

@@ -612,6 +612,12 @@ const App = () => {
       <Alert variant="info" title="Info"></Alert>
       <Alert variant="warning" title="Warning"></Alert>
       <Alert variant="error" title="Error"></Alert>
+
+      <H2>Without icon</H2>
+      <Alert variant="success" title="Success" icon={false}></Alert>
+      <Alert variant="info" title="Info" icon={false}></Alert>
+      <Alert variant="warning" title="Warning" icon={false}></Alert>
+      <Alert variant="error" title="Error" icon={false}></Alert>
     </div>
   );
 };
