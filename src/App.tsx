@@ -22,8 +22,9 @@ import { Stepper } from "./components/Stepper";
 import { Rating } from "./components/Rating";
 import { Modal } from "./components/Modal";
 import { Avatar } from "./components/Avatar";
-import Comment from "./components/Comment/src/Comment";
+import { Comment } from "./components/Comment";
 import { Alert } from "./components/Alert";
+import { Switch } from "./components/Switch";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -703,6 +704,9 @@ const App = () => {
         text="🔁 Reset"
         onClick={() => setExampleAlertShown(true)}
       />
+
+      <H1>Switch</H1>
+      <Switch />
     </div>
   );
 };

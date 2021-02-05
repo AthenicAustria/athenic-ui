@@ -13,5 +13,6 @@ export { Stepper } from "./components/Stepper";
 export { Rating } from "./components/Rating";
 export { Modal } from "./components/Modal";
 export { Avatar } from "./components/Avatar";
+export { Comment } from "./components/Comment";
 export { Alert } from "./components/Alert";
 export { Switch } from "./components/Switch";
