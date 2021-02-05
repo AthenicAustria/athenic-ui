@@ -12,7 +12,7 @@
 
 ##### 📝 View the Documentation (coming soon)
 
-##### 🔥 Explore the [Demo](https://ui.athenic.at/)
+##### 🔥 Check out the [Demo](https://ui.athenic.at/)
 
 ## Install
 
