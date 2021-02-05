@@ -14,3 +14,4 @@ export { Rating } from "./components/Rating";
 export { Modal } from "./components/Modal";
 export { Avatar } from "./components/Avatar";
 export { Alert } from "./components/Alert";
+export { Switch } from "./components/Switch";
