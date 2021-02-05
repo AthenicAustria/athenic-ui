@@ -16,6 +16,7 @@ export interface AlertProps {
   icon?: boolean;
   variant: AlertVariant;
   closeIcon?: boolean;
+  onClose?: () => void;
   className?: string;
   style?: CSSProperties;
 }
@@ -28,6 +29,7 @@ const Alert = ({
   icon = true,
   variant,
   closeIcon = false,
+  onClose,
 }: AlertProps) => {
   return (
     <div
@@ -55,6 +57,7 @@ const Alert = ({
             <FontAwesomeIcon
               className={`alert__title__close-icon ${variant}`}
               icon={faTimes}
+              onClick={() => onClose && onClose()}
             />
           ) : null}
         </h3>
