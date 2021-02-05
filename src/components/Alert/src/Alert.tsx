@@ -54,11 +54,12 @@ const Alert = ({
           ) : null}
           {title}
           {closeIcon ? (
-            <FontAwesomeIcon
-              className={`alert__title__close-icon ${variant}`}
-              icon={faTimes}
-              onClick={() => onClose && onClose()}
-            />
+            <span className={`alert__title__close-icon ${variant}`}>
+              <FontAwesomeIcon
+                icon={faTimes}
+                onClick={() => onClose && onClose()}
+              />
+            </span>
           ) : null}
         </h3>
       ) : null}
