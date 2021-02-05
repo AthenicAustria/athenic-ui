@@ -35,7 +35,9 @@ const Alert = ({
 }: AlertProps) => {
   return (
     <div
-      className={`alert ${className ? className : ""} ${variant}`}
+      className={`alert ${className ? className : ""} ${variant} ${
+        shown ? "visible" : "hidden"
+      }`}
       style={style ? style : null}
     >
       {title ? (

@@ -40,6 +40,8 @@ const App = () => {
   const [bottomLeftModalShown, setBottomLeftModalShown] = useState(false);
   const [bottomRightModalShown, setBottomRightModalShown] = useState(false);
 
+  const [exampleAlertShown, setExampleAlertShown] = useState(true);
+
   return (
     <div id="App">
       <H1>Headers</H1>
@@ -686,6 +688,21 @@ const App = () => {
         description="This is an error description"
         closeIcon={true}
       ></Alert>
+
+      <H2>With React states</H2>
+      <Alert
+        variant="success"
+        title="Payment successful!"
+        description="Thank you for using our service. Your payment has been successful!"
+        closeIcon={true}
+        shown={exampleAlertShown}
+        onClose={() => setExampleAlertShown(false)}
+      ></Alert>
+      <Button
+        size="small"
+        text="🔁 Reset"
+        onClick={() => setExampleAlertShown(true)}
+      />
     </div>
   );
 };
