@@ -614,10 +614,30 @@ const App = () => {
       <Alert variant="error" title="Error"></Alert>
 
       <H2>Without icon</H2>
-      <Alert variant="success" title="Success" icon={false}></Alert>
-      <Alert variant="info" title="Info" icon={false}></Alert>
-      <Alert variant="warning" title="Warning" icon={false}></Alert>
-      <Alert variant="error" title="Error" icon={false}></Alert>
+      <Alert
+        variant="success"
+        title="Success"
+        icon={false}
+        description="This is a success description"
+      ></Alert>
+      <Alert
+        variant="info"
+        title="Info"
+        icon={false}
+        description="This is an info description"
+      ></Alert>
+      <Alert
+        variant="warning"
+        title="Warning"
+        icon={false}
+        description="This is a warning description"
+      ></Alert>
+      <Alert
+        variant="error"
+        title="Error"
+        icon={false}
+        description="This is an error description"
+      ></Alert>
 
       <H2>With description</H2>
       <Alert
@@ -625,9 +645,21 @@ const App = () => {
         title="Success"
         description="This is a success description"
       ></Alert>
-      <Alert variant="info" title="Info" description=""></Alert>
-      <Alert variant="warning" title="Warning" description=""></Alert>
-      <Alert variant="error" title="Error" description=""></Alert>
+      <Alert
+        variant="info"
+        title="Info"
+        description="This is an info description"
+      ></Alert>
+      <Alert
+        variant="warning"
+        title="Warning"
+        description="This is a warning description"
+      ></Alert>
+      <Alert
+        variant="error"
+        title="Error"
+        description="This is an error description"
+      ></Alert>
     </div>
   );
 };

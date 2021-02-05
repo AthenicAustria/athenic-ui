@@ -30,6 +30,8 @@
     margin-left: 12px;
 
     &__icon {
+      width: 16px !important;
+      display: inline-block;
       margin-right: 16px;
       font-size: 0.8em;
 
@@ -57,7 +59,7 @@
     }
 
     &.without-icon {
-      margin-left: 16px;
+      margin-left: 12px;
     }
   }
 }
