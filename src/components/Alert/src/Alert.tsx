@@ -3,6 +3,7 @@ import {
   faExclamation,
   faExclamationTriangle,
   faInfo,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties } from "react";
@@ -14,6 +15,7 @@ export interface AlertProps {
   description?: string;
   icon?: boolean;
   variant: AlertVariant;
+  closeIcon?: boolean;
   className?: string;
   style?: CSSProperties;
 }
@@ -25,6 +27,7 @@ const Alert = ({
   description,
   icon = true,
   variant,
+  closeIcon = false,
 }: AlertProps) => {
   return (
     <div
@@ -48,6 +51,12 @@ const Alert = ({
             />
           ) : null}
           {title}
+          {closeIcon ? (
+            <FontAwesomeIcon
+              className={`alert__title__close-icon ${variant}`}
+              icon={faTimes}
+            />
+          ) : null}
         </h3>
       ) : null}
       {description ? (

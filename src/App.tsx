@@ -660,6 +660,32 @@ const App = () => {
         title="Error"
         description="This is an error description"
       ></Alert>
+
+      <H2>With close icon</H2>
+      <Alert
+        variant="success"
+        title="Success"
+        description="This is a success description"
+        closeIcon={true}
+      ></Alert>
+      <Alert
+        variant="info"
+        title="Info"
+        description="This is an info description"
+        closeIcon={true}
+      ></Alert>
+      <Alert
+        variant="warning"
+        title="Warning"
+        description="This is a warning description"
+        closeIcon={true}
+      ></Alert>
+      <Alert
+        variant="error"
+        title="Error"
+        description="This is an error description"
+        closeIcon={true}
+      ></Alert>
     </div>
   );
 };
