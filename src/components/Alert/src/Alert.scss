@@ -50,4 +50,14 @@
       }
     }
   }
+
+  &__description {
+    &.with-icon {
+      margin-left: 42px;
+    }
+
+    &.without-icon {
+      margin-left: 16px;
+    }
+  }
 }

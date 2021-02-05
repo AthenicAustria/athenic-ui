@@ -618,6 +618,16 @@ const App = () => {
       <Alert variant="info" title="Info" icon={false}></Alert>
       <Alert variant="warning" title="Warning" icon={false}></Alert>
       <Alert variant="error" title="Error" icon={false}></Alert>
+
+      <H2>With description</H2>
+      <Alert
+        variant="success"
+        title="Success"
+        description="This is a success description"
+      ></Alert>
+      <Alert variant="info" title="Info" description=""></Alert>
+      <Alert variant="warning" title="Warning" description=""></Alert>
+      <Alert variant="error" title="Error" description=""></Alert>
     </div>
   );
 };

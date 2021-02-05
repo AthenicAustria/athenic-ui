@@ -48,8 +48,16 @@ const Alert = ({
             />
           ) : null}
           {title}
-          {description ? <p>{description}</p> : null}
         </h3>
+      ) : null}
+      {description ? (
+        <p
+          className={`alert__description ${
+            icon ? "with-icon" : "without-icon"
+          }`}
+        >
+          {description}
+        </p>
       ) : null}
     </div>
   );
