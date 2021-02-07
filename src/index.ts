@@ -16,3 +16,4 @@ export { Avatar } from "./components/Avatar";
 export { Comment } from "./components/Comment";
 export { Alert } from "./components/Alert";
 export { Switch } from "./components/Switch";
+export { RadioGroup } from "./components/RadioGroup";

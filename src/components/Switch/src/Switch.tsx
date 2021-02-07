@@ -45,7 +45,7 @@ const Switch = ({
           form={form && form}
           disabled={disabled}
           type="checkbox"
-          className={`switch__input`}
+          className={`switch__input ${disabled ? "disabled" : ""}`}
           onChange={onChange && onChange}
           checked={checked && checked}
         />
