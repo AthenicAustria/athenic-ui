@@ -39,13 +39,22 @@
   &:active &__circle {
     width: 50px;
   }
+
+  &__input:checked ~ &__circle {
+    left: 52px;
+    opacity: 1;
+  }
+
+  &:active &__input ~ &__circle {
+    left: 40px;
+  }
 }
 
-.switch__input:checked ~ .switch__circle {
-  left: 52px;
-  opacity: 1;
-}
+// .switch__input:checked ~ .switch__circle {
+//   left: 52px;
+//   opacity: 1;
+// }
 
-.switch:active .switch__input:checked ~ .switch__circle {
-  left: 40px;
-}
+// .switch:active .switch__input:checked ~ .switch__circle {
+//   left: 40px;
+// }
