@@ -707,8 +707,12 @@ const App = () => {
 
       <H1>Switch</H1>
       <Switch />
-      <Switch />
-      <Switch />
+
+      <H2>Disabled</H2>
+      <Switch disabled={true} />
+
+      <H2>With Label</H2>
+      <Switch label="Enable/Disable Filters" style={{ marginLeft: 0 }} />
     </div>
   );
 };

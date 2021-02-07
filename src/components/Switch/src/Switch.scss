@@ -1,3 +1,12 @@
+.switch__wrapper {
+  margin: 8px 16px;
+
+  &__label {
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+}
+
 .switch {
   position: relative;
   width: 36px;
@@ -5,7 +14,7 @@
   height: 18px;
   border-radius: 25px;
   cursor: pointer;
-  margin: 4px 8px;
+  margin: 8px 0;
 
   &__input {
     position: relative;
