@@ -45,6 +45,7 @@
       align-items: center;
 
       &:after {
+        box-shadow: 0px 10px 10px 0px var(--color-input-shadow);
         transition: 0.2s ease;
         content: "";
         border-radius: 50%;

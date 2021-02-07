@@ -1,3 +1,5 @@
+import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties } from "react";
 import { RadioGroupOptions, RadioGroupOption } from "../types/RadioGroupTypes";
 import "./RadioGroup.scss";
@@ -9,6 +11,7 @@ export interface RadioGroupProps {
   options: RadioGroupOptions;
   value?: string;
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
+  validationMessage?: string;
 }
 
 const RadioGroup = ({
@@ -17,6 +20,7 @@ const RadioGroup = ({
   onChange,
   options,
   value,
+  validationMessage,
 }: RadioGroupProps) => {
   return (
     <div
@@ -43,6 +47,12 @@ const RadioGroup = ({
           </label>
         );
       })}
+      {validationMessage ? (
+        <small className="text-input__validation-message">
+          <FontAwesomeIcon icon={faExclamationTriangle} />
+          <span style={{ marginLeft: "4px" }}>{validationMessage}</span>
+        </small>
+      ) : null}
     </div>
   );
 };

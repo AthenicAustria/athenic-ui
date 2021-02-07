@@ -794,8 +794,21 @@ const App = () => {
             { value: "option2", id: "option2", label: "Option 2" },
             { value: "option3", id: "option3", label: "Option 3" },
           ],
-          name: "example",
+          name: "example1",
         }}
+      />
+
+      <H2>With Validation-Message</H2>
+      <RadioGroup
+        options={{
+          options: [
+            { value: "option4", id: "option4", label: "Option 4" },
+            { value: "option5", id: "option5", label: "Option 5" },
+            { value: "option6", id: "option6", label: "Option 6" },
+          ],
+          name: "example2",
+        }}
+        validationMessage="No matter what you select, you're always wrong ;)"
       />
     </div>
   );
