@@ -1,9 +1,13 @@
 .switch__wrapper {
-  margin: 8px 16px;
+  margin: 8px 16px 20px 16px;
 
   &__label {
     margin-bottom: 6px;
     font-weight: 600;
+  }
+
+  &__validation-message {
+    color: var(--color-error);
   }
 }
 

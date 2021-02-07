@@ -1,3 +1,5 @@
+import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties } from "react";
 import "./Switch.scss";
 
@@ -10,6 +12,7 @@ export interface SwitchProps {
   name?: string;
   id?: string;
   label?: string;
+  validationMessage?: string;
 }
 
 const Switch = ({
@@ -21,6 +24,7 @@ const Switch = ({
   id,
   name,
   label,
+  validationMessage,
 }: SwitchProps) => {
   return (
     <div
@@ -32,7 +36,6 @@ const Switch = ({
           {label}
         </label>
       ) : null}
-
       <div className={`switch`}>
         <input
           id={id && id}
@@ -45,6 +48,12 @@ const Switch = ({
         />
         <div className={`switch__circle`}></div>
       </div>
+      {validationMessage ? (
+        <small className="switch__wrapper__validation-message">
+          <FontAwesomeIcon icon={faExclamationTriangle} />
+          <span style={{ marginLeft: "4px" }}>{validationMessage}</span>
+        </small>
+      ) : null}
     </div>
   );
 };

@@ -712,7 +712,20 @@ const App = () => {
       <Switch disabled={true} />
 
       <H2>With Label</H2>
-      <Switch label="Enable/Disable Filters" style={{ marginLeft: 0 }} />
+      <Switch label="Option 1" style={{ marginLeft: 0 }} />
+      <Switch label="Option 2" style={{ marginLeft: 0 }} />
+
+      <H2>With Validation-Message</H2>
+      <Switch
+        label="Option 1"
+        style={{ marginLeft: 0 }}
+        validationMessage="Not allowed to check this :("
+      />
+      <Switch
+        label="Option 2"
+        style={{ marginLeft: 0 }}
+        validationMessage="Not allowed to check this either :("
+      />
     </div>
   );
 };
