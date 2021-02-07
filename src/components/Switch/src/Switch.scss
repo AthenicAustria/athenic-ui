@@ -48,6 +48,6 @@
   }
 
   &:active &__input ~ &__circle {
-    left: 12px;
+    left: 14px;
   }
 } // .switch__input:checked ~ .switch__circle { //   left: 52px; //   opacity: 1; // } // .switch:active .switch__input:checked ~ .switch__circle { //   left: 40px; // }
