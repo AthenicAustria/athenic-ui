@@ -1,13 +1,14 @@
 .switch {
   position: relative;
-  width: 100px;
+  width: 36px;
   background-color: rgba(100, 100, 100, 0.15);
-  height: 48px;
+  height: 18px;
   border-radius: 25px;
   cursor: pointer;
+  margin: 4px 8px;
 
   &__input {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     width: 100%;
@@ -21,15 +22,16 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 38px;
-    height: 38px;
-    margin: 5px;
+    width: 10px;
+    height: 10px;
+    margin: 4px;
     z-index: 2;
-    background: black;
+    background-color: var(--color-primary);
     border-radius: 20px;
     opacity: 0.4;
     box-shadow: 0px 10px 10px 0px rgba(50, 50, 50, 0.35);
     transition: all 0.25s ease;
+    pointer-events: none;
   }
 
   &:hover {
@@ -37,24 +39,15 @@
   }
 
   &:active &__circle {
-    width: 50px;
+    width: 14px;
   }
 
   &__input:checked ~ &__circle {
-    left: 52px;
+    left: 18px;
     opacity: 1;
   }
 
   &:active &__input ~ &__circle {
-    left: 40px;
+    left: 12px;
   }
-}
-
-// .switch__input:checked ~ .switch__circle {
-//   left: 52px;
-//   opacity: 1;
-// }
-
-// .switch:active .switch__input:checked ~ .switch__circle {
-//   left: 40px;
-// }
+} // .switch__input:checked ~ .switch__circle { //   left: 52px; //   opacity: 1; // } // .switch:active .switch__input:checked ~ .switch__circle { //   left: 40px; // }

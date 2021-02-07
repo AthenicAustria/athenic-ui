@@ -707,6 +707,8 @@ const App = () => {
 
       <H1>Switch</H1>
       <Switch />
+      <Switch />
+      <Switch />
     </div>
   );
 };
