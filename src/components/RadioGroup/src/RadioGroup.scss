@@ -1,0 +1,14 @@
+.radio-group {
+  display: inline-block;
+  margin: 8px 16px;
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+
+  &__input {
+    margin-right: 8px;
+  }
+}

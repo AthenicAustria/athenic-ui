@@ -25,6 +25,8 @@ import { Avatar } from "./components/Avatar";
 import { Comment } from "./components/Comment";
 import { Alert } from "./components/Alert";
 import { Switch } from "./components/Switch";
+import { RadioGroup } from "./components/RadioGroup";
+import value from "*.png";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -782,6 +784,18 @@ const App = () => {
         label="Option 2"
         style={{ marginLeft: 0 }}
         validationMessage="Not allowed to check this either :("
+      />
+
+      <H1>RadioGroup</H1>
+      <RadioGroup
+        options={{
+          options: [
+            { value: "option1", id: "option1", label: "Option 1" },
+            { value: "option2", id: "option2", label: "Option 2" },
+            { value: "option3", id: "option3", label: "Option 3" },
+          ],
+          name: "example",
+        }}
       />
     </div>
   );

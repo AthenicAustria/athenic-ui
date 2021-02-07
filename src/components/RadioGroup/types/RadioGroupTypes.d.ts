@@ -1,1 +1,11 @@
-export type RadioGroupRadioButtons = { value: string; label: string }[];
+export type RadioGroupOption = {
+  value: string;
+  label: string;
+  id: string;
+};
+
+export type RadioGroupOptions = {
+  options: RadioGroupOption[];
+  form?: string;
+  name: string;
+};
