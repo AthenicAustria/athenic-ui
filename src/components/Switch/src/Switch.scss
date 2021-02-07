@@ -14,7 +14,7 @@
 .switch {
   position: relative;
   width: 36px;
-  background-color: rgba(100, 100, 100, 0.15);
+  background-color: var(--color-input);
   height: 18px;
   border-radius: 25px;
   cursor: pointer;
@@ -46,13 +46,13 @@
     background-color: var(--color-primary);
     border-radius: 20px;
     opacity: 0.4;
-    box-shadow: 0px 10px 10px 0px rgba(50, 50, 50, 0.35);
+    box-shadow: 0px 10px 10px 0px var(--color-input-shadow);
     transition: all 0.25s ease;
     pointer-events: none;
   }
 
   &:hover {
-    background-color: rgba(100, 100, 100, 0.35);
+    background-color: var(--color-input-hover);
   }
 
   &:active &__circle {

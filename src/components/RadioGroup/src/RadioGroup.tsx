@@ -30,15 +30,16 @@ const RadioGroup = ({
             form={options.form && options.form}
             className={`radio-group__label`}
           >
+            {option.label}
             <input
               form={options.form && options.form}
               type="radio"
               id={option.id && option.id}
               name={options.name && options.name}
               value={option.value}
-              className={`radio-group__input`}
+              className={`radio-group__label__input`}
             />
-            {option.label}
+            <span className={`radio-group__label__checkbox`}></span>
           </label>
         );
       })}
