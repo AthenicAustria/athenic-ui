@@ -13,6 +13,7 @@ export interface SwitchProps {
   id?: string;
   label?: string;
   validationMessage?: string;
+  checked?: boolean;
 }
 
 const Switch = ({
@@ -25,6 +26,7 @@ const Switch = ({
   name,
   label,
   validationMessage,
+  checked,
 }: SwitchProps) => {
   return (
     <div
@@ -45,6 +47,7 @@ const Switch = ({
           type="checkbox"
           className={`switch__input`}
           onChange={onChange && onChange}
+          checked={checked && checked}
         />
         <div className={`switch__circle`}></div>
       </div>
