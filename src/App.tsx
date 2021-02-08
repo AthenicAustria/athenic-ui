@@ -845,6 +845,15 @@ const App = () => {
         onClose={() => setOtpInputAlertShown(false)}
       />
       <OTPInput numInputs={6} onComplete={() => setOtpInputAlertShown(true)} />
+
+      <H2>Combined with Card</H2>
+      <Card size="auto">
+        <OTPInput
+          label="🔑 Verify your Account"
+          numInputs={6}
+          onComplete={() => setOtpInputAlertShown(true)}
+        />
+      </Card>
     </div>
   );
 };
