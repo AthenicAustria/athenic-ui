@@ -47,6 +47,8 @@ const App = () => {
 
   const [exampleAlertShown, setExampleAlertShown] = useState(true);
 
+  const [otpInputAlertShown, setOtpInputAlertShown] = useState(false);
+
   return (
     <div id="App">
       <H1>Headers</H1>
@@ -824,7 +826,19 @@ const App = () => {
       <H2>With placeholder</H2>
       <OTPInput numInputs={6} placeholder="&#8226;" />
 
-      <H1>C++ test</H1>
+      <H2>With summary</H2>
+      <OTPInput numInputs={6} summary />
+
+      <H2>Example with onComplete Alert</H2>
+      <Alert
+        style={{ marginLeft: 0 }}
+        shown={otpInputAlertShown}
+        variant="success"
+        title="Account verified"
+        closeIcon={true}
+        onClose={() => setOtpInputAlertShown(false)}
+      />
+      <OTPInput numInputs={6} onComplete={() => setOtpInputAlertShown(true)} />
     </div>
   );
 };

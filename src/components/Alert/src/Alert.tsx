@@ -11,7 +11,7 @@ import { AlertVariant } from "../types/AlertTypes";
 import "./Alert.scss";
 
 export interface AlertProps {
-  title?: string;
+  title: string;
   description?: string;
   icon?: boolean;
   variant: AlertVariant;

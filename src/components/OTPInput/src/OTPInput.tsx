@@ -12,7 +12,7 @@ export interface OTPInputProps {
   validationMessage?: string;
   value?: number[];
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
-  onConplete?: () => void;
+  onComplete?: () => void;
   placeholder?: string;
   summary?: boolean;
 }
@@ -25,6 +25,7 @@ const OTPInput = ({
   validationMessage,
   value,
   onChange,
+  onComplete,
   summary,
   placeholder,
 }: OTPInputProps) => {
@@ -39,6 +40,7 @@ const OTPInput = ({
     if (e.target.nextSibling) {
       e.target.nextSibling.focus();
     } else {
+      onComplete && onComplete();
       e.target.parentNode.children[0].select();
     }
   };
