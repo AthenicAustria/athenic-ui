@@ -811,7 +811,6 @@ const App = () => {
 
       <H1>OTP Input</H1>
       <OTPInput />
-      <OTPInput numInputs={6} />
 
       <H2>With Label</H2>
       <OTPInput numInputs={6} label="Enter verification code" />
