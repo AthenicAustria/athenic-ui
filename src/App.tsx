@@ -823,6 +823,8 @@ const App = () => {
 
       <H2>With placeholder</H2>
       <OTPInput numInputs={6} placeholder="&#8226;" />
+
+      <H1>C++ test</H1>
     </div>
   );
 };
