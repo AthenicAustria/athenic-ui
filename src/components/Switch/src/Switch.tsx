@@ -1,9 +1,11 @@
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties } from "react";
+import { SwitchVariant } from "../types/SwitchTypes";
 import "./Switch.scss";
 
 export interface SwitchProps {
+  variant?: SwitchVariant;
   className?: string;
   style?: CSSProperties;
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
@@ -17,6 +19,7 @@ export interface SwitchProps {
 }
 
 const Switch = ({
+  variant = "primary",
   className,
   style,
   onChange,
@@ -49,7 +52,7 @@ const Switch = ({
           onChange={onChange && onChange}
           checked={checked && checked}
         />
-        <div className={`switch__circle`}></div>
+        <div className={`switch__circle ${variant}`}></div>
       </div>
       {validationMessage ? (
         <small className="switch__wrapper__validation-message">

@@ -765,7 +765,13 @@ const App = () => {
       />
 
       <H1>Switch</H1>
+      <H2>Variants</H2>
       <Switch />
+      <Switch variant="secondary" />
+      <Switch variant="tertiary" />
+      <Switch variant="success" />
+      <Switch variant="warning" />
+      <Switch variant="error" />
 
       <H2>Disabled</H2>
       <Switch disabled={true} />

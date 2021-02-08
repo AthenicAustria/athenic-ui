@@ -25,8 +25,18 @@
         margin-left: 0;
       }
 
+      &[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      &[type="number"]:hover,
+      &[type="number"]:focus {
+        -moz-appearance: number-input;
+      }
+
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
+        -moz-appearance: textfield;
         appearance: none;
         margin: 0;
       }
