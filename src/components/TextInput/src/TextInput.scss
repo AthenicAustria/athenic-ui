@@ -1,6 +1,6 @@
 .text-input {
   &__input {
-    display: inline;
+    display: inline-block;
     outline: none;
     border-width: 1px;
     border-color: var(--color-grey);

@@ -1,4 +1,43 @@
 .search-input {
   &__input {
+    display: inline-block;
+    outline: none;
+    border-width: 1px;
+    border-color: var(--color-grey);
+    border-style: solid;
+    border-radius: 8px;
+    padding: 8px 16px;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+    transition: 0.18s ease-out;
+    font-family: var(--font-primary);
+    margin: 8px 12px;
+
+    &:focus {
+      box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.01),
+        0px 0px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &.disabled {
+      background-color: inset 1px 4px 16px rgba(0, 0, 0, 0.02);
+      cursor: not-allowed;
+    }
+
+    &.invalid {
+      border-color: var(--color-error);
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 6px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+  }
+
+  &__validation-message {
+    display: block;
+    margin-top: 6px;
+    color: var(--color-error);
+    font-family: var(--font-primary);
   }
 }

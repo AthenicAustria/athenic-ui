@@ -6,6 +6,7 @@ export { Button, IconButton } from "./components/Button";
 export { Badge } from "./components/Badge";
 export { Spinner } from "./components/Spinner";
 export { TextInput } from "./components/TextInput";
+export { SearchInput } from "./components/SearchInput";
 export { Card } from "./components/Card";
 export { Link } from "./components/Link";
 export { Counter } from "./components/Counter";

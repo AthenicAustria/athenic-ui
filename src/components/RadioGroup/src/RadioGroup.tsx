@@ -33,6 +33,7 @@ const RadioGroup = ({
             htmlFor={option.id && option.id}
             form={options.form && options.form}
             className={`radio-group__label`}
+            key={index}
           >
             {option.label}
             <input
@@ -42,6 +43,7 @@ const RadioGroup = ({
               name={options.name && options.name}
               value={option.value}
               className={`radio-group__label__input`}
+              key={index}
             />
             <span className={`radio-group__label__checkbox`}></span>
           </label>

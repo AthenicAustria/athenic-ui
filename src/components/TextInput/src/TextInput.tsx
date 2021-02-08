@@ -36,7 +36,7 @@ const TextInput = ({
   return (
     <div className="text-input">
       {label ? (
-        <label className="text-input__label" htmlFor={name}>
+        <label className="text-input__label" htmlFor={name && name}>
           {label}
         </label>
       ) : null}

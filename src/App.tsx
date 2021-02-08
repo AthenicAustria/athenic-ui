@@ -27,6 +27,7 @@ import { Alert } from "./components/Alert";
 import { Switch } from "./components/Switch";
 import { RadioGroup } from "./components/RadioGroup";
 import value from "*.png";
+import { SearchInput } from "./components/SearchInput";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -157,30 +158,6 @@ const App = () => {
       <H2>Custom Speed</H2>
       <Spinner speed={500} />
       <Spinner speed={2000} />
-
-      <H1>Text Input</H1>
-      <TextInput style={{ marginLeft: "0px" }} />
-
-      <H2>With Placeholder</H2>
-      <TextInput placeholder="Athenic UI" style={{ marginLeft: 0 }} />
-
-      <H2>Disabled</H2>
-      <TextInput disabled={true} style={{ marginLeft: 0 }} />
-
-      <H2>Invalid</H2>
-      <TextInput invalid={true} style={{ marginLeft: 0 }} />
-
-      <H2>With Label</H2>
-      <TextInput label="E-Mail" style={{ marginLeft: 0 }} />
-
-      <H2>With Validation-Message</H2>
-      <TextInput
-        validationMessage="Please enter a valid E-Mail"
-        style={{ marginLeft: 0 }}
-      />
-
-      <H2>Password</H2>
-      <TextInput type="password" style={{ marginLeft: 0 }} />
 
       <H1>Card</H1>
       <H2>Size</H2>
@@ -763,6 +740,15 @@ const App = () => {
 
       <H2>Password</H2>
       <TextInput type="password" style={{ marginLeft: 0 }} />
+
+      <H1>SearchInput</H1>
+      <SearchInput style={{ marginLeft: 0 }} />
+
+      <H2>With Validation-Message</H2>
+      <SearchInput
+        style={{ marginLeft: 0 }}
+        validationMessage="Please enter a valid search term!"
+      />
 
       <H1>Switch</H1>
       <Switch />
