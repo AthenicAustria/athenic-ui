@@ -12,6 +12,7 @@ export interface OTPInputProps {
   validationMessage?: string;
   value?: number[];
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
+  onConplete?: () => void;
   placeholder?: string;
   summary?: boolean;
 }
@@ -25,6 +26,7 @@ const OTPInput = ({
   value,
   onChange,
   summary,
+  placeholder,
 }: OTPInputProps) => {
   const [otp, setOtp] = useState(
     value ? value : [...Array(numInputs)].fill("")
@@ -40,8 +42,6 @@ const OTPInput = ({
       e.target.parentNode.children[0].select();
     }
   };
-
-  console.log(otp);
 
   return (
     <div
@@ -67,11 +67,14 @@ const OTPInput = ({
                 console.log(e.target.value);
               }}
               onFocus={(e: React.FocusEvent<any>) => e.target.select()}
+              placeholder={placeholder ? placeholder : null}
             />
           );
         })}
       </div>
-      <div className={`otp-input__summary`}>{otp.join(" ")}</div>
+      {summary ? (
+        <div className={`otp-input__summary`}>{otp.join(" ")}</div>
+      ) : null}
       {validationMessage ? (
         <small className="text-input__validation-message">
           <FontAwesomeIcon icon={faExclamationTriangle} />

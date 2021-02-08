@@ -816,18 +816,13 @@ const App = () => {
       <OTPInput numInputs={6} label="Enter verification code" />
 
       <H2>With Validation-Message</H2>
-      <OTPInput
-        numInputs={6}
-        label="Enter verification code"
-        validationMessage="Invalid Code"
-      />
+      <OTPInput numInputs={6} validationMessage="Invalid Code" />
 
       <H2>With initial values</H2>
-      <OTPInput
-        numInputs={6}
-        label="Enter verification code"
-        value={[1, 2, 3, 4, 5, 6]}
-      />
+      <OTPInput numInputs={6} value={[1, 2, 3, 4, 5, 6]} />
+
+      <H2>With placeholder</H2>
+      <OTPInput numInputs={6} placeholder="&#8226;" />
     </div>
   );
 };
