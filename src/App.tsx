@@ -813,9 +813,6 @@ const App = () => {
       <OTPInput />
       <OTPInput numInputs={6} />
 
-      <H2>With Separator</H2>
-      <OTPInput numInputs={6} separator={<span>-</span>} />
-
       <H2>With Label</H2>
       <OTPInput numInputs={6} label="Enter verification code" />
 
