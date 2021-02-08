@@ -28,6 +28,7 @@ import { Switch } from "./components/Switch";
 import { RadioGroup } from "./components/RadioGroup";
 import value from "*.png";
 import { SearchInput } from "./components/SearchInput";
+import { OTPInput } from "./components/OTPInput";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -744,10 +745,21 @@ const App = () => {
       <H1>SearchInput</H1>
       <SearchInput style={{ marginLeft: 0 }} />
 
+      <H2>Disabled</H2>
+      <SearchInput style={{ marginLeft: 0 }} disabled />
+
       <H2>With Validation-Message</H2>
       <SearchInput
         style={{ marginLeft: 0 }}
         validationMessage="Please enter a valid search term!"
+      />
+
+      <H2>onSearch</H2>
+      <SearchInput
+        style={{ marginLeft: 0 }}
+        onSearch={() =>
+          window.alert("You must be looking for something very important huh?")
+        }
       />
 
       <H1>Switch</H1>
@@ -795,6 +807,30 @@ const App = () => {
           name: "example2",
         }}
         validationMessage="No matter what you select, you're always wrong ;)"
+      />
+
+      <H1>OTP Input</H1>
+      <OTPInput />
+      <OTPInput numInputs={6} />
+
+      <H2>With Separator</H2>
+      <OTPInput numInputs={6} separator={<span>-</span>} />
+
+      <H2>With Label</H2>
+      <OTPInput numInputs={6} label="Enter verification code" />
+
+      <H2>With Validation-Message</H2>
+      <OTPInput
+        numInputs={6}
+        label="Enter verification code"
+        validationMessage="Invalid Code"
+      />
+
+      <H2>With initial values</H2>
+      <OTPInput
+        numInputs={6}
+        label="Enter verification code"
+        value={[1, 2, 3, 4, 5, 6]}
       />
     </div>
   );

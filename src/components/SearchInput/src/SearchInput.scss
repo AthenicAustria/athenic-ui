@@ -1,4 +1,14 @@
 .search-input {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 18px;
+    margin-left: 12px;
+    font-size: 0.8em;
+    color: var(--color-primary-tint);
+  }
+
   &__input {
     display: inline-block;
     outline: none;
@@ -6,7 +16,7 @@
     border-color: var(--color-grey);
     border-style: solid;
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 8px 16px 8px 32px;
     box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
     transition: 0.18s ease-out;
     font-family: var(--font-primary);
