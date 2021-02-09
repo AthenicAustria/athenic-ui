@@ -125,7 +125,7 @@ module.exports = [
       ],
     },
     output: {
-      filename: "index.ts",
+      filename: "index.d.ts",
       path: path.resolve(__dirname, "dist"),
       libraryTarget: "umd",
       library: "athenic-ui",
