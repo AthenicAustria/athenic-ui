@@ -29,7 +29,7 @@ const OTPInput = ({
   summary,
   placeholder,
 }: OTPInputProps) => {
-  const [otp, setOtp] = useState(
+  const [otp, setOtp] = useState<Array<string>>(
     value ? value : [...Array(numInputs)].fill("")
   );
 

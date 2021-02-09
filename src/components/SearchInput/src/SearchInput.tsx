@@ -3,7 +3,7 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, useState } from "react";
 import "./SearchInput.scss";
 
 export interface SearchInput {
@@ -16,7 +16,9 @@ export interface SearchInput {
   validationMessage?: string;
   invalid?: boolean;
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.FormEvent<HTMLInputElement>) => void;
   onSearch?: () => void;
+  expandOnFocus?: boolean;
 }
 
 const SearchInput = ({
@@ -29,8 +31,12 @@ const SearchInput = ({
   validationMessage,
   invalid,
   onChange,
+  onFocus,
   onSearch,
+  expandOnFocus = false,
 }: SearchInput) => {
+  const [expanded, setExpanded] = useState<boolean>(false);
+
   return (
     <div className="search-input">
       {label ? (
@@ -53,10 +59,12 @@ const SearchInput = ({
         style={style ? style : {}}
         onChange={onChange && onChange}
         onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
-          console.log("fired");
           if (e.key === "Enter" || e.keyCode === 13) {
             onSearch && onSearch();
           }
+        }}
+        onFocus={(e: React.FormEvent<HTMLInputElement>) => {
+          onFocus && onFocus(e);
         }}
       />
       {validationMessage ? (

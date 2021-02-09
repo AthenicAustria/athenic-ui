@@ -20,8 +20,7 @@ const Collapse = ({
   className,
   style,
 }: CollapseProps) => {
-  const [collapseTabs, setCollapseTabs] = useState([]);
-  // const [collapsed, setCollapsed] = useState(new Array(content.length - 1));
+  const [collapseTabs, setCollapseTabs] = useState<Array<JSX.Element>>([]);
 
   const toggleCollapseTab = (e: any) => {
     if (e.target.nextElementSibling.className.includes("collapsed")) {
@@ -46,7 +45,7 @@ const Collapse = ({
   };
 
   useEffect(() => {
-    let collapseTabsTemp: any = [];
+    let collapseTabsTemp: JSX.Element[] = [];
     content.forEach((tab: CollapseTab, index: number) => {
       collapseTabsTemp.push(
         <div className={`collapse__tab`} key={index}>

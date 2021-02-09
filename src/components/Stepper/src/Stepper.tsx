@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "./Stepper.scss";
-import { StepType, StepperDirection } from "../types/StepperTypes";
+import { Steps, StepperDirection, StepState } from "../types/StepperTypes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 export interface StepperProps {
-  steps: StepType;
+  steps: Steps;
   direction?: StepperDirection;
   currentStep: number;
 }
 
-const Stepper = ({ steps, direction, currentStep = 1 }: StepperProps) => {
-  const [stepState, setStepState] = useState([]);
-  direction = direction ? direction : "vertical";
+const Stepper = ({
+  steps,
+  direction = "vertical",
+  currentStep = 1,
+}: StepperProps) => {
+  const [stepState, setStepState] = useState<StepState>([]);
 
   useEffect(() => {
-    let createSteps = steps.map((step: any, idx: number) => ({
+    const createSteps: StepState = steps.map((step: any, i: number) => ({
       description: step,
-      completed: idx < currentStep - 1, // past are completed
-      selected: idx <= currentStep - 1, // past & present are colored
-      highlighted: idx === currentStep - 1, // only present is highlighted
+      completed: i < currentStep - 1,
+      selected: i <= currentStep - 1,
+      highlighted: i === currentStep - 1,
     }));
 
     setStepState(createSteps);
@@ -28,8 +31,8 @@ const Stepper = ({ steps, direction, currentStep = 1 }: StepperProps) => {
   return (
     <div className={`stepper-${direction}`}>
       {stepState.map(
-        ({ selected, completed, highlighted, description }, idx) => (
-          <div className="step" key={idx}>
+        ({ selected, completed, highlighted, description }, index: number) => (
+          <div className="step" key={index}>
             <div
               className={`step__number step-number-${
                 selected ? "active" : "disabled"
@@ -38,7 +41,7 @@ const Stepper = ({ steps, direction, currentStep = 1 }: StepperProps) => {
               {completed ? (
                 <FontAwesomeIcon icon={faCheckCircle} className="step-icon" />
               ) : (
-                idx + 1
+                index + 1
               )}
             </div>
             <div
@@ -48,7 +51,7 @@ const Stepper = ({ steps, direction, currentStep = 1 }: StepperProps) => {
             >
               {description}
             </div>
-            {idx + 1 !== stepState.length && (
+            {index + 1 !== stepState.length && (
               <div
                 className={`step__divider divider-${stepState.length}`}
               ></div>

@@ -28,7 +28,7 @@ const Rating = ({
 }: RatingProps) => {
   variant = variant ? variant : "star";
 
-  const [rating, setRating] = useState(initialRating || 0);
+  const [rating, setRating] = useState<number>(initialRating || 0);
   const emojis: EmojiScale = [
     {
       emoji: "😞",
