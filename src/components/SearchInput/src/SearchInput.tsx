@@ -55,8 +55,8 @@ const SearchInput = ({
         type="text"
         className={`search-input__input ${className ? className : ""} ${
           invalid ? "invalid" : ""
-        } ${disabled ? "disabled" : ""}`}
-        style={style ? style : {}}
+        } ${disabled ? "disabled" : ""} ${expanded ? "expanded" : ""}`}
+        style={style ? style : null}
         onChange={onChange && onChange}
         onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
           if (e.key === "Enter" || e.keyCode === 13) {
@@ -64,7 +64,11 @@ const SearchInput = ({
           }
         }}
         onFocus={(e: React.FormEvent<HTMLInputElement>) => {
+          expandOnFocus ? setExpanded(true) : null;
           onFocus && onFocus(e);
+        }}
+        onBlur={(e: React.FormEvent<HTMLInputElement>) => {
+          expandOnFocus ? setExpanded(false) : null;
         }}
       />
       {validationMessage ? (

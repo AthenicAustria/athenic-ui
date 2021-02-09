@@ -11,6 +11,7 @@
 
   &__input {
     display: inline-block;
+    width: 140px;
     outline: none;
     border-width: 1px;
     border-color: var(--color-grey);
@@ -18,7 +19,7 @@
     border-radius: 8px;
     padding: 8px 16px 8px 32px;
     box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
-    transition: 0.18s ease-out;
+    transition: 0.18s ease;
     font-family: var(--font-primary);
     margin: 8px 12px;
 
@@ -34,6 +35,10 @@
 
     &.invalid {
       border-color: var(--color-error);
+    }
+
+    &.expanded {
+      width: 200px;
     }
   }
 

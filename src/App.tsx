@@ -764,6 +764,9 @@ const App = () => {
         }
       />
 
+      <H2>Expand on focus</H2>
+      <SearchInput style={{ marginLeft: 0 }} expandOnFocus />
+
       <H1>Switch</H1>
       <H2>Variants</H2>
       <Switch />
@@ -774,7 +777,7 @@ const App = () => {
       <Switch variant="error" />
 
       <H2>Disabled</H2>
-      <Switch disabled={true} />
+      <Switch disabled />
 
       <H2>With Label</H2>
       <Switch label="Option 1" style={{ marginLeft: 0 }} />
