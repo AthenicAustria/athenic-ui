@@ -10,7 +10,6 @@
     "resolveJsonModule": true,
     "declaration": true,
     "sourceMap": true,
-    "lib": ["ES6", "DOM"],
-    "types": ["./dist/index.d.ts"]
+    "lib": ["ES6", "DOM"]
   }
 }
