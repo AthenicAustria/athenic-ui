@@ -19,15 +19,13 @@ export interface RatingProps {
 }
 
 const Rating = ({
-  variant,
+  variant = "star",
   className,
   style,
   size,
   initialRating,
   onRate,
 }: RatingProps) => {
-  variant = variant ? variant : "star";
-
   const [rating, setRating] = useState<number>(initialRating || 0);
   const emojis: EmojiScale = [
     {

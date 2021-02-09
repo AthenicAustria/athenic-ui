@@ -1,6 +1,6 @@
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { CSSProperties, HtmlHTMLAttributes, useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import "./OTPInput.scss";
 
 export interface OTPInputProps {
