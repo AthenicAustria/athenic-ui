@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "target": "ES6",
-    "module": "es6",
+    "target": "ES5",
+    "module": "commonjs",
     "jsx": "react",
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
