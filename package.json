@@ -56,7 +56,6 @@
     "babel-loader": "^8.2.2",
     "chalk": "^4.1.0",
     "css-loader": "^5.0.1",
-    "docz": "^2.3.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.0.0-beta.6",
     "identity-obj-proxy": "^3.0.0",

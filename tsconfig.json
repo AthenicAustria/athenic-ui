@@ -9,6 +9,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "declaration": true,
+    "declarationDir": "./",
     "sourceMap": true,
     "lib": ["ES6", "DOM"]
   }

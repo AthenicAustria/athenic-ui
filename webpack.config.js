@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const DtsPlugin = require("dts-webpack-plugin");
 
 module.exports = [
   {
@@ -125,7 +126,7 @@ module.exports = [
       ],
     },
     output: {
-      filename: "index.d.ts",
+      filename: "index.ts",
       path: path.resolve(__dirname, "dist"),
       libraryTarget: "umd",
       library: "athenic-ui",
