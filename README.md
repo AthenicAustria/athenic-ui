@@ -14,6 +14,8 @@
 
 ##### 🔥 Check out the [Demo](https://ui.athenic.at/)
 
+##### 🆘 Help! Somebody pls tell me how to handle those goddamn typescript module declarations...
+
 ## Install
 
 ```bash
