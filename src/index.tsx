@@ -5,8 +5,6 @@ import App from "./App";
 
 ReactDOM.render(<App />, document.querySelector("#root"));
 
-export * from "./index";
-
 // Athenic UI Components
 export { H1, H1Props } from "./components/H1";
 export { H2, H2Props } from "./components/H2";
