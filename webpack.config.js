@@ -47,11 +47,11 @@ module.exports = [
         filename: "index.css",
         chunkFilename: "index.chunk.css",
       }),
-      new NpmDtsPlugin({
-        logLevel: "debug",
-        force: true,
-        output: "./dist/index.d.ts",
-      }),
+      // new NpmDtsPlugin({
+      //   logLevel: "debug",
+      //   force: true,
+      //   output: "./dist/index.d.ts",
+      // }),
     ],
   },
   {
