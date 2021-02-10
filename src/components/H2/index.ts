@@ -1,1 +1,1 @@
-export { default as H2 } from "./src/H2";
+export { default as H2, H2Props } from "./src/H2";

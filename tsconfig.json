@@ -14,5 +14,5 @@
     "lib": ["ES5", "DOM"],
     "esModuleInterop": true
   },
-  "exclude": ["node_modules", "examples"]
+  "exclude": ["node_modules", "examples", "jest.config.ts"]
 }

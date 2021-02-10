@@ -3,7 +3,7 @@ import "./Counter.scss";
 import CountUp, { useCountUpProps } from "react-countup";
 import { CounterSize } from "../types/CounterTypes";
 
-export interface CountUpProps extends useCountUpProps {
+export interface CounterProps extends useCountUpProps {
   end: number;
   size?: CounterSize;
   className?: string;
@@ -29,7 +29,7 @@ const Counter = ({
   onUpdate,
   separator,
   useEasing,
-}: CountUpProps) => {
+}: CounterProps) => {
   return (
     <CountUp
       end={end}

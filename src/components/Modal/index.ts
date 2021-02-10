@@ -1,1 +1,2 @@
-export { default as Modal } from "./src/Modal";
+export { default as Modal, ModalProps } from "./src/Modal";
+export { ModalPosition } from "./types/ModalTypes";

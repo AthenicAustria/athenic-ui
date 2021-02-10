@@ -1,1 +1,1 @@
-export { default as OTPInput } from "./src/OTPInput";
+export { default as OTPInput, OTPInputProps } from "./src/OTPInput";

@@ -1,1 +1,2 @@
-export { default as Collapse } from "./src/Collapse";
+export { default as Collapse, CollapseProps } from "./src/Collapse";
+export { CollapsContentType, CollapseTab } from "./types/CollapseTypes";

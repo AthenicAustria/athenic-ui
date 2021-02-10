@@ -1,1 +1,1 @@
-export { default as SearchInput } from "./src/SearchInput";
+export { default as SearchInput, SearchInputProps } from "./src/SearchInput";

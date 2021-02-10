@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties, useState } from "react";
 import "./SearchInput.scss";
 
-export interface SearchInput {
+export interface SearchInputProps {
   style?: CSSProperties;
   className?: string;
   label?: string;
@@ -34,7 +34,7 @@ const SearchInput = ({
   onFocus,
   onSearch,
   expandOnFocus = false,
-}: SearchInput) => {
+}: SearchInputProps) => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
   return (

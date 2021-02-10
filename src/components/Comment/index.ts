@@ -1,1 +1,2 @@
-export { default as Comment } from "./src/Comment";
+export { default as Comment, CommentProps } from "./src/Comment";
+export { CommentAuthor } from "./types/CommentTypes";

@@ -1,1 +1,6 @@
-export { default as Spinner } from "./src/Spinner";
+export { default as Spinner, SpinnerProps } from "./src/Spinner";
+export {
+  SpinnerSize,
+  SpinnerSpeed,
+  SpinnerVariant,
+} from "./types/SpinnerTypes";

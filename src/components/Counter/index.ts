@@ -1,1 +1,2 @@
-export { default as Counter } from "./src/Counter";
+export { default as Counter, CounterProps } from "./src/Counter";
+export { CounterSize } from "./types/CounterTypes";

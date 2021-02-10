@@ -18,7 +18,11 @@ module.exports = [
         {
           test: /\.tsx?$/,
           use: "ts-loader",
-          exclude: "/node_modules/",
+          exclude: [
+            "/node_modules/",
+            "/examples/",
+            path.join(__dirname, "jest.config.ts"),
+          ],
         },
         {
           test: /\.s?css$/,
@@ -63,7 +67,11 @@ module.exports = [
         {
           test: /\.tsx?$/,
           use: "ts-loader",
-          exclude: "/node_modules/",
+          exclude: [
+            "/node_modules/",
+            "/examples/",
+            path.join(__dirname, "jest.config.ts"),
+          ],
         },
         {
           test: /\.s?css$/,

@@ -1,1 +1,1 @@
-export { default as H3 } from "./src/H3";
+export { default as H3, H3Props } from "./src/H3";
