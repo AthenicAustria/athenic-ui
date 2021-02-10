@@ -1,13 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const NpmDtsPlugin = require("npm-dts-webpack-plugin");
 
 module.exports = [
   {
     mode: "development",
     entry: {
-      app: path.join(__dirname, "src", "index.ts"),
+      app: path.join(__dirname, "src", "index.tsx"),
     },
     watch: false,
     target: "web",
@@ -19,7 +18,7 @@ module.exports = [
         {
           test: /\.tsx?$/,
           use: "ts-loader",
-          exclude: ["/node_modules/", path.join(__dirname, "examples")],
+          exclude: "/node_modules/",
         },
         {
           test: /\.s?css$/,
@@ -47,11 +46,6 @@ module.exports = [
         filename: "index.css",
         chunkFilename: "index.chunk.css",
       }),
-      // new NpmDtsPlugin({
-      //   logLevel: "debug",
-      //   force: true,
-      //   output: "./dist/index.d.ts",
-      // }),
     ],
   },
   {
@@ -69,7 +63,7 @@ module.exports = [
         {
           test: /\.tsx?$/,
           use: "ts-loader",
-          exclude: ["/node_modules/", path.join(__dirname, "examples")],
+          exclude: "/node_modules/",
         },
         {
           test: /\.s?css$/,
