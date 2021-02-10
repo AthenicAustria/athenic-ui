@@ -9,8 +9,10 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "declaration": true,
+    "declarationDir": "./dist",
     "sourceMap": true,
     "lib": ["ES5", "DOM"],
     "esModuleInterop": true
-  }
+  },
+  "exclude": ["node_modules", "examples"]
 }
