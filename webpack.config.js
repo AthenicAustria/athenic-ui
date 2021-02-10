@@ -7,7 +7,7 @@ module.exports = [
   {
     mode: "development",
     entry: {
-      app: path.join(__dirname, "src", "index.tsx"),
+      app: path.join(__dirname, "index.ts"),
     },
     watch: false,
     target: "web",
@@ -57,7 +57,7 @@ module.exports = [
   {
     mode: "production",
     entry: {
-      app: path.join(__dirname, "src", "index.ts"),
+      app: path.join(__dirname, "index.ts"),
     },
     watch: false,
     target: "web",
