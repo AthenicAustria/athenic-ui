@@ -1,16 +1,22 @@
 const path = require("path");
-const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
+  mode: "production",
+  entry: {
+    app: path.join(__dirname, "src", "index.tsx"),
+  },
+  watch: false,
+  target: "web",
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", "*"],
+  },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { presets: ["@babel/env"] },
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: "/node_modules/",
       },
       {
         test: /\.css$/,
@@ -26,17 +32,16 @@ module.exports = {
       },
     ],
   },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "dist/"),
     publicPath: "/dist/",
     filename: "bundle.js",
   },
+  plugins: [],
   devServer: {
     contentBase: path.join(__dirname, "public/"),
-    port: 3333,
-    publicPath: "http://localhost:3333/dist/",
+    port: 4444,
+    publicPath: "http://localhost:4444/dist/",
     hotOnly: true,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
 };
