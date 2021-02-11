@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const NpmDtsPlugin = require("npm-dts-webpack-plugin");
 
 module.exports = [
   {
@@ -50,6 +51,7 @@ module.exports = [
         filename: "index.css",
         chunkFilename: "index.chunk.css",
       }),
+      new NpmDtsPlugin(),
     ],
   },
   {
@@ -96,6 +98,6 @@ module.exports = [
       libraryTarget: "umd",
       library: "athenic-ui",
     },
-    plugins: [],
+    plugins: [new NpmDtsPlugin()],
   },
 ];
