@@ -19,6 +19,7 @@
     "test": "jest --config ./jest.config.ts",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "publish": "node ./src/utils/publish.js",
     "docz": "docz dev"
   },
   "keywords": [
