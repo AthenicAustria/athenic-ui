@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import packageJson from "../package.json";
 import "./index.scss";
 
-import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import * as faIcons from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -26,7 +25,6 @@ import { Comment } from "./components/Comment";
 import { Alert } from "./components/Alert";
 import { Switch } from "./components/Switch";
 import { RadioGroup } from "./components/RadioGroup";
-import value from "*.png";
 import { SearchInput } from "./components/SearchInput";
 import { OTPInput } from "./components/OTPInput";
 import NavBar from "./components/NavBar/src/NavBar";
@@ -84,13 +82,17 @@ const App = () => {
       <H2>With icon</H2>
       <Button
         style={{ marginLeft: 0 }}
-        iconBefore={faShoppingBag}
+        iconBefore={faIcons.faShoppingBag}
         variant="tertiary"
         size="medium"
       >
         Icon before
       </Button>
-      <Button iconAfter={faShoppingBag} variant="tertiary" size="medium">
+      <Button
+        iconAfter={faIcons.faShoppingBag}
+        variant="tertiary"
+        size="medium"
+      >
         Icon after
       </Button>
 
@@ -115,13 +117,21 @@ const App = () => {
       </Button>
 
       <H2>Icon Button</H2>
-      <IconButton style={{ marginLeft: 0 }} icon={faShoppingBag} size="small" />
       <IconButton
         style={{ marginLeft: 0 }}
-        icon={faShoppingBag}
+        icon={faIcons.faShoppingBag}
+        size="small"
+      />
+      <IconButton
+        style={{ marginLeft: 0 }}
+        icon={faIcons.faShoppingBag}
         size="medium"
       />
-      <IconButton style={{ marginLeft: 0 }} icon={faShoppingBag} size="large" />
+      <IconButton
+        style={{ marginLeft: 0 }}
+        icon={faIcons.faShoppingBag}
+        size="large"
+      />
 
       <H1>All Icons</H1>
       <Link to={`https://fontawesome.com/`} text="Icons by Font Awesome" />
@@ -864,6 +874,22 @@ const App = () => {
         ]}
       >
         <SearchInput style={{ marginLeft: "auto" }} expandOnFocus />
+        <Avatar />
+      </NavBar>
+      <NavBar
+        logo={{
+          logo: "https://logoipsum.com/logo/logo-10.svg",
+          link: "https://logoipsum.com/",
+        }}
+        elements={[
+          { label: "Athenic UI - Github", link: packageJson.repository.url },
+          { label: "No Link" },
+          { label: "Disabled", disabled: true },
+        ]}
+      >
+        <Button iconAfter={faIcons.faArrowRight} style={{ marginLeft: "auto" }}>
+          Start Now
+        </Button>
       </NavBar>
     </div>
   );

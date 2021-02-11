@@ -1,0 +1,30 @@
+.burger-menu {
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 36px;
+  width: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 8px;
+  padding: 3px 0;
+
+  &__layer {
+    @for $i from 1 through 3 {
+      &-#{$i} {
+        transition: 0.18s ease;
+        background-color: var(--color-primary);
+        height: 2px;
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  @for $i from 1 through 3 {
+    &:hover > &__layer-#{$i} {
+      transform: translateX(#{$i}px);
+    }
+  }
+}

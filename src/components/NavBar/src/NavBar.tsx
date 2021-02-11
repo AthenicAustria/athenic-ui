@@ -1,4 +1,5 @@
 import React, { CSSProperties, ReactChild, ReactChildren } from "react";
+import { BurgerMenu } from "../../BurgerMenu";
 import { Link } from "../../Link";
 import {
   NavBarElement,
@@ -62,7 +63,9 @@ const NavBar = ({
           );
         })}
       </ul>
+
       {children && children}
+      <BurgerMenu />
     </nav>
   );
 };

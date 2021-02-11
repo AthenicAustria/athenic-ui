@@ -1,6 +1,7 @@
 .nav-bar {
+  margin: 32px 16px;
   box-sizing: border-box;
-  width: 100%;
+  width: 95%;
   height: 10vh;
   background-color: var(--color-white);
   display: flex;
@@ -42,5 +43,11 @@
         text-decoration: line-through;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .nav-bar {
+    background-color: red;
   }
 }
