@@ -2,7 +2,7 @@
   "name": "athenic-ui",
   "version": "1.0.87",
   "description": "👑 Athenic UI React component library. Building beautiful React applications made simple!",
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "types": "dist/src/index.d.ts",
   "files": [
     "dist"
@@ -19,7 +19,8 @@
     "test": "jest --config ./jest.config.ts",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "publish": "node ./src/utils/publish.js",
+    "publish:tsc": "node ./src/utils/publish.tsc.js",
+    "publish:webpack": "node ./src/utils/publish.webpack.js",
     "docz": "docz dev"
   },
   "keywords": [
