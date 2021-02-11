@@ -14,7 +14,7 @@ Inquirer.prompt([
   try {
     console.clear();
 
-    exec(`npm run build`, (error, stdout, stderr) => {
+    exec(`npm run build:tsc`, (error, stdout, stderr) => {
       if (error) console.log(error);
       if (stderr) console.log(stderr);
       console.log(chalk.white.bold(`✔️  Built new bundle`));
