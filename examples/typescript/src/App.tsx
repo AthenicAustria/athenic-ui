@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Button } from "athenic-ui";
+import { Button } from "../../../dist/src/index";
 import "athenic-ui/dist/index.css";
 
 const App = () => {
