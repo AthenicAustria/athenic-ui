@@ -71,3 +71,10 @@ export {
   RadioGroupProps,
 } from "./components/RadioGroup";
 export { OTPInput, OTPInputProps } from "./components/OTPInput";
+export {
+  NavBar,
+  NavBarProps,
+  NavBarElement,
+  NavBarElements,
+  NavBarLogo,
+} from "./components/NavBar";

@@ -38,7 +38,7 @@ const SearchInput = ({
   const [expanded, setExpanded] = useState<boolean>(false);
 
   return (
-    <div className="search-input">
+    <div className="search-input" style={style ? style : null}>
       {label ? (
         <label className="search-input__label" htmlFor={name && name}>
           {label}
@@ -56,7 +56,6 @@ const SearchInput = ({
         className={`search-input__input ${className ? className : ""} ${
           invalid ? "invalid" : ""
         } ${disabled ? "disabled" : ""} ${expanded ? "expanded" : ""}`}
-        style={style ? style : null}
         onChange={onChange && onChange}
         onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
           if (e.key === "Enter" || e.keyCode === 13) {

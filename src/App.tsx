@@ -29,6 +29,7 @@ import { RadioGroup } from "./components/RadioGroup";
 import value from "*.png";
 import { SearchInput } from "./components/SearchInput";
 import { OTPInput } from "./components/OTPInput";
+import NavBar from "./components/NavBar/src/NavBar";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -742,30 +743,26 @@ const App = () => {
       />
 
       <H2>Password</H2>
-      <TextInput type="password" style={{ marginLeft: 0 }} />
+      <TextInput type="password" />
 
       <H1>SearchInput</H1>
-      <SearchInput style={{ marginLeft: 0 }} />
+      <SearchInput />
 
       <H2>Disabled</H2>
-      <SearchInput style={{ marginLeft: 0 }} disabled />
+      <SearchInput disabled />
 
       <H2>With Validation-Message</H2>
-      <SearchInput
-        style={{ marginLeft: 0 }}
-        validationMessage="Please enter a valid search term!"
-      />
+      <SearchInput validationMessage="Please enter a valid search term!" />
 
       <H2>onSearch</H2>
       <SearchInput
-        style={{ marginLeft: 0 }}
         onSearch={() =>
           window.alert("You must be looking for something very important huh?")
         }
       />
 
       <H2>Expand on focus</H2>
-      <SearchInput style={{ marginLeft: 0 }} expandOnFocus />
+      <SearchInput expandOnFocus />
 
       <H1>Switch</H1>
       <H2>Variants</H2>
@@ -853,6 +850,21 @@ const App = () => {
       <Card size="auto">
         <OTPInput label="🔑 Verify your Account" numInputs={6} />
       </Card>
+
+      <H1>NavBar</H1>
+      <NavBar
+        logo={{
+          logo: "https://logoipsum.com/logo/logo-10.svg",
+          link: "https://logoipsum.com/",
+        }}
+        elements={[
+          { label: "Athenic UI - Github", link: packageJson.repository.url },
+          { label: "No Link" },
+          { label: "Disabled", disabled: true },
+        ]}
+      >
+        <SearchInput style={{ marginLeft: "auto" }} expandOnFocus />
+      </NavBar>
     </div>
   );
 };
