@@ -14,7 +14,7 @@
 
 ##### 🔥 Check out the [Demo](https://ui.athenic.at/)
 
-##### 🆘 Help! Somebody pls tell me how to handle those goddamn typescript module declarations...
+## 🤝 Contributing [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Install
 
