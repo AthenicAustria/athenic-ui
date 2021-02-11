@@ -14,4 +14,4 @@ jobs:
         id: create_release
         uses: zendesk/action-create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}e
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
