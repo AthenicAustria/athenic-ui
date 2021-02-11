@@ -51,7 +51,6 @@ module.exports = [
         filename: "index.css",
         chunkFilename: "index.chunk.css",
       }),
-      new NpmDtsPlugin(),
     ],
   },
   {
@@ -98,6 +97,6 @@ module.exports = [
       libraryTarget: "umd",
       library: "athenic-ui",
     },
-    plugins: [new NpmDtsPlugin()],
+    plugins: [],
   },
 ];
