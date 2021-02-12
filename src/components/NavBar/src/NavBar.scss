@@ -44,10 +44,20 @@
       }
     }
   }
+
+  &__burger-menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1025px) {
   .nav-bar {
-    background-color: red;
+    &__content {
+      display: none;
+    }
+
+    &__burger-menu {
+      display: flex;
+    }
   }
 }

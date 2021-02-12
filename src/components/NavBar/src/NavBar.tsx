@@ -65,7 +65,7 @@ const NavBar = ({
       </ul>
 
       {children && children}
-      <BurgerMenu />
+      <BurgerMenu className="nav-bar__burger-menu" elements={elements} />
     </nav>
   );
 };
