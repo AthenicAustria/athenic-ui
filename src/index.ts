@@ -78,3 +78,9 @@ export {
   NavBarElements,
   NavBarLogo,
 } from "./components/NavBar";
+export {
+  Popover,
+  PopoverProps,
+  PopoverPosition,
+  PopoverSize,
+} from "./components/Popover";

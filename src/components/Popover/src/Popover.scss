@@ -1,0 +1,88 @@
+.popover {
+  position: relative;
+  display: inline-flex;
+
+  &__pop {
+    position: absolute;
+    margin: 16px 8px 8px 8px;
+    padding: 16px;
+    width: auto;
+    background-color: var(--color-white);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    visibility: visible;
+    transition: opacity 0.12s ease-in, visibility 0.12s ease-in;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    white-space: nowrap;
+    max-width: 1000px;
+    max-height: 400px;
+
+    &__content {
+      height: 100%;
+      display: block;
+    }
+
+    &.shown {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: initial;
+    }
+
+    &.small {
+      min-width: 80px;
+      min-height: 80px;
+    }
+
+    &.medium {
+      min-width: 180px;
+      min-height: 180px;
+    }
+
+    &.large {
+      min-width: 360px;
+      min-height: 360px;
+    }
+
+    &.bottom {
+      margin: 16px auto 8px auto;
+      top: 100%;
+    }
+
+    &.bottomLeft {
+      right: 0;
+      top: 100%;
+    }
+
+    &.bottomRight {
+      top: 100%;
+    }
+
+    &.top {
+      margin: 16px auto 8px auto;
+      bottom: 100%;
+    }
+
+    &.topLeft {
+      right: 0;
+      bottom: 100%;
+    }
+
+    &.topRight {
+      left: 0;
+      bottom: 100%;
+    }
+
+    &.left {
+      right: 100%;
+      top: -100%;
+    }
+
+    &.right {
+      left: 100%;
+      top: -100%;
+    }
+  }
+}

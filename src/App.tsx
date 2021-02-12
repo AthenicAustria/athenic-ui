@@ -28,6 +28,7 @@ import { RadioGroup } from "./components/RadioGroup";
 import { SearchInput } from "./components/SearchInput";
 import { OTPInput } from "./components/OTPInput";
 import NavBar from "./components/NavBar/src/NavBar";
+import Popover from "./components/Popover/src/Popover";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -35,18 +36,41 @@ const App = () => {
     "Verify your E-Mail",
     "Complete Registration",
   ];
-  const [stepperCardExample, setStepperCardExample] = useState(1);
+  const [stepperCardExample, setStepperCardExample] = useState<number>(1);
 
-  const [ratingDisplay, setRatingDisplay] = useState(0);
-  const [ratingDisplayEmoji, setRatingDisplayEmoji] = useState(0);
+  const [ratingDisplay, setRatingDisplay] = useState<number>(0);
+  const [ratingDisplayEmoji, setRatingDisplayEmoji] = useState<number>(0);
 
-  const [defaultModalShown, setDefaultModalShown] = useState(false);
-  const [bottomLeftModalShown, setBottomLeftModalShown] = useState(false);
-  const [bottomRightModalShown, setBottomRightModalShown] = useState(false);
+  const [defaultModalShown, setDefaultModalShown] = useState<boolean>(false);
+  const [bottomLeftModalShown, setBottomLeftModalShown] = useState<boolean>(
+    false
+  );
+  const [bottomRightModalShown, setBottomRightModalShown] = useState<boolean>(
+    false
+  );
 
-  const [exampleAlertShown, setExampleAlertShown] = useState(true);
+  const [exampleAlertShown, setExampleAlertShown] = useState<boolean>(true);
 
-  const [otpInputAlertShown, setOtpInputAlertShown] = useState(false);
+  const [otpInputAlertShown, setOtpInputAlertShown] = useState<boolean>(false);
+
+  const [defaultPopoverShown, setDefaultPopoverShown] = useState<boolean>(
+    false
+  );
+  const [bottomLeftPopoverShown, setBottomLeftPopoverShown] = useState<boolean>(
+    false
+  );
+  const [bottomRightPopoverShown, setBottomRightPopoverShown] = useState<
+    boolean
+  >(false);
+  const [topPopoverShown, setTopPopoverShown] = useState<boolean>(false);
+  const [topLeftPopoverShown, setTopLeftPopoverShown] = useState<boolean>(
+    false
+  );
+  const [topRightPopoverShown, setTopRightPopoverShown] = useState<boolean>(
+    false
+  );
+  const [leftPopoverShown, setLeftPopoverShown] = useState<boolean>(false);
+  const [rightPopoverShown, setRightPopoverShown] = useState<boolean>(false);
 
   return (
     <div id="App">
@@ -860,6 +884,61 @@ const App = () => {
       <Card size="auto">
         <OTPInput label="🔑 Verify your Account" numInputs={6} />
       </Card>
+
+      <H1>Popover</H1>
+      <H2>Positions</H2>
+
+      <Popover
+        shown={defaultPopoverShown}
+        content={<span>🍌 You found a fresh Banana in this Popover</span>}
+        size="auto"
+      >
+        <Button onClick={() => setDefaultPopoverShown((prev) => !prev)}>
+          🍾 Shown Popover
+        </Button>
+      </Popover>
+
+      <Popover shown={bottomLeftPopoverShown} position="bottomLeft">
+        <Button onClick={() => setBottomLeftPopoverShown((prev) => !prev)}>
+          🍾 Bottom Left
+        </Button>
+      </Popover>
+
+      <Popover shown={bottomRightPopoverShown} position="bottomRight">
+        <Button onClick={() => setBottomRightPopoverShown((prev) => !prev)}>
+          🍾 Bottom Right
+        </Button>
+      </Popover>
+
+      <Popover shown={topPopoverShown} position="top">
+        <Button onClick={() => setTopPopoverShown((prev) => !prev)}>
+          🍾 Top
+        </Button>
+      </Popover>
+
+      <Popover shown={topLeftPopoverShown} position="topLeft">
+        <Button onClick={() => setTopLeftPopoverShown((prev) => !prev)}>
+          🍾 Top Left
+        </Button>
+      </Popover>
+
+      <Popover shown={topRightPopoverShown} position="topRight">
+        <Button onClick={() => setTopRightPopoverShown((prev) => !prev)}>
+          🍾 Top Right
+        </Button>
+      </Popover>
+
+      <Popover shown={leftPopoverShown} position="left">
+        <Button onClick={() => setLeftPopoverShown((prev) => !prev)}>
+          🍾 Left
+        </Button>
+      </Popover>
+
+      <Popover shown={rightPopoverShown} position="right">
+        <Button onClick={() => setRightPopoverShown((prev) => !prev)}>
+          🍾 Right
+        </Button>
+      </Popover>
 
       <H1>NavBar</H1>
       <NavBar
