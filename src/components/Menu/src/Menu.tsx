@@ -1,5 +1,6 @@
 import React, { CSSProperties, ReactElement } from "react";
 import "./Menu.scss";
+import MenuDivider from "./MenuDivider";
 import MenuItem, { MenuItemProps } from "./MenuItem";
 
 export interface MenuProps {
@@ -17,5 +18,6 @@ const Menu = ({ className = "", style = {}, children }: MenuProps) => {
 };
 
 Menu.Item = MenuItem;
+Menu.Divider = MenuDivider;
 
 export default Menu;

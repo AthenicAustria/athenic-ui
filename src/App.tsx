@@ -1003,6 +1003,16 @@ const App = () => {
           Menu Item disabled
         </Menu.Item>
       </Menu>
+
+      <H2>With Divider</H2>
+      <Menu>
+        <Menu.Item icon={faIcons.faUser}>Profile</Menu.Item>
+        <Menu.Item icon={faIcons.faEdit}>Edit</Menu.Item>
+        <Menu.Divider />
+        <Menu.Item icon={faIcons.faTrash} variant="error">
+          Delete Account
+        </Menu.Item>
+      </Menu>
     </div>
   );
 };

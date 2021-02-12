@@ -1,4 +1,4 @@
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties } from "react";
 import { MenuItemVariant } from "../types/MenuTypes";
@@ -7,7 +7,7 @@ import "./MenuItem.scss";
 export interface MenuItemProps {
   className?: string;
   style?: CSSProperties;
-  icon?: IconProp;
+  icon?: IconDefinition;
   children: string;
   link?: string;
   variant?: MenuItemVariant;
@@ -26,7 +26,7 @@ const MenuItem = ({
   return (
     <li
       className={`menu-item ${className} ${variant ? variant : ""} ${
-        disabled ? "disabled" : null
+        disabled ? "disabled" : ""
       }`}
       style={style}
     >
@@ -35,7 +35,7 @@ const MenuItem = ({
           {icon ? (
             <span
               className={`menu-item__icon ${variant ? variant : ""} ${
-                disabled ? "disabled" : null
+                disabled ? "disabled" : ""
               }`}
             >
               <FontAwesomeIcon icon={icon} />
@@ -47,7 +47,7 @@ const MenuItem = ({
         <>
           <span
             className={`menu-item__icon ${variant ? variant : ""} ${
-              disabled ? "disabled" : null
+              disabled ? "disabled" : ""
             }`}
           >
             <FontAwesomeIcon icon={icon} />
