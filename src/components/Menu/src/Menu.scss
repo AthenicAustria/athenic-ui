@@ -1,0 +1,9 @@
+.menu {
+  display: inline-block;
+
+  &__menu {
+    margin: 0;
+    padding: 16px;
+    list-style-type: none;
+  }
+}

@@ -84,3 +84,10 @@ export {
   PopoverPosition,
   PopoverSize,
 } from "./components/Popover";
+export {
+  Menu,
+  MenuProps,
+  MenuItem,
+  MenuItemProps,
+  MenuItemVariant,
+} from "./components/Menu";

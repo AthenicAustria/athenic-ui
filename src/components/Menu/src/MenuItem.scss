@@ -1,0 +1,53 @@
+.menu-item {
+  color: var(--color-primary);
+  margin: 12px 0;
+
+  &__icon {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 0.9em;
+    color: var(--color-grey);
+    width: 22px;
+
+    &.success {
+      color: var(--color-success);
+    }
+
+    &.warning {
+      color: var(--color-warning);
+    }
+
+    &.error {
+      color: var(--color-error);
+    }
+
+    &.disabled {
+      color: var(--color-disabled);
+      text-decoration: line-through;
+      cursor: not-allowed;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &.success {
+    color: var(--color-success);
+  }
+
+  &.warning {
+    color: var(--color-warning);
+  }
+
+  &.error {
+    color: var(--color-error);
+  }
+
+  &.disabled {
+    color: var(--color-disabled);
+    text-decoration: line-through;
+    cursor: not-allowed;
+  }
+}

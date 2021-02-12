@@ -27,8 +27,9 @@ import { Switch } from "./components/Switch";
 import { RadioGroup } from "./components/RadioGroup";
 import { SearchInput } from "./components/SearchInput";
 import { OTPInput } from "./components/OTPInput";
-import NavBar from "./components/NavBar/src/NavBar";
-import Popover from "./components/Popover/src/Popover";
+import { NavBar } from "./components/NavBar/";
+import { Popover } from "./components/Popover/";
+import { Menu } from "./components/Menu";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -970,6 +971,38 @@ const App = () => {
           Start Now
         </Button>
       </NavBar>
+
+      <H1>Menu</H1>
+      <Menu>
+        <Menu.Item>Menu Item 1</Menu.Item>
+        <Menu.Item>Menu Item 2</Menu.Item>
+        <Menu.Item link={packageJson.repository.url}>
+          Menu Item 3 (Link to Github)
+        </Menu.Item>
+      </Menu>
+
+      <H2>With Icons</H2>
+      <Menu>
+        <Menu.Item icon={faIcons.faUser}>Profile</Menu.Item>
+        <Menu.Item icon={faIcons.faEdit}>Edit</Menu.Item>
+        <Menu.Item icon={faIcons.faSlidersH}>Settings</Menu.Item>
+      </Menu>
+
+      <H2>Variants</H2>
+      <Menu>
+        <Menu.Item icon={faIcons.faMoneyBill} variant="success">
+          You won the Lottery
+        </Menu.Item>
+        <Menu.Item icon={faIcons.faUserCheck} variant="warning">
+          Verify your Email
+        </Menu.Item>
+        <Menu.Item icon={faIcons.faTrash} variant="error">
+          Delete Account
+        </Menu.Item>
+        <Menu.Item icon={faIcons.faTrash} variant="error" disabled>
+          Menu Item disabled
+        </Menu.Item>
+      </Menu>
     </div>
   );
 };
