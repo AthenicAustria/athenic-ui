@@ -90,4 +90,6 @@ export {
   MenuItem,
   MenuItemProps,
   MenuItemVariant,
+  MenuDivider,
+  MenuDividerProps,
 } from "./components/Menu";
