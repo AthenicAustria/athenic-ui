@@ -28,7 +28,8 @@
     "react",
     "typescript",
     "library",
-    "components"
+    "components",
+    "ui"
   ],
   "author": "simonostini",
   "license": "MIT",
