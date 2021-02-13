@@ -1062,7 +1062,7 @@ const App = () => {
         icon
       />
       {Toaster.toast()}
-      {new Toaster().toast("primary")}
+      {new Toaster().init().toast("error")}
     </div>
   );
 };

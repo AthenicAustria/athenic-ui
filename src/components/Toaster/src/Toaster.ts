@@ -1,47 +1,34 @@
 import React from "react";
 import { ToastVariant } from "../types/ToasterTypes";
+import "./Toaster.scss";
 
 class Toaster {
-  private variant: ToastVariant = "primary";
-  private DOMNode: React.ReactNode = null;
+  private _variant: ToastVariant = "primary";
+  private _DOMNode: React.ReactNode = null;
+  private _manager: JSX.Element = null;
+
   constructor() {
-    React.createElement<React.Component>(
-      "div",
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "div"
-    );
+    this._manager = this._createManager();
   }
 
-  public toast(variant: ToastVariant): void {
-    this.variant = variant;
-    return console.log("Spawned Toast of tpye " + variant);
-  }
+  public init: () => this = () => {
+    console.log("hi");
+    return this;
+  };
 
+  /*eslint-disable no-unused-vars */
+  public toast: (variant: ToastVariant) => this = (variant: ToastVariant) => {
+    console.log("Spawned Toast of type " + variant);
+    return this;
+  };
+
+  /*eslint-disable no-unused-vars */
   public static toast(): void {
     return console.log("🍞🍫 Starting to toast 4 Toasts with Nutella...");
+  }
+
+  private _createManager(): JSX.Element {
+    return React.createElement("div", { id: "toaster-manager" });
   }
 }
 

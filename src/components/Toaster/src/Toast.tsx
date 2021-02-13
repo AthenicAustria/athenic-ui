@@ -69,7 +69,6 @@ const Toast = ({
           {description}
         </p>
       ) : null}
-      <div></div>
     </div>
   );
 };

@@ -1,0 +1,11 @@
+#toast-manager {
+  position: sticky;
+  top: 0;
+  margin: 16px;
+  left: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
