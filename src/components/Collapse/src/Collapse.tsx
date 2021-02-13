@@ -42,7 +42,7 @@ const Collapse = ({
   };
 
   useEffect(() => {
-    let collapseTabsTemp: JSX.Element[] = [];
+    const collapseTabsTemp: JSX.Element[] = [];
     content.forEach((tab: CollapseTab, index: number) => {
       collapseTabsTemp.push(
         <div className={`collapse__tab`} key={index}>

@@ -20,6 +20,15 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "no-unused-vars": "error",
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
+    "no-empty-function": "error",
+    "no-empty": "error",
+    "no-eval": "error",
+    "no-inline-comments": "error",
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "require-await": "error",
+    "prefer-const": "error",
+    "semi": "error"
   }
 }

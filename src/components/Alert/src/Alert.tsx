@@ -30,7 +30,7 @@ const Alert = ({
   icon = true,
   variant,
   closeIcon = false,
-  onClose = () => {},
+  onClose = () => null,
   shown = true,
 }: AlertProps) => {
   return (
