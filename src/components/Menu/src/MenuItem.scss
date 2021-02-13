@@ -1,6 +1,10 @@
 .menu-item {
   color: var(--color-primary);
-  margin: 12px 0;
+  margin-top: 12px;
+
+  &:first-of-type {
+    margin: 0;
+  }
 
   &__icon {
     display: inline-block;

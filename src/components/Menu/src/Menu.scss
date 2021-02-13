@@ -1,9 +1,10 @@
 .menu {
   display: inline-block;
+  margin: 8px;
 
   &__menu {
     margin: 0;
-    padding: 16px;
+    padding: 0px;
     list-style-type: none;
   }
 }

@@ -73,6 +73,8 @@ const App = () => {
   const [leftPopoverShown, setLeftPopoverShown] = useState<boolean>(false);
   const [rightPopoverShown, setRightPopoverShown] = useState<boolean>(false);
 
+  const [popoverMenuShown, setPopoverMenuShown] = useState<boolean>(false);
+
   return (
     <div id="App">
       <H1>Headers</H1>
@@ -1013,6 +1015,27 @@ const App = () => {
           Delete Account
         </Menu.Item>
       </Menu>
+
+      <H2>Combined with Popover</H2>
+      <Popover
+        position="topRight"
+        size="auto"
+        content={
+          <Menu>
+            <Menu.Item icon={faIcons.faUser}>Profile</Menu.Item>
+            <Menu.Item icon={faIcons.faEdit}>Edit</Menu.Item>
+            <Menu.Divider />
+            <Menu.Item icon={faIcons.faTrash} variant="error">
+              Delete Account
+            </Menu.Item>
+          </Menu>
+        }
+        shown={popoverMenuShown}
+      >
+        <Button onClick={() => setPopoverMenuShown((prev) => !prev)}>
+          Open Menu
+        </Button>
+      </Popover>
     </div>
   );
 };
