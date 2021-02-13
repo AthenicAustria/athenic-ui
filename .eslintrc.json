@@ -29,6 +29,8 @@
     "prefer-arrow-callback": "error",
     "require-await": "error",
     "prefer-const": "error",
-    "semi": "error"
+    "semi": "error",
+    "strict": "error",
+    "yoda": "error"
   }
 }
