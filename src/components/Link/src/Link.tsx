@@ -1,8 +1,4 @@
-import React, {
-  AnchorHTMLAttributes,
-  CSSProperties,
-  HtmlHTMLAttributes,
-} from "react";
+import React, { CSSProperties } from "react";
 import "./Link.scss";
 
 export interface LinkProps {

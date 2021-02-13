@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 import {
   SpinnerSize,
   SpinnerVariant,

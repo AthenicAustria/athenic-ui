@@ -11,6 +11,7 @@ export interface OTPInputProps {
   label?: string;
   validationMessage?: string;
   value?: number[];
+  /* eslint-disable no-unused-vars*/
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
   onComplete?: () => void;
   placeholder?: string;
@@ -52,7 +53,7 @@ const OTPInput = ({
     >
       {label ? <label className="otp-input__label">{label}</label> : null}
       <div className={`otp-input__wrapper`}>
-        {otp.map((_: any, i: number, a: []) => {
+        {otp.map((_: any, i: number) => {
           return (
             <input
               type="number"

@@ -15,6 +15,7 @@ export interface RatingProps {
   className?: string;
   style?: CSSProperties;
   initialRating?: number;
+  /* eslint-disable no-unused-vars*/
   onRate?: (value: number) => void;
 }
 

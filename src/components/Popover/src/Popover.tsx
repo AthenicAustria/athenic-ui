@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement, useState } from "react";
+import React, { CSSProperties, ReactElement } from "react";
 import { PopoverPosition, PopoverSize } from "../types/PopoverTypes";
 import "./Popover.scss";
 

@@ -16,6 +16,7 @@ export interface TextInputProps {
   style?: CSSProperties;
   className?: string;
   type?: TextInputType;
+  /* eslint-disable no-unused-vars*/
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 

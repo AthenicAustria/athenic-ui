@@ -15,6 +15,7 @@ export interface SearchInputProps {
   disabled?: boolean;
   validationMessage?: string;
   invalid?: boolean;
+  /* eslint-disable no-unused-vars*/
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
   onFocus?: (e: React.FormEvent<HTMLInputElement>) => void;
   onSearch?: () => void;

@@ -1,4 +1,4 @@
-import { faAddressCard, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties } from "react";
 import { AvatarSize } from "../types/AvatarTypes";

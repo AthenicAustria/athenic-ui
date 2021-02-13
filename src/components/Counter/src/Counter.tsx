@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import "./Counter.scss";
 import CountUp, { useCountUpProps } from "react-countup";
 import { CounterSize } from "../types/CounterTypes";

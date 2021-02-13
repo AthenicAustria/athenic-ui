@@ -10,6 +10,7 @@ export interface RadioGroupProps {
   style?: CSSProperties;
   options: RadioGroupOptions;
   value?: string;
+  /* eslint-disable no-unused-vars*/
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
   validationMessage?: string;
 }
@@ -44,6 +45,7 @@ const RadioGroup = ({
               value={option.value}
               className={`radio-group__label__input`}
               key={index}
+              onChange={(e) => onChange && onChange(e)}
             />
             <span className={`radio-group__label__checkbox`}></span>
           </label>

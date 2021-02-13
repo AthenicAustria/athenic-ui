@@ -51,7 +51,9 @@ const BurgerMenu = ({
           onClick={() => setContentShown((prev: boolean) => !prev)}
         >
           {[...new Array(3)].map((_: any, i: number) => {
-            return <div className={`burger-menu__layer-${i + 1}`}></div>;
+            return (
+              <div className={`burger-menu__layer-${i + 1}`} key={i}></div>
+            );
           })}
         </div>
       </Popover>

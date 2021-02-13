@@ -2,10 +2,7 @@ import React, { CSSProperties, useState, useEffect } from "react";
 import { CollapsContentType, CollapseTab } from "../types/CollapseTypes";
 import "./Collapse.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronDown,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export interface CollapseProps {
   content: CollapsContentType;
