@@ -3,12 +3,14 @@
   display: inline-block;
   height: 48px;
   width: 48px;
+  min-width: 48px;
   border-radius: 8px;
   margin: 8px;
 
   &.small {
     height: 32px;
     width: 32px;
+    min-width: 32px;
   }
 
   &.medium {
@@ -18,6 +20,7 @@
   &.large {
     height: 64px;
     width: 64px;
+    min-width: 64px;
   }
 
   &__image {
