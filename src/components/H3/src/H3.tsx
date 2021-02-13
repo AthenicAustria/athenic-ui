@@ -1,8 +1,8 @@
-import React, { CSSProperties, ReactChild } from "react";
+import React, { CSSProperties, ReactChild, ReactChildren } from "react";
 import "./H3.scss";
 
 export interface H3Props {
-  children?: ReactChild;
+  children?: ReactChild | ReactChild[] | ReactChildren | ReactChildren[];
   style?: CSSProperties;
   className?: string;
 }

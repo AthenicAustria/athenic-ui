@@ -30,6 +30,7 @@ import { OTPInput } from "./components/OTPInput";
 import { NavBar } from "./components/NavBar/";
 import { Popover } from "./components/Popover/";
 import { Menu } from "./components/Menu";
+import { Toast, Toaster } from "./components/Toaster";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -1036,6 +1037,32 @@ const App = () => {
           Open Menu
         </Button>
       </Popover>
+
+      <H1>Toaster</H1>
+      <Toast title="🍞 I'm a Toast" />
+
+      <H2>Variants</H2>
+      <Toast title="Primary Toast" variant="primary" icon />
+      <Toast title="Secondary Toast" variant="secondary" icon />
+      <Toast title="Tertiary Toast" variant="tertiary" icon />
+      <Toast title="Success Toast" variant="success" icon />
+      <Toast title="Warning Toast" variant="warning" icon />
+      <Toast title="Error Toast" variant="error" icon />
+
+      <H2>With description</H2>
+      <Toast
+        title="I'm a Toast"
+        description="Toast is usually toasted with a Toaster"
+      />
+
+      <H2>With Icon</H2>
+      <Toast
+        title="🍞 I'm a Toast"
+        description="Toast is usually toasted with a Toaster"
+        icon
+      />
+      {Toaster.toast()}
+      {new Toaster().toast("primary")}
     </div>
   );
 };
