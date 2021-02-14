@@ -55,6 +55,11 @@ class Toaster {
       })
     );
 
+    setTimeout(() => {
+      Toaster._toasts.pop();
+      Toaster._updateManager();
+    }, 4000);
+
     Toaster._updateManager();
   };
 

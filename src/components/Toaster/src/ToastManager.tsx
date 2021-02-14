@@ -16,16 +16,18 @@ const ToastManager = ({
 }: ToastManagerProps) => {
   const [toasts] = useState<ToastsType>(toastElements);
 
-  const getToasts: () => ToastsType = () => toasts;
-
   return (
     <div
       className={`toast-manager ${className}`}
       style={style}
       {...Toaster.managerDataAttr}
     >
-      {toastElements.map((e: ToastType, i: number) => {
-        return <div key={i}>{e}</div>;
+      {toasts.map((e: ToastType, i: number) => {
+        return (
+          <div className={`toast-manager__toast-wrapper`} key={i}>
+            {e}
+          </div>
+        );
       })}
     </div>
   );
