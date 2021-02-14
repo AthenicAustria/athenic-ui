@@ -1061,8 +1061,11 @@ const App = () => {
         description="Toast is usually toasted with a Toaster"
         icon
       />
-      {new Toaster().init()}
-      {/* {Toaster.toast("Nutella")} */}
+
+      <H2>Using Toaster & ToastManager</H2>
+      <Button onClick={() => new Toaster().toast("error")}>
+        Spawn new Error toast
+      </Button>
     </div>
   );
 };

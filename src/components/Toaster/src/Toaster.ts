@@ -27,7 +27,7 @@ class Toaster {
   private _manager: JSX.Element = null;
 
   constructor() {
-    this._manager = this._createManager();
+    this._createManager();
   }
 
   public init: () => void = () => {
@@ -35,10 +35,9 @@ class Toaster {
   };
 
   /*eslint-disable no-unused-vars */
-  public toast: (variant: ToastVariant) => this = (variant: ToastVariant) => {
+  public toast: (variant: ToastVariant) => void = (variant: ToastVariant) => {
     this._variant = variant;
     console.log("Spawned Toast of type " + variant);
-    return this;
   };
 
   @log
@@ -46,12 +45,12 @@ class Toaster {
     return `🍞🍫 Starting to toast 4 Toasts with ${topping}`;
   }
 
-  private _createManager(): JSX.Element {
+  private _createManager(): void {
     const managerWrapper: HTMLElement = document.createElement("div");
     managerWrapper.setAttribute("data-athenic-ui-toast-manager-wrapper", "");
     document.body.appendChild(managerWrapper);
-    ReactDOM.render(React.createElement(ToastManager), managerWrapper);
-    return React.createElement("div", { id: "toaster-manager" });
+    this._manager = React.createElement(ToastManager);
+    ReactDOM.render(this._manager, managerWrapper);
   }
 }
 
