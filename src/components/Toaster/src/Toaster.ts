@@ -1,3 +1,4 @@
+/*eslint-disable no-unused-vars */
 import React from "react";
 import ReactDOM from "react-dom";
 import { Toast, ToastManager } from "../index";
@@ -30,6 +31,7 @@ class Toaster {
   } = {
     "data-athenic-ui-toast-manager-wrapper": "",
   };
+  private static _closeDelay: number = 4000;
 
   public static managerDataAttr: {
     "data-athenic-ui-toast-manager": string;
@@ -37,12 +39,12 @@ class Toaster {
     "data-athenic-ui-toast-manager": "",
   };
 
-  public static init: () => void = () => {
-    return Toaster._manager;
-  };
+  public static setCloseDelay(ms: number) {
+    Toaster._closeDelay = ms;
+    return this;
+  }
 
-  /*eslint-disable no-unused-vars */
-  public static toast: (props: ToastProps) => void = (props: ToastProps) => {
+  public static toast(props: ToastProps) {
     if (!Toaster._managerWrapper) Toaster._createManagerWrapper();
 
     Toaster._toasts.unshift(React.createElement(Toast, props));
@@ -50,10 +52,11 @@ class Toaster {
     setTimeout(() => {
       Toaster._toasts.pop();
       Toaster._updateManager();
-    }, 4000);
+    }, Toaster._closeDelay);
 
     Toaster._updateManager();
-  };
+    return this;
+  }
 
   @logRealToast
   public static toastRealToast(topping: string): string {

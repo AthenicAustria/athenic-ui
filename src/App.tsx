@@ -1087,7 +1087,7 @@ const App = () => {
       </Button>
       <Button
         onClick={() => {
-          Toaster.toast({
+          Toaster.setCloseDelay(3400).toast({
             variant: "error",
             title: "Error Toast",
             icon: true,
