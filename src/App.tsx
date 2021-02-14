@@ -1063,7 +1063,11 @@ const App = () => {
       />
 
       <H2>Using Toaster & ToastManager</H2>
-      <Button onClick={() => new Toaster().toast("error")}>
+      <Button
+        onClick={() => {
+          Toaster.toast("success");
+        }}
+      >
         Spawn new Error toast
       </Button>
     </div>
