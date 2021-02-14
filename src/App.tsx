@@ -1065,10 +1065,36 @@ const App = () => {
       <H2>Using Toaster & ToastManager</H2>
       <Button
         onClick={() => {
-          Toaster.toast("success");
+          Toaster.toast({
+            variant: "success",
+            title: "Success Toast",
+            icon: true,
+          });
         }}
       >
-        Spawn new Error toast
+        ✔️ Spawn Success Toast
+      </Button>
+      <Button
+        onClick={() => {
+          Toaster.toast({
+            variant: "warning",
+            title: "Warning Toast",
+            icon: true,
+          });
+        }}
+      >
+        ⚠️ Spawn Warning Toast
+      </Button>
+      <Button
+        onClick={() => {
+          Toaster.toast({
+            variant: "error",
+            title: "Error Toast",
+            icon: true,
+          });
+        }}
+      >
+        ❌ Spawn Error Toast
       </Button>
     </div>
   );

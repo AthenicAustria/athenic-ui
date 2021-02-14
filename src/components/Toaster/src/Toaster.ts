@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { ToastVariant } from "../types/ToasterTypes";
 import { Toast, ToastManager } from "../index";
+import { ToastProps } from "./Toast";
 
 function logRealToast(
   target: Object,
@@ -42,18 +42,10 @@ class Toaster {
   };
 
   /*eslint-disable no-unused-vars */
-  public static toast: (variant: ToastVariant) => void = (
-    variant: ToastVariant
-  ) => {
+  public static toast: (props: ToastProps) => void = (props: ToastProps) => {
     if (!Toaster._managerWrapper) Toaster._createManagerWrapper();
 
-    Toaster._toasts.unshift(
-      React.createElement(Toast, {
-        variant: variant,
-        title: "Test toast",
-        icon: true,
-      })
-    );
+    Toaster._toasts.unshift(React.createElement(Toast, props));
 
     setTimeout(() => {
       Toaster._toasts.pop();
