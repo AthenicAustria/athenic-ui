@@ -1,3 +1,6 @@
+import { ReactElement } from "react";
+import { ToastProps } from "../src/Toast";
+
 export type ToastVariant =
   | "primary"
   | "secondary"
@@ -6,3 +9,6 @@ export type ToastVariant =
   | "info"
   | "warning"
   | "error";
+
+export type ToastType = ReactElement<ToastProps>;
+export type ToastsType = Array<ToastType>;

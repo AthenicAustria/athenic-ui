@@ -1061,8 +1061,8 @@ const App = () => {
         description="Toast is usually toasted with a Toaster"
         icon
       />
-      {Toaster.toast()}
-      {new Toaster().init().toast("error")}
+      {new Toaster().init()}
+      {/* {Toaster.toast("Nutella")} */}
     </div>
   );
 };
