@@ -1107,7 +1107,7 @@ const App = () => {
           });
         }}
       >
-        ❌ Spawn Error Toast (despawns in 2s)
+        ✔️ Spawn Success Toast (despawns in 2s)
       </Button>
     </div>
   );
