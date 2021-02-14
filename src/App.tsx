@@ -1087,7 +1087,7 @@ const App = () => {
       </Button>
       <Button
         onClick={() => {
-          Toaster.setCloseDelay(3400).toast({
+          Toaster.toast({
             variant: "error",
             title: "Error Toast",
             icon: true,
@@ -1095,6 +1095,19 @@ const App = () => {
         }}
       >
         ❌ Spawn Error Toast
+      </Button>
+
+      <H2>Custom despawn time</H2>
+      <Button
+        onClick={() => {
+          Toaster.setDespawnDelay(2000).toast({
+            variant: "success",
+            title: "Success Toast",
+            icon: true,
+          });
+        }}
+      >
+        ❌ Spawn Error Toast (despawns in 2s)
       </Button>
     </div>
   );

@@ -39,16 +39,15 @@ class Toaster {
     "data-athenic-ui-toast-manager": "",
   };
 
-  public static setCloseDelay(ms: number) {
+  public static setDespawnDelay(ms: number): typeof Toaster {
     Toaster._closeDelay = ms;
     return this;
   }
 
-  public static toast(props: ToastProps) {
+  public static toast(props: ToastProps): typeof Toaster {
     if (!Toaster._managerWrapper) Toaster._createManagerWrapper();
 
     Toaster._toasts.unshift(React.createElement(Toast, props));
-
     setTimeout(() => {
       Toaster._toasts.pop();
       Toaster._updateManager();
