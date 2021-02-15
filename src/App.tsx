@@ -80,6 +80,7 @@ const App = () => {
   const [topDrawerShown, setTopDrawerShown] = useState<boolean>(false);
   const [bottomDrawerShown, setBottomDrawerShown] = useState<boolean>(false);
   const [leftDrawerShown, setLeftDrawerShown] = useState<boolean>(false);
+  const [exampleDrawerShown, setExampleDrawerShown] = useState<boolean>(false);
 
   return (
     <div id="App">
@@ -1148,6 +1149,19 @@ const App = () => {
         onClose={() => setLeftDrawerShown(false)}
         position="left"
       ></Drawer>
+
+      <H2>Example</H2>
+      <Button onClick={() => setExampleDrawerShown((prev) => !prev)}>
+        🗄️ Example Drawer
+      </Button>
+      <Drawer
+        shown={exampleDrawerShown}
+        onClose={() => setExampleDrawerShown(false)}
+      >
+        <Drawer.Header>
+          <H3>Title</H3>
+        </Drawer.Header>
+      </Drawer>
     </div>
   );
 };
