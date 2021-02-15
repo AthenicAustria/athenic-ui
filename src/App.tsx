@@ -1100,7 +1100,7 @@ const App = () => {
       <H2>Custom despawn time</H2>
       <Button
         onClick={() => {
-          Toaster.setDespawnDelay(2000).toast({
+          Toaster.setDespawnDelay(10000).toast({
             variant: "success",
             title: "Success Toast",
             icon: true,

@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties } from "react";
-import { Toaster } from "../../../../dist/src";
+import { Toaster } from "..";
 import { ToastVariant } from "../types/ToasterTypes";
 import "./Toast.scss";
 
@@ -20,6 +20,10 @@ export interface ToastProps {
   icon?: boolean;
   closeIcon?: boolean;
   onClose?: () => void;
+  /**
+   * @description Do not set this unless you exactly know what you are doing!
+   * */
+  dangerouslyChangeToastKey?: number;
 }
 
 const Toast = ({
@@ -31,6 +35,7 @@ const Toast = ({
   icon,
   closeIcon = true,
   onClose,
+  dangerouslyChangeToastKey,
 }: ToastProps) => {
   return (
     <div className={`toast ${className} ${variant}`} style={style}>
@@ -52,7 +57,10 @@ const Toast = ({
           ) : null}
           {title}
           {closeIcon ? (
-            <span className={`toast__title__close-icon ${variant}`} onClick={() => Toaster.}>
+            <span
+              className={`toast__title__close-icon ${variant}`}
+              onClick={() => Toaster.despawnToast(dangerouslyChangeToastKey)}
+            >
               <FontAwesomeIcon
                 icon={faTimes}
                 onClick={() => onClose && onClose()}

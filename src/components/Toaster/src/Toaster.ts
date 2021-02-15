@@ -39,15 +39,20 @@ class Toaster {
     "data-athenic-ui-toast-manager": "",
   };
 
-  public static setDespawnDelay(ms: number): typeof Toaster {
+  public static setDespawnDelay(ms: number) {
     Toaster._closeDelay = ms;
     return this;
   }
 
-  public static toast(props: ToastProps): typeof Toaster {
+  public static toast(props: ToastProps) {
     if (!Toaster._managerWrapper) Toaster._createManagerWrapper();
 
-    Toaster._toasts.unshift(React.createElement(Toast, props));
+    Toaster._toasts.unshift(
+      React.createElement(Toast, {
+        ...props,
+        dangerouslyChangeToastKey: Toaster._toasts.length,
+      })
+    );
     setTimeout(() => {
       Toaster._toasts.pop();
       Toaster._updateManager();
@@ -57,9 +62,16 @@ class Toaster {
     return this;
   }
 
+  public static despawnToast(toastKey: number) {
+    Toaster._toasts.splice(toastKey, 1);
+    Toaster._updateManager();
+    return this;
+  }
+
   @logRealToast
-  public static toastRealToast(topping: string): string {
-    return `🍞🍫 Starting to toast 4 Toasts with ${topping}`;
+  public static __toastRealToast(topping: string) {
+    console.log(`🍞🍫 Starting to toast 4 Toasts with ${topping}`);
+    return this;
   }
 
   private static _createManagerWrapper(): void {
