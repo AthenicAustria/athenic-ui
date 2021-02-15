@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { CSSProperties } from "react";
+import { Toaster } from "../../../../dist/src";
 import { ToastVariant } from "../types/ToasterTypes";
 import "./Toast.scss";
 
@@ -51,7 +52,7 @@ const Toast = ({
           ) : null}
           {title}
           {closeIcon ? (
-            <span className={`toast__title__close-icon ${variant}`}>
+            <span className={`toast__title__close-icon ${variant}`} onClick={() => Toaster.}>
               <FontAwesomeIcon
                 icon={faTimes}
                 onClick={() => onClose && onClose()}
