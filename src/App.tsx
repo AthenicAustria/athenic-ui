@@ -31,6 +31,7 @@ import { NavBar } from "./components/NavBar/";
 import { Popover } from "./components/Popover/";
 import { Menu } from "./components/Menu";
 import { Toast, Toaster } from "./components/Toaster";
+import { Drawer } from "./components/Drawer";
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -73,8 +74,12 @@ const App = () => {
   );
   const [leftPopoverShown, setLeftPopoverShown] = useState<boolean>(false);
   const [rightPopoverShown, setRightPopoverShown] = useState<boolean>(false);
-
   const [popoverMenuShown, setPopoverMenuShown] = useState<boolean>(false);
+
+  const [defaultDrawerShown, setDefaultDrawerShown] = useState<boolean>(false);
+  const [topDrawerShown, setTopDrawerShown] = useState<boolean>(false);
+  const [bottomDrawerShown, setBottomDrawerShown] = useState<boolean>(false);
+  const [leftDrawerShown, setLeftDrawerShown] = useState<boolean>(false);
 
   return (
     <div id="App">
@@ -1100,7 +1105,7 @@ const App = () => {
       <H2>Custom despawn time</H2>
       <Button
         onClick={() => {
-          Toaster.setDespawnDelay(10000).toast({
+          Toaster.setDespawnDelay(2000).toast({
             variant: "success",
             title: "Success Toast",
             icon: true,
@@ -1109,6 +1114,40 @@ const App = () => {
       >
         ✔️ Spawn Success Toast (despawns in 2s)
       </Button>
+
+      <H1>Drawer</H1>
+      <H2>Positions</H2>
+      <Button onClick={() => setTopDrawerShown((prev) => !prev)}>
+        🗄️ Top Drawer
+      </Button>
+      <Drawer
+        shown={topDrawerShown}
+        onClose={() => setTopDrawerShown(false)}
+        position="top"
+      ></Drawer>
+      <Button onClick={() => setDefaultDrawerShown((prev) => !prev)}>
+        🗄️ Right Drawer (default)
+      </Button>
+      <Drawer
+        shown={defaultDrawerShown}
+        onClose={() => setDefaultDrawerShown(false)}
+      ></Drawer>
+      <Button onClick={() => setBottomDrawerShown((prev) => !prev)}>
+        🗄️ Bottom Drawer
+      </Button>
+      <Drawer
+        shown={bottomDrawerShown}
+        onClose={() => setBottomDrawerShown(false)}
+        position="bottom"
+      ></Drawer>
+      <Button onClick={() => setLeftDrawerShown((prev) => !prev)}>
+        🗄️ Left Drawer
+      </Button>
+      <Drawer
+        shown={leftDrawerShown}
+        onClose={() => setLeftDrawerShown(false)}
+        position="left"
+      ></Drawer>
     </div>
   );
 };

@@ -60,9 +60,11 @@
 
   &.disabled {
     background-color: var(--color-disabled);
+
     &:hover {
       transform: translateY(0px);
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+      cursor: not-allowed;
     }
   }
 

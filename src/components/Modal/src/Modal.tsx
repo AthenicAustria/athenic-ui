@@ -14,6 +14,7 @@ export interface ModalProps {
   onClose: () => void;
   children?: ReactChild | ReactChildren | ReactChild[] | ReactChildren[];
   position?: ModalPosition;
+  closeOnExternalClick?: boolean;
 }
 
 const Modal = ({
@@ -25,12 +26,13 @@ const Modal = ({
   onClose,
   children,
   position = "default",
+  closeOnExternalClick = true,
 }: ModalProps) => {
   return (
     <>
       <div
         className={`modal-blur ${shown ? "shown" : "hidden"}`}
-        onClick={() => onClose()}
+        onClick={() => (closeOnExternalClick ? onClose() : void 0)}
       ></div>
       <div
         className={`modal ${className ? className : ""} ${
