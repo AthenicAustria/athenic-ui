@@ -103,3 +103,14 @@ export {
   ToastType,
   ToastVariant,
 } from "./components/Toaster";
+export {
+  Drawer,
+  DrawerHeader,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeaderProps,
+  DrawerBodyProps,
+  DrawerFooterProps,
+  DrawerProps,
+  DrawerPosition,
+} from "./components/Drawer";
