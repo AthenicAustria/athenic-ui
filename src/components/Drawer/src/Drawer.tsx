@@ -1,7 +1,9 @@
 import React, { CSSProperties, ReactChild, ReactChildren } from "react";
 import { DrawerPosition } from "../types/DrawerTypes";
 import "./Drawer.scss";
+import DrawerBody from "./DrawerBody";
 import DrawerHeader from "./DrawerHeader";
+import DrawerFooter from "./DrawerFooter";
 
 export interface DrawerProps {
   className?: string;
@@ -39,5 +41,7 @@ const Drawer = ({
 };
 
 Drawer.Header = DrawerHeader;
+Drawer.Body = DrawerBody;
+Drawer.Footer = DrawerFooter;
 
 export default Drawer;

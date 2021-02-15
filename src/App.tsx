@@ -1161,6 +1161,7 @@ const App = () => {
         <Drawer.Header>
           <H3>Title</H3>
         </Drawer.Header>
+        <Drawer.Footer>Footer</Drawer.Footer>
       </Drawer>
     </div>
   );
