@@ -32,10 +32,20 @@
   visibility: hidden;
   pointer-events: none;
 
+  * {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
   &.shown {
     padding: 16px 32px;
     visibility: visible;
     pointer-events: initial;
+
+    * {
+      visibility: visible;
+      pointer-events: initial;
+    }
   }
 
   &.top {

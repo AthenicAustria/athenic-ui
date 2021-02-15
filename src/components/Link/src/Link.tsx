@@ -9,12 +9,12 @@ export interface LinkProps {
   style?: CSSProperties;
 }
 
-const Link = ({ to, text, target, className, style }: LinkProps) => {
+const Link = ({ to, text, target, className = "", style = {} }: LinkProps) => {
   return (
     <a
       href={to}
       className={`link ${className}`}
-      style={style ? style : null}
+      style={style}
       target={target ? target : ""}
     >
       {text}

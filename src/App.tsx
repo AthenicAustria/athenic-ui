@@ -1161,6 +1161,16 @@ const App = () => {
         <Drawer.Header>
           <H3>Title</H3>
         </Drawer.Header>
+        <Drawer.Body>
+          <Menu style={{ margin: 0 }}>
+            <Menu.Item icon={faIcons.faUser}>Profile</Menu.Item>
+            <Menu.Item icon={faIcons.faEdit}>Settings</Menu.Item>
+            <Menu.Divider />
+            <Menu.Item icon={faIcons.faTrash} variant="error">
+              Delete Account
+            </Menu.Item>
+          </Menu>
+        </Drawer.Body>
         <Drawer.Footer>Footer</Drawer.Footer>
       </Drawer>
     </div>
