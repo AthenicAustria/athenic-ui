@@ -1,4 +1,4 @@
-// Athenic UI Components
+// Athenic UI - Components
 export { H1, H1Props } from "./components/H1";
 export { H2, H2Props } from "./components/H2";
 export { H3, H3Props } from "./components/H3";
