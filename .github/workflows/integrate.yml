@@ -3,7 +3,7 @@ name: ✨ Continuous Integration
 on:
   push:
     branches: [master]
-    pull-request: [master]]
+    pull-request: [master]
 
 jobs:
   test:

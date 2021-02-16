@@ -15,8 +15,6 @@ export interface DrawerProps {
   closeOnExternalClick?: boolean;
 }
 
-//
-
 const Drawer = ({
   className = "",
   style = {},
