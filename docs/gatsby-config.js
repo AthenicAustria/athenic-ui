@@ -4,7 +4,7 @@ module.exports = {
     defaultTitle: `Athenic UI`,
     siteTitleShort: `Athenic UI`,
     siteDescription: `👑 Athenic UI React component library. Building beautiful React applications made simple!`,
-    siteUrl: `https://rocketdocs.netlify.com`,
+    siteUrl: `https://docs.athenic.at`,
     siteAuthor: `@b3h3m0th`,
     siteImage: `./static/logo.png`,
     siteLanguage: `en`,

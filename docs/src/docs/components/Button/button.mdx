@@ -1,0 +1,51 @@
+---
+title: "Button"
+description: Button
+---
+
+## Button
+
+```js
+import { Button } from "athenic-ui";
+```
+
+### Props
+
+- text: `string` | `ReactChildren`
+- text?: `string`| `ReactChildren`
+- style?: `CSSProperties`
+- className?: `string`
+- size?: `ButtonSize`
+- variant?: `ButtonVariant`
+- children?: `ReactChildren` | `ReactChild` | `string`
+- iconBefore?: `ButtonIconType`
+- iconAfter?: `ButtonIconType`
+- onClick?: `React.MouseEventHandler<HTMLButtonElement>`
+- onHover?: `React.MouseEventHandler<HTMLButtonElement>`
+- disabled?: `boolean`
+- link?: `string`
+
+## IconButton
+
+```js
+import { IconButton } from "athenic-ui";
+```
+
+### Props
+
+- icon: `ButtonIconType`;
+- style?: `CSSProperties`;
+- className?: `string`;
+- size?: `ButtonSize`;
+
+## Types
+
+- ButtonSize: `small` | `medium` | `large`;
+- ButtonVariant:
+  | `primary`
+  | `secondary`
+  | `tertiary`
+  | `success`
+  | `warning`
+  | `error`
+- ButtonIconType: `IconDefinition (@fortawesome/fontawesome-svg-core)`;
