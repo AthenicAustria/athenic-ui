@@ -2,8 +2,9 @@ name: ✨ Continuous Integration
 
 on:
   push:
-    branches: [master]
-    pull_request: [master]
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   test:
