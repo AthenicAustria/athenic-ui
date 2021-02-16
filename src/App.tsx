@@ -62,9 +62,10 @@ const App = () => {
   const [bottomLeftPopoverShown, setBottomLeftPopoverShown] = useState<boolean>(
     false
   );
-  const [bottomRightPopoverShown, setBottomRightPopoverShown] = useState<
-    boolean
-  >(false);
+  const [
+    bottomRightPopoverShown,
+    setBottomRightPopoverShown,
+  ] = useState<boolean>(false);
   const [topPopoverShown, setTopPopoverShown] = useState<boolean>(false);
   const [topLeftPopoverShown, setTopLeftPopoverShown] = useState<boolean>(
     false

@@ -20,6 +20,7 @@
     "test": "jest --config ./jest.config.ts",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "build:docs": "cd ./docs && npm run build",
     "publish:tsc": "node ./src/utils/publish.tsc.js",
     "publish:webpack": "node ./src/utils/publish.webpack.js"
   },
