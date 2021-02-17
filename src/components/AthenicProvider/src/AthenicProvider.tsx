@@ -5,7 +5,9 @@ export interface AthenicProviderProps {
 }
 
 const AthenicProvider = ({ children }: AthenicProviderProps) => {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    //
+  }, []);
   return <div className={`____athenic-ui`}>{children}</div>;
 };
 
