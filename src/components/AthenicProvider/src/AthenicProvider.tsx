@@ -1,10 +1,20 @@
 import React, { useEffect } from "react";
+import { AthenicTheme } from "../types/AthenicProviderTypes";
 
 export interface AthenicProviderProps {
   children?: any;
+  theme?: AthenicTheme;
 }
 
-const AthenicProvider = ({ children }: AthenicProviderProps) => {
+const AthenicProvider = ({ children, theme }: AthenicProviderProps) => {
+  if (theme) {
+    for (const [key, value] of Object.entries(theme)) {
+      document.documentElement.style.setProperty(
+        `--${key.replace("_", "-")}`,
+        `'${value}'`
+      );
+    }
+  }
   useEffect(() => {
     //
   }, []);
