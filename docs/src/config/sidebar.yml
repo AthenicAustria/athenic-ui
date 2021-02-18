@@ -4,6 +4,10 @@
   link: "/"
 - label: "Getting started"
   link: "/getting-started"
+- label: Configuration
+  items:
+    - label: "Theme"
+      link: "/config/theme"
 - label: Components
   items:
     - label: "Button"

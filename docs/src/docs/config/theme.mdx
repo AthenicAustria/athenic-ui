@@ -1,0 +1,77 @@
+---
+title: Configuration
+description: Configure Athenic UI for your own needs. Customize colors, fonts, etc.
+---
+
+Configure Athenic UI for your own needs. Customize colors, fonts, etc.
+
+## AthenicProvider
+
+The AthenicProvider helps you creating a customized theme for your application.
+Import the Provider then use it like any other Component.
+Everything that is "inside" (a children) of the Provider will be affected by your customization.
+So make sure to use it on the root level of your React app.
+
+```jsx title=index.jsx
+import ReactDOM from "react-dom";
+import { AthenicProvider, Button } from "athenic-ui";
+
+const App = () => {
+  return (
+    <AthenicProvider>
+      <Button>I am wrapped by an AthenicProvider</Button>
+    </AthenicProvider>
+  );
+};
+
+ReactDom.render(<App/>, document.getElementById("root")));
+```
+
+Now if you want to actually set custom colors or fonts you can create a theme object and pass it to the AthenicProvider Props.
+
+```jsx title=index.jsx
+import ReactDOM from "react-dom";
+import { AthenicProvider, Button } from "athenic-ui";
+
+const theme = {
+  color_primary: "red",
+};
+
+const App = () => {
+  return (
+    <AthenicProvider theme={theme}>
+      <Button>I am wrapped by an AthenicProvider</Button>
+    </AthenicProvider>
+  );
+};
+```
+
+Here are some other ways how to customize your app using the AthenicProvider:
+
+## AthenicProvider Props
+
+- children?: `any`
+- theme: `AthenicTheme`
+- asciiComment: `boolean`
+
+## AthenicTheme Properties
+
+- color_primary?: `string`
+- color_secondary?: `string`
+- color_tertiary?: `string`
+- color_primary_tint?: `string`
+- color_secondary_tint?: `string`
+- color_tertiary_tint?: `string`
+- color_error?: `string`
+- color_warning?: `string`
+- color_success?: `string`
+- color_disabled?: `string`
+- color_input?: `string`
+- color_input_hover?: `string`
+- color_input_shadow?: `string`
+- color_error_tint?: `string`
+- color_warning_tint?: `string`
+- color_success_tint?: `string`
+- color_disabled_tint?: `string`
+- font_primary?: `string`
+- font_secondary?: `string`

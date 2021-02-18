@@ -25,6 +25,4 @@ export type AthenicTheme = {
   //fonts
   font_primary?: string;
   font_secondary?: string;
-
-  athenic_comment?: boolean;
 };
