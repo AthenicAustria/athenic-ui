@@ -10,8 +10,16 @@
       link: "/config/theme"
 - label: Components
   items:
+    - label: "H1"
+      link: "/components/h1"
+    - label: "H2"
+      link: "/components/h2"
+    - label: "H3"
+      link: "/components/h3"
     - label: "Button"
-      link: "/components/Button/button"
+      link: "/components/button"
+    - label: "Badge"
+      link: "/components/badge"
 - label: Usage
   items:
     - label: "Creating docs"
