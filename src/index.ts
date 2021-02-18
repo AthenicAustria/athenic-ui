@@ -115,3 +115,8 @@ export {
   DrawerPosition,
 } from "./components/Drawer";
 export { ReactComment, ReactCommentProps } from "./components/ReactComment";
+export {
+  AthenicProvider,
+  AthenicProviderProps,
+  __athenicAscii,
+} from "./components/AthenicProvider";
