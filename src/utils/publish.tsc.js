@@ -8,9 +8,9 @@ Inquirer.prompt([
     type: "list",
     name: "version",
     message: "Version",
-    choices: ["patch", "major", "minor"],
+    choices: ["patch", "minor", "major"],
   },
-]).then(async (answers) => {
+]).then((answers) => {
   try {
     console.clear();
 
