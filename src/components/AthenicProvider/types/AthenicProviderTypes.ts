@@ -21,4 +21,8 @@ export type AthenicTheme = {
   color_warning_tint?: string;
   color_success_tint?: string;
   color_disabled_tint?: string;
+
+  //fonts
+  font_primary?: string;
+  font_secondary?: string;
 };
