@@ -1,24 +1,24 @@
 export type AthenicTheme = {
   //trio
-  primary_color: string;
-  secondary_color: string;
-  tertiary_color: string;
+  color_primary?: string;
+  color_secondary?: string;
+  color_tertiary?: string;
 
-  primary_color_tint: string;
-  secondary_color_tint: string;
-  tertiary_color_tint: string;
+  color_primary_tint?: string;
+  color_secondary_tint?: string;
+  color_tertiary_tint?: string;
 
   //states
-  error_color: string;
-  warning_color: string;
-  success_color: string;
-  disabled_color: string;
-  input_color: string;
-  input_color_hover: string;
-  input_color_shadow: string;
+  color_error?: string;
+  color_warning?: string;
+  color_success?: string;
+  color_disabled?: string;
+  color_input?: string;
+  color_input_hover?: string;
+  color_input_shadow?: string;
 
-  error_color_tint: string;
-  warning_color_tint: string;
-  success_color_tint: string;
-  disabled_color_tint: string;
+  color_error_tint?: string;
+  color_warning_tint?: string;
+  color_success_tint?: string;
+  color_disabled_tint?: string;
 };

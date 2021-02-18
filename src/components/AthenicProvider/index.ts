@@ -1,1 +1,5 @@
-export { default as AthenicProvider } from "./src/AthenicProvider";
+export {
+  default as AthenicProvider,
+  AthenicProviderProps,
+  __athenicAscii,
+} from "./src/AthenicProvider";

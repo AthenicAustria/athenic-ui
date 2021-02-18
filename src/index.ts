@@ -114,3 +114,4 @@ export {
   DrawerProps,
   DrawerPosition,
 } from "./components/Drawer";
+export { ReactComment, ReactCommentProps } from "./components/ReactComment";

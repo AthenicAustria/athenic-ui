@@ -33,6 +33,11 @@ import { Menu } from "./components/Menu";
 import { Toast, Toaster } from "./components/Toaster";
 import { Drawer } from "./components/Drawer";
 import { AthenicProvider } from "./components/AthenicProvider";
+import { AthenicTheme } from "./components/AthenicProvider/types/AthenicProviderTypes";
+
+const theme: AthenicTheme = {
+  //
+};
 
 const App = () => {
   const stepperCardExampleSteps = [
@@ -86,7 +91,7 @@ const App = () => {
 
   return (
     <div id="App">
-      <AthenicProvider>
+      <AthenicProvider theme={theme}>
         <H1>Headers</H1>
 
         <H1 style={{ color: "var(--color-light-red)" }}>Athenic UI - H1</H1>
