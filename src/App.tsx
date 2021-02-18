@@ -92,6 +92,9 @@ const App = () => {
   return (
     <div id="App">
       <AthenicProvider theme={theme}>
+        <H1>Athenic Provider</H1>
+        <p>Open your Browsers DevTools to inspect the Provider</p>
+
         <H1>Headers</H1>
 
         <H1 style={{ color: "var(--color-light-red)" }}>Athenic UI - H1</H1>
