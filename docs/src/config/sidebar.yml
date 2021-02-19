@@ -40,8 +40,6 @@
       link: "components/link"
     - label: "Menu"
       link: "components/menu"
-    - label: "Menu-Item"
-      link: "components/menuItem"
     - label: "Modal"
       link: "components/modal"
     - label: "NavBar"
