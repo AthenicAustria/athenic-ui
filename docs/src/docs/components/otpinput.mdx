@@ -1,0 +1,67 @@
+---
+title: "OTP-Input"
+description: OTP-Input
+---
+
+## OTP-Input
+
+```js
+import { OTPInput } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<OTPInput
+  numInputs={6}
+  summary
+  value={[1, 2, 3, 4, 5, 6]}
+  validationMessage="Invalid Code"
+  label="Enter verification code"
+/>
+```
+
+### Example - In Card
+
+```jsx
+<Card>
+  <OTPInput
+    numInputs={6}
+    summary
+    value={[1, 2, 3, 4, 5, 6]}
+    validationMessage="Invalid Code"
+    label="Enter verification code"
+  />
+</Card>
+```
+
+### Example - With OnComplete Alert
+
+```jsx
+<Alert
+  style={{ marginLeft: 0 }}
+  shown={otpInputAlertShown}
+  variant="success"
+  title="Account verified"
+  closeIcon={true}
+  onClose={() => setOtpInputAlertShown(false)}
+/>
+<OTPInput
+  numInputs={6}
+  onComplete={() => setOtpInputAlertShown(true)}
+/>
+```
+
+### Props
+
+- style?: `CSSProperties`
+- className?: `string`
+- numInputs?: `number`
+- separator?: `any`
+- label?: `string`
+- validationMessage?: `string`
+- value?: `number[]`
+- onChange?: `(e: React.FormEvent<HTMLInputElement>) => void`
+- onComplete?: `() => void`
+- placeholder?: `string`
+- summary?: `boolean`

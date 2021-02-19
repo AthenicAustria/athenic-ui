@@ -1,0 +1,44 @@
+---
+title: "Menu"
+description: Menu
+---
+
+## Menu
+
+```js
+import { Menu } from "athenic-ui";
+```
+
+### Props
+
+- className?: `string`
+- style?: `CSSProperties`
+- children?: `ReactElement<MenuItemProps> | Array<ReactElement<MenuItemProps>>`
+
+## Menu-Item
+
+### Example
+
+```jsx
+<Menu>
+  <Menu.Item>Menu Item 1</Menu.Item>
+  <Menu.Item>Menu Item 2</Menu.Item>
+  <Menu.Item link="https://github.com/AthenicAustria/athenic-ui">
+    Menu Item 3 (Link to Github)
+  </Menu.Item>
+</Menu>
+```
+
+### Props
+
+- className?: `string`
+- style?: `CSSProperties`
+- icon?: `IconDefinition`
+- children: `string`
+- link?: `string`
+- variant?: `MenuItemVariant`
+- disabled?: `boolean`
+
+## Types
+
+- MenuItemVariant: `"success" | "warning" | "error"`

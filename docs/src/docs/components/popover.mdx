@@ -1,0 +1,66 @@
+---
+title: "Pop-Over"
+description: Pop-Over
+---
+
+## Pop-Over
+
+```js
+import { Popover } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<Popover
+  shown={defaultPopoverShown}
+  content={<span>🍌 You found a fresh Banana in this Popover</span>}
+  size="auto"
+>
+  <Button onClick={() => setDefaultPopoverShown((prev) => !prev)}>
+    🍾 Shown Popover
+  </Button>
+</Popover>
+```
+
+### Example - Combined with Menu
+
+```jsx
+<Popover
+  position="topRight"
+  size="auto"
+  content={
+    <Menu>
+      <Menu.Item icon={faIcons.faUser}>Profile</Menu.Item>
+      <Menu.Item icon={faIcons.faEdit}>Edit</Menu.Item>
+      <Menu.Divider />
+      <Menu.Item icon={faIcons.faTrash} variant="error">
+        Delete Account
+      </Menu.Item>
+    </Menu>
+  }
+  shown={popoverMenuShown}
+>
+  <Button onClick={() => setPopoverMenuShown((prev) => !prev)}>
+    Open Menu
+  </Button>
+</Popover>
+```
+
+### Props
+
+- children: `ReactElement<any>`
+- content?: `ReactElement<any> | Array<ReactElement<any>>`
+- className?: `string`
+- style?: `CSSProperties`
+- position?: `PopoverPosition`
+- size?: `PopoverSize`
+- shown?: `boolean`
+- onClose?: `() => void`
+
+## Types
+
+- PopoverPosition:
+  ` | "top" | "topLeft" | "topRight" | "bottom" | "bottomLeft" | "bottomRight" | "left" | "right"`
+
+- PopoverSize = `"small" | "medium" | "large" | "auto"`

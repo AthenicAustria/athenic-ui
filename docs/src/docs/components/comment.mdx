@@ -1,0 +1,70 @@
+---
+title: "Comment"
+description: Comment
+---
+
+## Comment
+
+```js
+import { Comment } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<Comment
+  style={{ marginLeft: 0 }}
+  author={{
+    name: "PatPlayz",
+  }}
+  text="Im a Comment!"
+  likes={123}
+></Comment>
+```
+
+### Example with nested Comment
+
+```jsx
+<Comment
+  style={{ marginLeft: 0 }}
+  author={{
+    name: "Behemoth",
+  }}
+  text="Im the First Comment!"
+  likes={666}
+>
+  <Comment
+    style={{ marginLeft: 0 }}
+    author={{
+      name: "Hageli",
+    }}
+    text="Im a nested Comment"
+    likes={5}
+  />
+  <Comment
+    style={{ marginLeft: 0 }}
+    author={{
+      name: "Proxy0504",
+    }}
+    text="Me too!"
+    likes={3}
+  />
+</Comment>
+```
+
+### Props
+
+- author: `CommentAuthor`
+- text: `string`
+- likes?: `number`
+- dislikes?: `number`
+- onLike?: `() => void`
+- onDislike?: `() => void`
+- onReply?: `() => void`
+- style?: `CSSProperties`
+- className?: `string`
+- children?: ` ReactElement<CommentProps> | Array<ReactElement<CommentProps>>`
+
+## Types
+
+- CommentAuthor: `{ name: string; avatar?: string; link?: string }`

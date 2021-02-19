@@ -1,0 +1,75 @@
+---
+title: "Modal"
+description: Modal
+---
+
+## Modal
+
+```js
+import { Modal } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<Button
+  style={{ marginLeft: 0 }}
+  onClick={() => setDefaultModalShown(!defaultModalShown)}
+>
+  😮‍💨 Open Modal
+</Button>
+<Modal
+  shown={defaultModalShown}
+  title="🍍 Yo! I'm a fresh Modal and this is a very, very long title. It goes on and on and should break just right about here :)"
+  onClose={() => setDefaultModalShown(false)}
+>
+```
+
+### Example - With a Position
+
+```jsx
+<Button
+  style={{ marginLeft: 0 }}
+  onClick={() => setBottomLeftModalShown(!defaultModalShown)}
+>
+  ↙️ Open Modal bottomLeft
+</Button>
+<Modal
+  shown={bottomLeftModalShown}
+  title="🥝 Yo! I'm another fresh Modal"
+  onClose={() => setBottomLeftModalShown(false)}
+  position="bottomLeft"
+>
+  <Button
+    size="small"
+    style={{ marginLeft: 0 }}
+    onClick={() => setBottomLeftModalShown(false)}
+  >
+    Nah, I'm fine
+  </Button>
+  <Button
+    variant="error"
+    size="small"
+    style={{ marginLeft: 0 }}
+    onClick={() => setBottomLeftModalShown(false)}
+  >
+    Delete?
+  </Button>
+</Modal>
+```
+
+### Props
+
+- shown: `boolean`
+- title?: `string`
+- closeButton?: `boolean`
+- className?: `string`
+- style?: `CSSProperties`
+- onClose: `() => void`
+- children?:` ReactChild | ReactChildren | ReactChild[] | ReactChildren[]`
+- position?: `ModalPosition`
+- closeOnExternalClick?: `boolean`
+
+## Types
+
+- ModalPosition: `"default" | "center" | "bottomLeft" | "bottomRight"`

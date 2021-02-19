@@ -1,0 +1,41 @@
+---
+title: "Radio-Group"
+description: Radio-Group
+---
+
+## Radio-Group
+
+```js
+import { RadioGroup } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<RadioGroup
+  options={{
+    options: [
+      { value: "option1", id: "option1", label: "Option 1" },
+      { value: "option2", id: "option2", label: "Option 2" },
+      { value: "option3", id: "option3", label: "Option 3" },
+    ],
+    name: "example1",
+  }}
+/>
+```
+
+### Props
+
+- variant?: `RatingVariant`
+- size?: `RatingSize`
+- className?: `string`
+- style?: `CSSProperties`
+- initialRating?: `number`
+- onRate?: `(value: number) => void`
+
+## Types
+
+- RatingVariant: `"star" | "emoji"`
+- RatingSize: `"small" | "medium" | "large"`
+- EmojiType: `{ emoji: string; value: number }`
+- EmojiScale: `EmojiType[]`

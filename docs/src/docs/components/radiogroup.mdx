@@ -1,0 +1,41 @@
+---
+title: "Radio-Group"
+description: Radio-Group
+---
+
+## Radio-Group
+
+```js
+import { RadioGroup } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<RadioGroup
+  options={{
+    options: [
+      { value: "option1", id: "option1", label: "Option 1" },
+      { value: "option2", id: "option2", label: "Option 2" },
+      { value: "option3", id: "option3", label: "Option 3" },
+    ],
+    name: "example1",
+  }}
+/>
+```
+
+### Props
+
+- title?: `string`
+- className?: `string`
+- style?: `CSSProperties`
+- options: `RadioGroupOptions`
+- value?: `string`
+- onChange?: `(e: React.FormEvent<HTMLInputElement>) => void`
+- validationMessage?: `string`
+
+## Types
+
+- RadioGroupOption: `{ value: string; label: string; id: string; }`
+
+- RadioGroupOptions: `{ options: RadioGroupOption[]; form?: string; name: string; }`
