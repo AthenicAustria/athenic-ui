@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/AthenicAustria/athenic-ui"
   },
+  "community": {
+    "discord": "https://discord.gg/TSGj5RCJST"
+  },
   "scripts": {
     "start": "webpack --config webpack.config.js --progress -w",
     "serve": "webpack serve --mode development --open",

@@ -10,9 +10,11 @@
 
 [![NPM](https://nodei.co/npm/athenc-ui.png?compact=true)](https://npmjs.org/package/athenic-ui) <a href="https://www.buymeacoffee.com/b3h3m0th" target="_tab"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 180px !important; margin: 0px 8px"></a>
 
-##### 📝 View the Documentation (coming soon)
+##### 📝 View the [Documentation](https://docs.athenic.at/)
 
 ##### 🔥 Check out the [Demo](https://ui.athenic.at/)
+
+##### 👄 Join the discussion on [Discord](https://discord.gg/TSGj5RCJST)
 
 ## Install
 
