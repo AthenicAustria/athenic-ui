@@ -1,0 +1,76 @@
+---
+title: "Stepper"
+description: Stepper
+---
+
+## Stepper
+
+```js
+import { Stepper } from "athenic-ui";
+```
+
+### Example - Horizontal
+
+```jsx
+<Stepper
+  currentStep={2}
+  direction="horizontal"
+  steps={["Sign Up", "Verify your Account", "Complete registration"]}
+/>
+```
+
+### Example - Vertical
+
+```jsx
+<Stepper
+  currentStep={2}
+  direction="vertical"
+  steps={["Sign Up", "Verify your Account", "Complete registration"]}
+/>
+```
+
+### Example - With other Components
+
+```jsx
+<Card title="Register">
+  <Stepper currentStep={stepperCardExample} steps={stepperCardExampleSteps} />
+  <br />
+  <Button
+    size="small"
+    variant="primary"
+    onClick={() => {
+      stepperCardExample > 1
+        ? setStepperCardExample(stepperCardExample - 1)
+        : null;
+      console.log(stepperCardExample);
+    }}
+  >
+    👈 Previous
+  </Button>
+  <Button
+    size="small"
+    variant="primary"
+    onClick={() => {
+      stepperCardExample <= stepperCardExampleSteps.length
+        ? setStepperCardExample(stepperCardExample + 1)
+        : null;
+      console.log(stepperCardExample);
+    }}
+  >
+    Next 👉
+  </Button>
+</Card>
+```
+
+### Props
+
+- steps: `Steps`
+- direction?: `StepperDirection`
+- currentStep: `number`
+
+## Types
+
+- Step: `string`
+- Steps: `Step[]`
+- StepperDirection: `"horizontal" | "vertical"`
+- StepState: `{ description: string; completed: boolean; selected: boolean; highlighted: boolean; }[] `

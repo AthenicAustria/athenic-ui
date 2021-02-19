@@ -1,0 +1,49 @@
+---
+title: "Switch"
+description: Switch
+---
+
+## Switch
+
+```js
+import { Switch } from "athenic-ui";
+```
+
+### Examples
+
+```jsx
+<Switch />
+<Switch variant="secondary" />
+<Switch disabled />
+<Switch label="Option 1" style={{ marginLeft: 0 }} />
+<Switch
+  label="Option 1"
+  style={{ marginLeft: 0 }}
+  validationMessage="Not allowed to check this :("
+/>
+<Switch
+  label="Option 2"
+  style={{ marginLeft: 0 }}
+  validationMessage="Not allowed to check this either :("
+/>
+```
+
+### Props
+
+- variant?: `SwitchVariant`
+- className?: `string`
+- style?: `CSSProperties`
+- onChange?: `(e: React.FormEvent<HTMLInputElement>) => void`
+- disabled?: `boolean`
+- form?: `string`
+- name?: `string`
+- id?: `string`
+- label?: `string`
+- validationMessage?: `string`
+- checked?: `boolean`
+
+## Types
+
+- SwitchSize: `"small" | "medium" | "large"`
+- SwitchVariant:
+  `"primary" | "secondary" | "tertiary" | "success" | "warning" | "error"`

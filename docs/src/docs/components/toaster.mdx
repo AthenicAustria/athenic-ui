@@ -1,0 +1,45 @@
+---
+title: "Text-Input"
+description: Text-Input
+---
+
+## Text-Input
+
+```js
+import { TextInput } from "athenic-ui";
+```
+
+### Examples
+
+```jsx
+<TextInput />
+<TextInput disabled={true} />
+<TextInput invalid={true} />
+<TextInput label="E-Mail" />
+<TextInput
+  validationMessage="Please enter a valid E-Mail"
+/>
+```
+
+### Props
+
+- placeholder?: `string`
+- disabled?: `boolean`
+- form?: `string`
+- value?: `string`
+- invalid?: `boolean`
+- name?: `string`
+- label?: `string`
+- validationMessage?: `string`
+- style?: `CSSProperties`
+- className?: `string`
+- type?: `TextInputType`
+- onChange?: `(e: React.FormEvent<HTMLInputElement>) => void`
+
+## Types
+
+- ToastVariant:
+  `"primary" | "secondary" | "tertiary" | "success" | "info" | "warning" | "error"`
+
+- ToastType: `ReactElement<ToastProps>`
+- ToastsType: `Array<ToastType>`
