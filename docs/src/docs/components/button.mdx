@@ -9,6 +9,34 @@ description: Button
 import { Button } from "athenic-ui";
 ```
 
+### Examples
+
+```jsx
+import * as faIcons from "@fortawesome/free-solid-svg-icons";
+
+<Button
+  style={{ marginLeft: 0 }}
+  iconBefore={faIcons.faShoppingBag}
+  size="medium"
+>
+  Icon before
+</Button>
+<Button
+  iconAfter={faIcons.faShoppingBag}
+  variant="secondary"
+  size="medium"
+>
+  Icon after
+</Button>
+<Button
+  variant="tertiary"
+  link={`https://github.com/AthenicAustria/athenic-ui`}
+  style={{ marginLeft: 0 }}
+>
+  🐱 Link to the Github-Repo
+</Button>
+```
+
 ### Props
 
 - text: `string` | `ReactChildren`
