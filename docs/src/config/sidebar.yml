@@ -66,20 +66,6 @@
       link: "components/textinput"
     - label: "Toaster"
       link: "components/toaster"
-- label: Usage
-  items:
-    - label: "Creating docs"
-      link: "/usage/creating-docs"
-    - label: "Navigation"
-      link: "/usage/navigation"
-    - label: "Shadowing"
-      link: "/usage/shadowing"
-- label: More
-  items:
-    - label: FAQ
-      link: /faq
-    - label: Changelog
-      link: /changelog
 - label: Community
   items:
     - label: "Github"
