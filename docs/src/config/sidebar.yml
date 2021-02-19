@@ -54,21 +54,9 @@
       link: "components/rating"
     - label: "Search-Input"
       link: "components/searchinput"
-- label: Usage
-  items:
-    - label: "Creating docs"
-      link: "/usage/creating-docs"
-    - label: "Navigation"
-      link: "/usage/navigation"
-    - label: "Shadowing"
-      link: "/usage/shadowing"
-- label: More
-  items:
-    - label: FAQ
-      link: /faq
-    - label: Changelog
-      link: /changelog
 - label: Community
   items:
     - label: "Github"
       link: https://github.com/AthenicAustria/athenic-ui
+    - label: "Discord"
+      link: https://discord.gg/TSGj5RCJST
