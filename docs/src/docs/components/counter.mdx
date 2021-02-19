@@ -1,0 +1,44 @@
+---
+title: "Counter"
+description: Counter
+---
+
+## Counter
+
+```js
+import { Counter } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<Counter size="small" end={5000} />
+```
+
+### Example with prefix
+
+```jsx
+<Counter size="small" prefix="$ " end={500} />
+```
+
+### Example with suffix
+
+```jsx
+<Counter size="large" suffix=" Users" end={3000} />
+```
+
+### Example with delay
+
+```jsx
+<Counter size="medium" delay={2} end={1000} />
+```
+
+### Props
+
+- end: `number`
+- size?: `CounterSize`
+- className?: `string`
+
+## Types
+
+- CounterSize: `"small" | "medium" | "large"`

@@ -1,0 +1,63 @@
+---
+title: "Collapse"
+description: Collapse
+---
+
+## Collapse
+
+```js
+import { Collapse } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<Collapse
+  content={[
+    {
+      header: "Tab 1",
+      content: (
+        <Button text="👋 I'm hiding in here... :D" style={{ marginLeft: 0 }} />
+      ),
+    },
+    { header: "Tab 2", content: "Content of Tab 2" },
+    { header: "Tab 3", content: "Content of Tab 3" },
+  ]}
+  initialActiveTabs={[0]}
+></Collapse>
+```
+
+### Example with Card
+
+```jsx
+<Card size="auto">
+  <Collapse
+    content={[
+      {
+        header: "Tab 1",
+        content: (
+          <Button
+            text="👋 I'm hiding in here... :D"
+            style={{ marginLeft: 0 }}
+          />
+        ),
+      },
+      { header: "Tab 2", content: "Content of Tab 2" },
+      { header: "Tab 3", content: "Content of Tab 3" },
+    ]}
+    initialActiveTabs={[0]}
+  ></Collapse>
+</Card>
+```
+
+### Props
+
+- content: `CollapsContentType`
+- initialActiveTabs?: `number[]`
+- className?: `string`
+- style?: `CSSProperties`
+
+## Types
+
+- CollapsContentType: `CollapseTab[]`
+- CollapseTab: `{ header: string; content: any }`

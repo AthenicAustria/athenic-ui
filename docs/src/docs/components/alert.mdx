@@ -1,0 +1,37 @@
+---
+title: "Alert"
+description: alert
+---
+
+## Alert
+
+```js
+import { Alert } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<Alert
+  variant="success"
+  title="Success"
+  closeIcon={true}
+  description="This is an info description"
+></Alert>
+```
+
+### Props
+
+- title: `string`;
+- description?: `string`;
+- icon?: `boolean`;
+- variant: `AlertVariant`;
+- closeIcon?: `boolean`;
+- shown?: `boolean`;
+- onClose?: ` () => void`;
+- className?: `string`;
+- style?: `CSSProperties`;
+
+## Types
+
+- AlertVariant: `"success" | "info" | "warning" | "error"`

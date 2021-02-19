@@ -1,0 +1,44 @@
+---
+title: "NavBar"
+description: NavBar
+---
+
+## NavBar
+
+```js
+import { NavBar } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<NavBar
+  logo={{
+    logo: "https://logoipsum.com/logo/logo-10.svg",
+    link: "https://logoipsum.com/",
+  }}
+  elements={[
+    { label: "Athenic UI - Github", link: packageJson.repository.url },
+    { label: "No Link" },
+    { label: "Disabled", disabled: true },
+  ]}
+>
+  <Button iconAfter={faIcons.faArrowRight} style={{ marginLeft: "auto" }}>
+    Start Now
+  </Button>
+</NavBar>
+```
+
+### Props
+
+- className?: `string`
+- style?: `CSSProperties`
+- elements?: `NavBarElements`
+- logo?: `NavBarLogo`
+- children?: `ReactChild | ReactChildren | ReactChild[] | ReactChildren[]`
+
+## Types
+
+- NavBarElement: `{ label: string; link?: string; disabled?: boolean; }`
+- NavBarElements: `Array<NavBarElement>`
+- NavBarLogo: `{ logo?: string; link?: string; onClick?: () => void }`

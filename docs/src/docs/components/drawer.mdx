@@ -1,0 +1,55 @@
+---
+title: "Drawer"
+description: Drawer
+---
+
+## Drawer
+
+```js
+import { Drawer } from "athenic-ui";
+```
+
+### Example
+
+```jsx
+<Drawer
+  shown={true}
+  onClose={() => setTopDrawerShown(false)}
+  position="top"
+></Drawer>
+```
+
+### Drawer + other Components
+
+```jsx
+<Drawer shown={exampleDrawerShown} onClose={() => setExampleDrawerShown(false)}>
+  <Drawer.Header>
+    <H3>Title</H3>
+  </Drawer.Header>
+  <Drawer.Body>
+    <Menu style={{ margin: 0 }}>
+      <Menu.Item icon={faIcons.faUser}>Profile</Menu.Item>
+      <Menu.Item icon={faIcons.faEdit}>Settings</Menu.Item>
+      <Menu.Divider />
+      <Menu.Item icon={faIcons.faTrash} variant="error">
+        Delete Account
+      </Menu.Item>
+    </Menu>
+  </Drawer.Body>
+  <Drawer.Footer>Footer</Drawer.Footer>
+</Drawer>
+```
+
+### Props
+
+- className?: `string`
+- style?: `CSSProperties`
+- position?: `DrawerPosition`
+- shown?: `boolean`
+- onClose: `() => void`
+- children?: `ReactChild | ReactChild[] | ReactChildren | ReactChildren[]`
+- closeOnExternalClick?: `boolean`
+
+## Types
+
+- DrawerPosition = `"top" | "left" | "bottom" | "right"`
