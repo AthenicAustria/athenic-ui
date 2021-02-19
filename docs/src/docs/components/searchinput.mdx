@@ -1,41 +1,39 @@
 ---
-title: "Radio-Group"
-description: Radio-Group
+title: "Search-Input"
+description: search-input
 ---
 
 ## Radio-Group
 
 ```js
-import { RadioGroup } from "athenic-ui";
+import { SearchInpu } from "athenic-ui";
 ```
 
-### Example
+### Examples
 
 ```jsx
-<RadioGroup
-  options={{
-    options: [
-      { value: "option1", id: "option1", label: "Option 1" },
-      { value: "option2", id: "option2", label: "Option 2" },
-      { value: "option3", id: "option3", label: "Option 3" },
-    ],
-    name: "example1",
-  }}
+<SearchInput />
+<SearchInput disabled />
+<SearchInput validationMessage="Please enter a valid search term!" />
+<SearchInput
+  onSearch={() =>
+    window.alert(
+      "You must be looking for something very important huh?"
+    )
+  }
 />
+<SearchInput expandOnFocus />
 ```
 
 ### Props
 
-- variant?: `RatingVariant`
-- size?: `RatingSize`
-- className?: `string`
 - style?: `CSSProperties`
-- initialRating?: `number`
-- onRate?: `(value: number) => void`
-
-## Types
-
-- RatingVariant: `"star" | "emoji"`
-- RatingSize: `"small" | "medium" | "large"`
-- EmojiType: `{ emoji: string; value: number }`
-- EmojiScale: `EmojiType[]`
+- className?: `string`
+- label?: `string`
+- name?: `string`
+- form?: `string`
+- disabled?: `boolean`
+- validationMessage?: `string`
+- invalid?: `boolean`
+- onChange?: `(e: React.FormEvent<HTMLInputElement>) => void`
+- onFocus?: `(e: React.FormEvent<HTMLInputElement>) => void`

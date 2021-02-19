@@ -1,27 +1,23 @@
 ---
-title: "Radio-Group"
-description: Radio-Group
+title: "Rating"
+description: rating
 ---
 
-## Radio-Group
+## Rating
 
 ```js
-import { RadioGroup } from "athenic-ui";
+import { Rating } from "athenic-ui";
 ```
 
-### Example
+### Examples
 
 ```jsx
-<RadioGroup
-  options={{
-    options: [
-      { value: "option1", id: "option1", label: "Option 1" },
-      { value: "option2", id: "option2", label: "Option 2" },
-      { value: "option3", id: "option3", label: "Option 3" },
-    ],
-    name: "example1",
-  }}
-/>
+<Rating variant="star" size="small" />
+<Rating variant="star" />
+<Rating variant="star" size="large" />
+<Rating variant="star" initialRating={3} />
+<Rating variant="emoji"/>
+
 ```
 
 ### Props

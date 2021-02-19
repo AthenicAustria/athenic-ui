@@ -17,7 +17,7 @@ import { Menu } from "athenic-ui";
 
 ## Menu-Item
 
-### Example
+### Examples
 
 ```jsx
 <Menu>
@@ -25,6 +25,15 @@ import { Menu } from "athenic-ui";
   <Menu.Item>Menu Item 2</Menu.Item>
   <Menu.Item link="https://github.com/AthenicAustria/athenic-ui">
     Menu Item 3 (Link to Github)
+  </Menu.Item>
+</Menu>
+
+<Menu>
+  <Menu.Item icon={faIcons.faUser}>Profile</Menu.Item>
+  <Menu.Item icon={faIcons.faEdit}>Edit</Menu.Item>
+  <Menu.Divider />
+  <Menu.Item icon={faIcons.faTrash} variant="error">
+    Delete Account
   </Menu.Item>
 </Menu>
 ```
@@ -38,6 +47,25 @@ import { Menu } from "athenic-ui";
 - link?: `string`
 - variant?: `MenuItemVariant`
 - disabled?: `boolean`
+
+## MenuItem
+
+### Props
+
+- className?: `string`
+- style?: `CSSProperties`
+- icon?: `IconDefinition`
+- children: `string`
+- link?: `string`
+- variant?: `MenuItemVariant`
+- disabled?: `boolean`
+
+## MenuDivider
+
+### Props
+
+- className?: `string`
+- style?: `CSSProperties`
 
 ## Types
 
