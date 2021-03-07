@@ -24,8 +24,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build:docs": "cd ./docs && npm run build",
-    "publish:tsc": "node ./src/utils/publish.tsc.js",
-    "publish:webpack": "node ./src/utils/publish.webpack.js"
+    "publish": "node ./src/utils/publish.webpack.js"
   },
   "keywords": [
     "athenic",
