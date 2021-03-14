@@ -36,7 +36,9 @@ const OTPInput = ({
 
   const handleChange = (e: any, index: number) => {
     if (isNaN(e.target.value)) return false;
-    setOtp([...otp.map((d, i) => (i === index ? e.target.value : d))]);
+    setOtp([
+      ...otp.map((d: any, i: number) => (i === index ? e.target.value : d)),
+    ]);
 
     if (e.target.nextSibling) {
       e.target.nextSibling.focus();
