@@ -97,5 +97,9 @@ module.exports = [
       library: "athenic-ui",
     },
     plugins: [],
+    externals: {
+      react: "react",
+      "react-dom": "react-dom",
+    },
   },
 ];
