@@ -29,6 +29,7 @@ export {
   TextInputType,
 } from "./components/TextInput";
 export { SearchInput, SearchInputProps } from "./components/SearchInput";
+export { PasswordInput, PasswordInputProps } from "./components/PasswordInput";
 export { Card, CardProps, CardSize } from "./components/Card";
 export { Link, LinkProps } from "./components/Link";
 export { Counter, CounterProps, CounterSize } from "./components/Counter";
