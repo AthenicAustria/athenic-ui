@@ -1,9 +1,10 @@
 import {
   faExclamationTriangle,
-  faSearch,
+  faEye,
+  faEyeSlash,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, useState } from "react";
 import "./PasswordInput.scss";
 
 export interface PasswordInputProps {
@@ -16,6 +17,7 @@ export interface PasswordInputProps {
   validationMessage?: string;
   invalid?: boolean;
   value?: string;
+  initiallyShown?: boolean;
   /* eslint-disable no-unused-vars*/
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
   onFocus?: (e: React.FormEvent<HTMLInputElement>) => void;
@@ -35,7 +37,9 @@ const PasswordInput = ({
   onChange,
   onFocus,
   onBlur,
+  initiallyShown,
 }: PasswordInputProps) => {
+  const [textShown, setTextShown] = useState<boolean>(false);
   return (
     <div className={`password-input`} style={style ? style : null}>
       {label ? (
@@ -43,8 +47,11 @@ const PasswordInput = ({
           {label}
         </label>
       ) : null}
-      <div className="password-input__icon">
-        <FontAwesomeIcon icon={faSearch} />
+      <div
+        className="password-input__icon"
+        onClick={() => setTextShown((prev) => !prev)}
+      >
+        <FontAwesomeIcon icon={textShown ? faEye : faEyeSlash} />
       </div>
       <input
         disabled={disabled}
