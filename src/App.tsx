@@ -34,6 +34,7 @@ import { Toast, Toaster } from "./components/Toaster";
 import { Drawer } from "./components/Drawer";
 import { AthenicProvider } from "./components/AthenicProvider";
 import { AthenicTheme } from "./components/AthenicProvider/types/AthenicProviderTypes";
+import { PasswordInput } from "./components/PasswordInput";
 
 const theme: AthenicTheme = {
   //
@@ -820,7 +821,7 @@ const App = () => {
         <H2>Password</H2>
         <TextInput type="password" />
 
-        <H1>SearchInput</H1>
+        <H1>Search Input</H1>
         <SearchInput />
 
         <H2>Disabled</H2>
@@ -841,7 +842,11 @@ const App = () => {
         <H2>Expand on focus</H2>
         <SearchInput expandOnFocus />
 
-        <H1>PasswordInput</H1>
+        <H1>Password Input</H1>
+        <PasswordInput />
+
+        <H2>Disabled</H2>
+        <PasswordInput disabled />
 
         <H1>Switch</H1>
         <H2>Variants</H2>

@@ -3,10 +3,10 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { CSSProperties, useState } from "react";
-import "./SearchInput.scss";
+import React, { CSSProperties } from "react";
+import "./PasswordInput.scss";
 
-export interface SearchInputProps {
+export interface PasswordInputProps {
   style?: CSSProperties;
   className?: string;
   label?: string;
@@ -20,11 +20,9 @@ export interface SearchInputProps {
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
   onFocus?: (e: React.FormEvent<HTMLInputElement>) => void;
   onBlur?: () => void;
-  onSearch?: () => void;
-  expandOnFocus?: boolean;
 }
 
-const SearchInput = ({
+const PasswordInput = ({
   style,
   className,
   label,
@@ -33,23 +31,19 @@ const SearchInput = ({
   disabled,
   validationMessage,
   invalid,
+  value,
   onChange,
   onFocus,
-  onSearch,
   onBlur,
-  expandOnFocus = false,
-  value,
-}: SearchInputProps) => {
-  const [expanded, setExpanded] = useState<boolean>(false);
-
+}: PasswordInputProps) => {
   return (
-    <div className="search-input" style={style ? style : null}>
+    <div className={`password-input`} style={style ? style : null}>
       {label ? (
-        <label className="search-input__label" htmlFor={name && name}>
+        <label className="password-input__label" htmlFor={name && name}>
           {label}
         </label>
       ) : null}
-      <div className="search-input__icon">
+      <div className="password-input__icon">
         <FontAwesomeIcon icon={faSearch} />
       </div>
       <input
@@ -58,27 +52,20 @@ const SearchInput = ({
         name={name ? name : null}
         form={form && form}
         type="text"
-        className={`search-input__input ${className ? className : ""} ${
+        className={`password-input__input ${className ? className : ""} ${
           invalid ? "invalid" : ""
-        } ${disabled ? "disabled" : ""} ${expanded ? "expanded" : ""}`}
+        } ${disabled ? "disabled" : ""}`}
         onChange={onChange && onChange}
-        onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
-          if (e.key === "Enter" || e.keyCode === 13) {
-            onSearch && onSearch();
-          }
-        }}
         onFocus={(e: React.FormEvent<HTMLInputElement>) => {
-          expandOnFocus ? setExpanded(true) : null;
           onFocus && onFocus(e);
         }}
         onBlur={(e: React.FormEvent<HTMLInputElement>) => {
-          expandOnFocus ? setExpanded(false) : null;
           onBlur && onBlur();
         }}
         value={value && value}
       />
       {validationMessage ? (
-        <small className="search-input__validation-message">
+        <small className="password-input__validation-message">
           <FontAwesomeIcon icon={faExclamationTriangle} />
           <span style={{ marginLeft: "4px" }}>{validationMessage}</span>
         </small>
@@ -87,4 +74,4 @@ const SearchInput = ({
   );
 };
 
-export default SearchInput;
+export default PasswordInput;
