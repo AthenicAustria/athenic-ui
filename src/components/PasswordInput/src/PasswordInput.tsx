@@ -39,7 +39,7 @@ const PasswordInput = ({
   onBlur,
   initiallyShown,
 }: PasswordInputProps) => {
-  const [textShown, setTextShown] = useState<boolean>(false);
+  const [textShown, setTextShown] = useState<boolean>(initiallyShown || false);
   return (
     <div className={`password-input`} style={style ? style : null}>
       {label ? (
@@ -58,7 +58,7 @@ const PasswordInput = ({
         id={name ? name : null}
         name={name ? name : null}
         form={form && form}
-        type="text"
+        type={textShown ? "text" : "password"}
         className={`password-input__input ${className ? className : ""} ${
           invalid ? "invalid" : ""
         } ${disabled ? "disabled" : ""}`}
