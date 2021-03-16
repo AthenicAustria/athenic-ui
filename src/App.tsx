@@ -841,6 +841,8 @@ const App = () => {
         <H2>Expand on focus</H2>
         <SearchInput expandOnFocus />
 
+        <H1>PasswordInput</H1>
+
         <H1>Switch</H1>
         <H2>Variants</H2>
         <Switch />
