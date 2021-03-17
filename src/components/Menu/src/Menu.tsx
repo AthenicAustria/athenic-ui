@@ -9,11 +9,7 @@ export interface MenuProps {
   children?: ReactElement<MenuItemProps> | Array<ReactElement<MenuItemProps>>;
 }
 
-const Menu: React.FC<MenuProps> = ({
-  className = "",
-  style = {},
-  children,
-}: MenuProps) => {
+const Menu = ({ className = "", style = {}, children }: MenuProps) => {
   return (
     <div className={`menu ${className}`} style={style}>
       {children ? <ul className={`menu__menu`}>{children}</ul> : null}
