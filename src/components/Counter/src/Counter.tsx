@@ -9,7 +9,7 @@ export interface CounterProps extends useCountUpProps {
   className?: string;
 }
 
-const Counter = ({
+const Counter: React.FC<CounterProps> = ({
   className,
   end,
   start,

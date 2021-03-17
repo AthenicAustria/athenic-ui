@@ -10,7 +10,12 @@ export interface BadgeProps {
   className?: string;
 }
 
-const Badge = ({ label, variant, solid, className }: BadgeProps) => {
+const Badge: React.FC<BadgeProps> = ({
+  label,
+  variant,
+  solid,
+  className,
+}: BadgeProps) => {
   return (
     <div
       className={`badge ${variant ? variant : ""} ${solid ? "solid" : ""} ${

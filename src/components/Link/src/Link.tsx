@@ -9,7 +9,13 @@ export interface LinkProps {
   style?: CSSProperties;
 }
 
-const Link = ({ to, text, target, className = "", style = {} }: LinkProps) => {
+const Link: React.FC<LinkProps> = ({
+  to,
+  text,
+  target,
+  className = "",
+  style = {},
+}: LinkProps) => {
   return (
     <a
       href={to}

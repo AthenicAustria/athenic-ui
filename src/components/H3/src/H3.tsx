@@ -7,7 +7,7 @@ export interface H3Props {
   className?: string;
 }
 
-const H3 = ({ children, style, className }: H3Props) => {
+const H3: React.FC<H3Props> = ({ children, style, className }: H3Props) => {
   return (
     <h3 className={`h3 ${className ? className : ""}`} style={style && style}>
       {children && children}

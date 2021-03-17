@@ -1,14 +1,18 @@
-import React, { useRef, useEffect } from "react";
-
+import React, { useRef, useEffect, MutableRefObject } from "react";
 export interface ReactCommentProps {
   text: string;
   trim: boolean;
 }
 
-const ReactComment = ({ text, trim }: ReactCommentProps) => {
-  const element = useRef(null);
+const ReactComment: React.FC<ReactCommentProps> = ({
+  text,
+  trim,
+}: ReactCommentProps) => {
+  const element: MutableRefObject<HTMLDivElement> = useRef<HTMLDivElement | null>(
+    null
+  );
 
-  const createComment = () => {
+  const createComment: () => string = () => {
     trim ? (text = text.trim()) : (): any => void 0;
 
     return `<!-- ${text} -->`;

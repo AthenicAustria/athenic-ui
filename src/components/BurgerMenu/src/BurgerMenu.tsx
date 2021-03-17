@@ -10,7 +10,7 @@ export interface BurgerMenuProps {
   elements: NavBarElements;
 }
 
-const BurgerMenu = ({
+const BurgerMenu: React.FC<BurgerMenuProps> = ({
   className = "",
   style = {},
   elements,

@@ -15,7 +15,7 @@ export interface DrawerProps {
   closeOnExternalClick?: boolean;
 }
 
-const Drawer = ({
+const Drawer: React.FC<DrawerProps> = ({
   className = "",
   style = {},
   position = "right",

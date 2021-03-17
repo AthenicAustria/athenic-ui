@@ -7,7 +7,7 @@ export interface H2Props {
   className?: string;
 }
 
-const H2 = ({ children, style, className }: H2Props) => {
+const H2: React.FC<H2Props> = ({ children, style, className }: H2Props) => {
   return (
     <h2 className={`h2 ${className ? className : ""}`} style={style && style}>
       {children && children}

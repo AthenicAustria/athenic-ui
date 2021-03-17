@@ -7,7 +7,7 @@ export interface DrawerBodyProps {
   children?: ReactChild | ReactChild[] | ReactChildren | ReactChildren[];
 }
 
-const DrawerBody = ({
+const DrawerBody: React.FC<DrawerBodyProps> = ({
   className = "",
   style = {},
   children,

@@ -9,7 +9,7 @@ export interface DrawerHeaderProps {
   children?: ReactChild | ReactChild[] | ReactChildren | ReactChildren[];
 }
 
-const DrawerHeader = ({
+const DrawerHeader: React.FC<DrawerHeaderProps> = ({
   className = "",
   style = {},
   title = "",

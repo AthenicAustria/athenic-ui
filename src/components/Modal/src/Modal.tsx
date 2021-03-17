@@ -17,7 +17,7 @@ export interface ModalProps {
   closeOnExternalClick?: boolean;
 }
 
-const Modal = ({
+const Modal: React.FC<ModalProps> = ({
   shown,
   className,
   style,

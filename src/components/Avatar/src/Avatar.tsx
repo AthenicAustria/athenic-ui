@@ -14,7 +14,7 @@ export interface AvatarProps {
   onClick?: () => void;
 }
 
-const Avatar = ({
+const Avatar: React.FC<AvatarProps> = ({
   className,
   style,
   image,

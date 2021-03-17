@@ -19,7 +19,7 @@ export interface RatingProps {
   onRate?: (value: number) => void;
 }
 
-const Rating = ({
+const Rating: React.FC<RatingProps> = ({
   variant = "star",
   className,
   style,

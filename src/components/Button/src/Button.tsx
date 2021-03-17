@@ -22,7 +22,7 @@ export interface ButtonProps {
   link?: string;
 }
 
-const Button = ({
+const Button: React.FC<ButtonProps> = ({
   text,
   style,
   className,

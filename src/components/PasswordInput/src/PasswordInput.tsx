@@ -24,7 +24,7 @@ export interface PasswordInputProps {
   onBlur?: () => void;
 }
 
-const PasswordInput = ({
+const PasswordInput: React.FC<PasswordInputProps> = ({
   style,
   className,
   label,

@@ -6,7 +6,10 @@ export interface MenuDividerProps {
   style?: CSSProperties;
 }
 
-const MenuDivider = ({ className = "", style = {} }: MenuDividerProps) => {
+const MenuDivider: React.FC<MenuDividerProps> = ({
+  className = "",
+  style = {},
+}: MenuDividerProps) => {
   return <li className={`menu-divider ${className}`} style={style}></li>;
 };
 

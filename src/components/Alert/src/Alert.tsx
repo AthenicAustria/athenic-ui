@@ -22,7 +22,7 @@ export interface AlertProps {
   style?: CSSProperties;
 }
 
-const Alert = ({
+const Alert: React.FC<AlertProps> = ({
   className,
   style,
   title,

@@ -14,7 +14,7 @@ export interface MenuItemProps {
   disabled?: boolean;
 }
 
-const MenuItem = ({
+const MenuItem: React.FC<MenuItemProps> = ({
   className = "",
   style = {},
   icon,

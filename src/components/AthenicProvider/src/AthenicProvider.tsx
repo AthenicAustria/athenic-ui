@@ -29,7 +29,7 @@ export interface AthenicProviderProps {
   asciiComment?: boolean;
 }
 
-const AthenicProvider = ({
+const AthenicProvider: React.FC<AthenicProviderProps> = ({
   children,
   theme,
   asciiComment = true,

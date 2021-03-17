@@ -16,7 +16,7 @@ export interface NavBarProps {
   children?: ReactChild | ReactChildren | ReactChild[] | ReactChildren[];
 }
 
-const NavBar = ({
+const NavBar: React.FC<NavBarProps> = ({
   className,
   style,
   elements = [],

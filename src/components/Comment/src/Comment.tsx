@@ -18,7 +18,7 @@ export interface CommentProps {
   children?: ReactElement<CommentProps> | Array<ReactElement<CommentProps>>;
 }
 
-const Comment = ({
+const Comment: React.FC<CommentProps> = ({
   style,
   className,
   author,

@@ -15,7 +15,7 @@ export interface RadioGroupProps {
   validationMessage?: string;
 }
 
-const RadioGroup = ({
+const RadioGroup: React.FC<RadioGroupProps> = ({
   className,
   style,
   onChange,

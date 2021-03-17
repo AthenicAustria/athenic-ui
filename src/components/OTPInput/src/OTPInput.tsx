@@ -18,7 +18,7 @@ export interface OTPInputProps {
   summary?: boolean;
 }
 
-const OTPInput = ({
+const OTPInput: React.FC<OTPInputProps> = ({
   className,
   style,
   numInputs = 4,

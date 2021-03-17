@@ -8,7 +8,7 @@ export interface DrawerFooterProps {
   children?: ReactChild | ReactChild[] | ReactChildren | ReactChildren[];
 }
 
-const DrawerFooter = ({
+const DrawerFooter: React.FC<DrawerFooterProps> = ({
   className = "",
   style = {},
   children,

@@ -16,7 +16,13 @@ export interface CardProps {
   size?: CardSize;
 }
 
-const Card = ({ style, className, children, title, size }: CardProps) => {
+const Card: React.FC<CardProps> = ({
+  style,
+  className,
+  children,
+  title,
+  size,
+}: CardProps) => {
   return (
     <div
       className={`card ${className ? className : ""} ${size ? size : "medium"}`}

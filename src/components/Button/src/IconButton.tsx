@@ -10,7 +10,12 @@ export interface IconButtonProps {
   size?: ButtonSize;
 }
 
-const IconButton = ({ icon, style, className, size }: IconButtonProps) => {
+const IconButton: React.FC<IconButtonProps> = ({
+  icon,
+  style,
+  className,
+  size,
+}: IconButtonProps) => {
   return (
     <button
       className={`icon_button ${className ? className : ""} ${

@@ -13,7 +13,7 @@ export interface PopoverProps {
   onClose?: () => void;
 }
 
-const Popover = ({
+const Popover: React.FC<PopoverProps> = ({
   className = "",
   style = {},
   position = "bottom",

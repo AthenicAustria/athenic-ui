@@ -11,7 +11,7 @@ export interface CollapseProps {
   style?: CSSProperties;
 }
 
-const Collapse = ({
+const Collapse: React.FC<CollapseProps> = ({
   content,
   initialActiveTabs,
   className,
