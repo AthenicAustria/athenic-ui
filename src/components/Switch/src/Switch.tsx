@@ -19,7 +19,7 @@ export interface SwitchProps {
   checked?: boolean;
 }
 
-const Switch = ({
+const Switch: React.FC<SwitchProps> = ({
   variant = "primary",
   className,
   style,

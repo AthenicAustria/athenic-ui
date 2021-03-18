@@ -26,7 +26,7 @@ export interface ToastProps {
   dangerouslyChangeToastKey?: number;
 }
 
-const Toast = ({
+const Toast: React.FC<ToastProps> = ({
   className = "",
   style = {},
   variant = "primary",

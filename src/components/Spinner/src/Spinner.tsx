@@ -13,7 +13,12 @@ export interface SpinnerProps {
   style?: CSSProperties;
 }
 
-const Spinner = ({ variant, size, speed, style }: SpinnerProps) => {
+const Spinner: React.FC<SpinnerProps> = ({
+  variant,
+  size,
+  speed,
+  style,
+}: SpinnerProps) => {
   speed ? (speed = speed / 1000) : null;
   return (
     <div

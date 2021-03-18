@@ -20,7 +20,7 @@ export interface TextInputProps {
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
-const TextInput = ({
+const TextInput: React.FC<TextInputProps> = ({
   placeholder,
   disabled,
   form,

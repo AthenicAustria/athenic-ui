@@ -10,7 +10,7 @@ export interface StepperProps {
   currentStep: number;
 }
 
-const Stepper = ({
+const Stepper: React.FC<StepperProps> = ({
   steps,
   direction = "vertical",
   currentStep = 1,

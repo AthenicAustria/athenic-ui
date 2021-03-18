@@ -24,7 +24,7 @@ export interface SearchInputProps {
   expandOnFocus?: boolean;
 }
 
-const SearchInput = ({
+const SearchInput: React.FC<SearchInputProps> = ({
   style,
   className,
   label,
