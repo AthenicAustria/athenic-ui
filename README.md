@@ -2,7 +2,7 @@
   <img width="450" height="200" src="https://raw.githubusercontent.com/b3h3m0th/athenic-ui/main/artwork/logo/logo.png"> <br/>
   <h3 align="center">👑 Building beautiful React Applications made simple</h3>
 </p>
-<hr/>
+<hr/> 
 
 # athenic-ui
 
