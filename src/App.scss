@@ -3,13 +3,7 @@
 
 body {
   margin: 0;
-  padding: 1em;
-  padding-left: 3em;
+  margin: 0;
   font-family: var(--font-primary);
-  min-height: 100vh;
   overflow-x: hidden;
-}
-
-#App {
-  height: 100%;
 }
