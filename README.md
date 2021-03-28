@@ -16,7 +16,7 @@
 
 ##### 👄 Join the discussion on [Discord](https://discord.gg/TSGj5RCJST)
 
-## Install
+## Install 
 
 ```bash
 npm install --save athenic-ui
